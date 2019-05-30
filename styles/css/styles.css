@@ -181,8 +181,9 @@ h5.hero-subtitle {
   box-shadow: 0 0 5px white;
 }
 .projeto #imagem-projeto {
-  width: 450px;
-  height: 225px;
+  max-width: 450px;
+  max-height: 225px;
+  margin: auto;
 }
 .projeto .descricao-projeto {
   margin-top: 10px;

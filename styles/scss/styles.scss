@@ -224,8 +224,9 @@ h5.hero-subtitle {
     }
     
     #imagem-projeto {
-        width: 450px;
-        height: 225px;
+        max-width: 450px;
+        max-height: 225px;
+        margin: auto;
     }
     
     .descricao-projeto {
