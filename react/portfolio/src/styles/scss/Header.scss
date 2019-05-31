@@ -1,0 +1,37 @@
+@import 'variables.scss';
+@import 'animations.scss';
+
+header {
+    flex-basis: 5%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    background-color: black; 
+    color: white;
+    padding: 10px 75px;
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: resetTransform 0.5s 0.5s ease-in-out 1 forwards, fadeIn 0.5s 0.75s ease-in-out 1 forwards;
+
+    .logo {
+        border: 2px solid $main-color;
+        box-shadow: 0px 0px 5px $main-color;
+        max-height: 45px;
+    }
+    
+    .navbar {
+        ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+            li {
+                margin-left: 25px;
+                a {
+                    font-size: 2em;
+                }
+            }
+        }
+    }
+}

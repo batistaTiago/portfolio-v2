@@ -1,0 +1,50 @@
+@import '../global-stylesheets/variables.scss';
+@import '../global-stylesheets/animations.scss';
+
+#projetos {
+    // background-color: rgba(0, 0, 0, 0.3);
+}
+
+#header-projetos {
+    color: $cor-headers;
+    text-align: center;
+    
+    h1 {
+        font-size: 3em;
+        text-shadow: 1px 1px 5px $main-color;
+    }
+    
+    h3 {
+        font-size: 1.25em;
+    }
+    
+    p {
+        font-size: 1em;
+    }
+    
+}
+
+.lista-projetos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 35px;
+    padding: 5px;
+    list-style-type: none;
+}
+
+.projeto {
+    border: 2px solid #ccc;
+    box-shadow: 0px 0px 15px 1px #ccc;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 10px 35px;
+    margin: 10px 35px;
+    flex-basis: 40%;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(rgba(55, 55, 55, 0.05), rgba(200, 200, 200, 0.05));
+}

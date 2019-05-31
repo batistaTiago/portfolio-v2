@@ -1,0 +1,48 @@
+@import './app/global-stylesheets/variables.scss';
+@import './app/global-stylesheets/animations.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    color: $main-color;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: $hero-background-color;
+}
+
+body::before {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: url('/assets/images/background.jpg');
+    background-size: cover;
+    opacity: 0.05;
+}
+
+app-root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

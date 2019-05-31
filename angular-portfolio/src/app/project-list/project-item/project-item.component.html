@@ -1,0 +1,28 @@
+<li>
+  <h2 class='nome-projeto'><a [href]='projectData.deployUrl'>Pássaro Urbano</a></h2>
+
+  <div class='imagens-projeto'>
+
+    <div class='featured-image-container'>
+      <div class="featured-image" *ngFor='let image of projectData.imagens; let i = index'>
+        <img [src]='image' class="{{ i === selectedImageIndex ? 'opaque' : '' }}" />
+      </div>
+    </div>
+
+    <ul class='lista-imagens-projeto'>
+      <li *ngFor='let image of projectData.imagens; let i = index'>
+        <img [src]='image' [class]="i === selectedImageIndex ? 'current' : ''" (click)="imageClicked(i)" />
+      </li>
+    </ul>
+
+  </div>
+
+  <div class='descricao-projeto'>
+    {{ projectData. descricao }}
+  </div>
+
+  <div class="link-projeto">
+    Disponível <a [href]='projectData.deployUrl'>aqui</a>.
+  </div>
+
+</li>

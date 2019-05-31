@@ -1,0 +1,15 @@
+<section id="projetos" class="flex-columns justify-content-around">
+  <div id="header-projetos">
+    <h1>Projetos</h1>
+    <h3>Aqui estão os principais projetos já realizados.</h3>
+    <p>Todos os projetos a seguir foram construídos por mim, ambas as partes de front-end e back-end, a
+      menos que dito o contrário.</p>
+  </div>
+  <ol class="lista-projetos">
+    <app-project-item 
+      *ngFor="let project of projects" 
+      class="projeto" 
+      [projectData]='project'>
+    </app-project-item>
+  </ol>
+</section>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles/css/styles.css" type="text/css">
+
+    <title>batistaTiago - Portfolio</title>
+    <script src="scripts/index.js"></script>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="images/logo.png" />
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a href="#">Skills</a>
+                </li>
+                <li>
+                    <a href="#">Projetos</a>
+                </li>
+                <li>
+                    <a href="#">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="scroll-wrapper">
+        <div class="scrollable">
+            <section class="flex-columns justify-content-center">
+                <!-- <div></div> -->
+                <div class="hero">
+                    <div class="hero-image-container">
+                        <img src="./images/main.jpg" class="hero-image" alt="profile-photo" />
+                    </div>
+                    <div class="titles-container">
+                        <h1 class="hero-title">Batista Tiago</h1>
+                        <h4 class="hero-subtitle">Engenheiro mecatrônico</h4>
+                        <h4 class="hero-subtitle">Bacharel em ciências e tecnologia</h4>
+                        <h4 class="hero-subtitle">Full stack web-developer</h4>
+                        <h5 class="hero-subtitle">Angular/React & PHP/Node</h5>
+                    </div>
+
+                </div>
+                <!-- <div class="next-button-wrapper">
+                     <button id="projetos-button" onclick="scrollToElement(event)">
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                </div> -->
+            </section>
+
+            <section id="projetos" class="flex-columns justify-content-around">
+                <div id="header-projetos">
+                    <h1>Projetos</h1>
+                    <h3>Aqui estão os principais projetos já realizados.</h3>
+                    <p>Todos os projetos a seguir foram construídos por mim, ambas as partes de front-end e back-end, a
+                        menos que dito o contrário.</p>
+                </div>
+                <!-- <div class="scroll-wrapper">
+                    <div class="scrollable"> -->
+                <ol class="lista-projetos">
+                    <li class="projeto">
+                        <h2 class="nome-projeto"><a href="#">Pássaro Urbano</a></h2>
+
+                        <div class="imagens-projeto">
+
+                            <div class="featured-image-container">
+                                <img src="images/passaro-urbano/logo.png" id="container-image-1" class="p-15 opaque" />
+                                <img src="images/passaro-urbano/passaro-urbano1.png" id="container-image-2" />
+                                <img src="images/passaro-urbano/passaro-urbano2.png" id="container-image-3" />
+                                <img src="images/passaro-urbano/passaro-urbano3.png" id="container-image-4" />
+                            </div>
+
+                            <ul class="lista-imagens-projeto">
+                                <li>
+                                    <img src="images/passaro-urbano/logo.png" data-toggle="1"
+                                        onclick="galleryImageClicked(event)" class="current" />
+                                </li>
+                                <li>
+                                    <img src="images/passaro-urbano/passaro-urbano1.png" data-toggle="2"
+                                        onclick="galleryImageClicked(event)" />
+                                </li>
+                                <li>
+                                    <img src="images/passaro-urbano/passaro-urbano2.png" data-toggle="3"
+                                        onclick="galleryImageClicked(event)" />
+                                </li>
+                                <li>
+                                    <img src="images/passaro-urbano/passaro-urbano3.png" data-toggle="4"
+                                        onclick="galleryImageClicked(event)" />
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div class="descricao-projeto">
+                            Web app baseado no Peixe Urbano. Desenvolvido com Angular 7 e Firebase. Disponível
+                            <a href="http://batista-tiago-ekyidag.s3-website-sa-east-1.amazonaws.com">aqui</a>.
+                        </div>
+                    </li>
+                </ol>
+                <!-- </div>
+                </div> -->
+            </section>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="social-media-links">
+            <a href="https://www.twitter.com/ekyidag" class="fab fa-twitter-square"></a>
+            <a href="https://www.github.com/batistaTiago" class="fab fa-github-square"></a>
+        </div>
+    </footer>
+</body>
+
+</html>
