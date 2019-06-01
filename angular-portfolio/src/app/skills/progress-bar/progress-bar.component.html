@@ -1,10 +1,12 @@
 <div class="progress-bar-container">
   <div class="category">
-    {{ data.technologyName }}
+      <span>
+          {{ data.technologyName }}
+      </span>
+      <img src="/assets/images/skills/technologies/html.png" alt="technologyName" class="technology-logo" />
   </div>
   <div class="progress-bar">
     <span>{{ data.skillLevel }}</span>
-    <div class="filled">
-    </div>
+    <app-filled [filledWidth]='data.skillLevel * 10' [fillColor]="data.fillColor"></app-filled>
   </div>
 </div>

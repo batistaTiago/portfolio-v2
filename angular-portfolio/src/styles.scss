@@ -1,10 +1,23 @@
 @import './app/global-stylesheets/variables.scss';
 @import './app/global-stylesheets/animations.scss';
+@import url('https://fonts.googleapis.com/css?family=Philosopher&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     color: $main-color;
+    font-family: 'Philosopher', sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+    text-shadow: 1px 1px 5px $secondary-color;
+}
+
+.centered-flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .justify-content-center {

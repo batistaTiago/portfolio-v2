@@ -1,3 +1,22 @@
-<p>
-  contact works!
-</p>
+<div class="centered-flex-container">
+  <form (submit)="validateAndSubmit($event)">
+    
+    <h1>Contato</h1>
+    
+    <input type="text" placeholder="Seu nome" />
+    
+    <input type="text" placeholder="Seu email" />
+    
+    <input type="text" placeholder="Assunto" />
+
+    <input type="tel" placeholder="Telefone" />
+    
+    <textarea placeholder="Sua mensagem..."></textarea>
+    
+    <hr> 
+
+    <button type="submit">Enviar Mensagem</button>
+    
+  </form>
+</div>
+

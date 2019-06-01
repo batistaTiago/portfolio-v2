@@ -15,6 +15,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ProjectListComponent } from './project-list/project-list.component';
 import { ProjectItemComponent } from './project-list/project-item/project-item.component';
 import { ProgressBarComponent } from './skills/progress-bar/progress-bar.component';
+import { FilledComponent } from './skills/progress-bar/filled/filled.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProgressBarComponent } from './skills/progress-bar/progress-bar.compone
     SkillsComponent,
     ContactComponent,
     ProjectItemComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    FilledComponent
   ],
   imports: [
     BrowserModule,

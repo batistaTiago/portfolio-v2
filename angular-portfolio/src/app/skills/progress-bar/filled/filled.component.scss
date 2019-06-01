@@ -1,0 +1,11 @@
+@import '../../../global-stylesheets/variables.scss';
+@import '../../../global-stylesheets/animations.scss';
+
+.filled {
+    position: relative;
+    height: 25px;
+
+    transform: translateX(-100%);
+    animation: resetTransform 2s ease-in-out 1 forwards;
+
+}

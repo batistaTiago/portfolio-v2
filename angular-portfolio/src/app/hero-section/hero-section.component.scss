@@ -20,6 +20,9 @@
     
     // opacity: 0;
     // animation: fadeIn 0.5s 0.5s ease-in-out 1 forwards;
+
+    animation: resetTransform 0.5s 0.5s ease-in-out 1 forwards;
+    transform: scale(0) rotateZ(-720deg);
 }
 
 .hero-image {
@@ -30,21 +33,20 @@
 }
 
 .titles-container {
-    // opacity: 0;
-    // transform: translateX(100%);
-    // animation-name: fadeIn, resetTransform;
-    // animation-duration: 0.5s;
-    // animation-delay: 1s;
-    // animation-timing-function: ease-in-out;
-    // animation-iteration-count: 1;
-    // animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateX(100%);
+    
+    animation-name: fadeIn, resetTransform;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .hero-title {
     margin-top: 25px;
-    font-size: 3em;
-    color: $cor-headers;
-    text-shadow: 1px 1px 5px $main-color;
+    color: $main-color;
 }
 
 .hero-subtitle {

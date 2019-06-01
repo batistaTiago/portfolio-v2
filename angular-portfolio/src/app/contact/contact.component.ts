@@ -12,4 +12,18 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
+  private formIsValid: boolean = true;
+
+  public validateAndSubmit(e) {
+    e.preventDefault();
+
+    if (this.formIsValid) {
+      e.target.submit();
+    } else {
+      alert('form invalido')
+    }
+    
+    
+
+  }
 }

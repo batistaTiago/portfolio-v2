@@ -13,14 +13,14 @@ const routes: Routes = [];
   exports: [RouterModule]
 })
 export class AppRoutingModule {
-  private static _routes: Routes = [
+  private static routes: Routes = [
     { path: '', component: HeroSectionComponent },
     { path: 'skills', component: SkillsComponent },
-    { path: 'projects', component: ProjectListComponent},
+    { path: 'projects', component: ProjectListComponent },
     { path: 'contact', component: ContactComponent}
   ]
 
   public static AppRoutes(): Routes {
-    return AppRoutingModule._routes;
+    return AppRoutingModule.routes;
   }
  }
