@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import ContactFormValidator from '../services/contact-form-validator';
 
 @Component({
   selector: 'app-contact',
@@ -12,18 +13,67 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
-  private formIsValid: boolean = true;
+  @ViewChild('name') nameInput: ElementRef;
+  @ViewChild('email') emailInput: ElementRef;
+  @ViewChild('subject') subjectInput: ElementRef;
+  @ViewChild('phoneNumber') phoneNumberInput: ElementRef;
+  @ViewChild('messageBody') messageBodyInput: ElementRef;
+
+  private formIsValid: boolean = null;
+
+  private validator: ContactFormValidator = new ContactFormValidator()
+
+  private name: string = ''
+  private email: string = ''
+  private subject: string = ''
+  private phoneNumber: string = ''
+  private messageBody: string = ''
+
+  private showModal: boolean = true
+  private modalTimeoutId: number = null
+
+
+  private shakeElement(element: ElementRef<any>) {
+    element.nativeElement.classList.add('shake-animation')
+    setTimeout(
+      () => {
+        element.nativeElement.classList.remove('shake-animation')
+        element.nativeElement.focus()
+      }, 600
+    )
+  }
+
+
+  public updateFormValue(e, property) {
+    this[property] = e.target.value
+  }
 
   public validateAndSubmit(e) {
     e.preventDefault();
 
-    if (this.formIsValid) {
-      e.target.submit();
-    } else {
-      alert('form invalido')
-    }
-    
-    
+    this.validator.setFields(this.name, this.email, this.phoneNumber, this.subject, this.messageBody)
 
+    let error = this.validator.formHasErrors()
+
+    if (!error) {
+      this.shakeElement(this[error.toLowerCase() + 'Input'])
+    } else {
+      // e.target.submit();
+      this.showModal = true
+      this.modalTimeoutId = Number(
+      setTimeout(
+        () => {
+          this.showModal = false
+        }, 7000
+      ))
+    }
   }
+
+  public closeModal() {
+    if (this.modalTimeoutId) {
+      clearTimeout(this.modalTimeoutId)
+    }
+    this.showModal = false
+  }
+
 }

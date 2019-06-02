@@ -3,7 +3,9 @@
       <span>
           {{ data.technologyName }}
       </span>
-      <img src="/assets/images/skills/technologies/html.png" alt="technologyName" class="technology-logo" />
+      <div style="display: flex; justify-content: center; align-items: center;">
+          <i class="{{ data.faClassName }} technology-logo"></i>
+      </div>
   </div>
   <div class="progress-bar">
     <span>{{ data.skillLevel }}</span>
