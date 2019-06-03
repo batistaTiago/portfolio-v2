@@ -29,7 +29,7 @@ export class ContactComponent implements OnInit {
   private phoneNumber: string = ''
   private messageBody: string = ''
 
-  private showModal: boolean = true
+  private showModal: boolean = false
   private modalTimeoutId: number = null
 
 
@@ -55,7 +55,7 @@ export class ContactComponent implements OnInit {
 
     let error = this.validator.formHasErrors()
 
-    if (!error) {
+    if (error) {
       this.shakeElement(this[error.toLowerCase() + 'Input'])
     } else {
       // e.target.submit();
