@@ -25,10 +25,12 @@ app-main-header {
 }
 
 app-hero-section {
-    flex-basis: 80%;
+    // flex-basis: 80%;
     flex-grow: 1;
     display: flex;
     justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 app-main-footer {

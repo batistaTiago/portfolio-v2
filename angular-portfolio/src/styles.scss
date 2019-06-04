@@ -63,8 +63,8 @@ html, body {
 
 body {
     background: $hero-background-color;
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 body::before {
@@ -93,4 +93,26 @@ app-root {
 
 .opaque {
     opacity: 1;
+}
+
+@media (min-width: 768px) {
+    body {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
 }

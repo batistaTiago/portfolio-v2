@@ -1,23 +1,37 @@
 <header>
+    
     <div class="logo-root">
         <div class="bottom-rectangle"></div>
         <div class="top-rectangle"></div>
         <div class="logo-text">BT</div>
     </div>
-    <div class='navbar'>
-        <ul>
-            <li>
-                <a routerLink='/' class="{{ (router.url === '/') ? 'current-route' : '' }}">Main</a>
-            </li>
-            <li>
-                <a routerLink='skills' class="{{ (router.url === '/skills') ? 'current-route' : '' }}">Skills</a>
-            </li>
-            <li>
-                <a routerLink='projects' class="{{ (router.url === '/projects') ? 'current-route' : '' }}">Projetos</a>
-            </li>
-            <li>
-                <a routerLink='contact' class="{{ (router.url === '/contact') ? 'current-route' : '' }}">Contato</a>
-            </li>
-        </ul>
+    
+    
+    <div>
+        <label for="navbar-toggler" class="navbar-toggler-button">
+            <i class="fas fa-bars"></i>
+        </label>
     </div>
+    
+    <div class="navbar-container">
+        <input type="checkbox" id="navbar-toggler" />
+        <nav class='navbar'>
+            <ul>
+                <li>
+                    <a routerLink='/' class="{{ (router.url === '/') ? 'current-route' : '' }}">Main</a>
+                </li>
+                <li>
+                    <a routerLink='skills' class="{{ (router.url === '/skills') ? 'current-route' : '' }}">Skills</a>
+                </li>
+                <li>
+                    <a routerLink='projects' class="{{ (router.url === '/projects') ? 'current-route' : '' }}">Projetos</a>
+                </li>
+                <li>
+                    <a routerLink='contact' class="{{ (router.url === '/contact') ? 'current-route' : '' }}">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    
 </header>
