@@ -16,6 +16,7 @@ import { ProjectListComponent } from './project-list/project-list.component';
 import { ProjectItemComponent } from './project-list/project-item/project-item.component';
 import { ProgressBarComponent } from './skills/progress-bar/progress-bar.component';
 import { FilledComponent } from './skills/progress-bar/filled/filled.component';
+import { MainSpinnerComponent } from './main-spinner/main-spinner.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FilledComponent } from './skills/progress-bar/filled/filled.component';
     ContactComponent,
     ProjectItemComponent,
     ProgressBarComponent,
-    FilledComponent
+    FilledComponent,
+    MainSpinnerComponent
   ],
   imports: [
     BrowserModule,

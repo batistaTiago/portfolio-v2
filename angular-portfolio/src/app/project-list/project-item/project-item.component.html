@@ -1,5 +1,18 @@
 <li>
-  <h2 class='nome-projeto'><a [href]='projectData.deployUrl'>Pássaro Urbano</a></h2>
+  <div style="display: flex">
+    <div class='nome-projeto'>
+      <span>
+        Pássaro Urbano
+      </span>
+      <i class="far fa-question-circle"></i>
+      <div class="project-description-container">
+        <h3>Pássaro Urbano</h3>
+        <div class="project-description">{{ projectData. descricao }}</div>
+      </div>
+    </div>
+  </div>
+
+
 
   <div class='imagens-projeto'>
 
@@ -17,12 +30,13 @@
 
   </div>
 
-  <div class='descricao-projeto'>
+  <!-- <div class='descricao-projeto'>
     {{ projectData. descricao }}
-  </div>
+  </div> -->
 
-  <div class="link-projeto">
-    Disponível <a [href]='projectData.deployUrl'>aqui</a>.
+  <div class="links-projeto">
+    <a [href]='projectData.gitUrl' target="blank">Git</a>
+    <a [href]='projectData.deployUrl' target="blank">Live Version</a>
   </div>
 
 </li>

@@ -1,18 +1,22 @@
 <header>
-    <img class='logo' src='/assets/images/logo.png' alt='logo' />
+    <div class="logo-root">
+        <div class="bottom-rectangle"></div>
+        <div class="top-rectangle"></div>
+        <div class="logo-text">BT</div>
+    </div>
     <div class='navbar'>
         <ul>
             <li>
-                <a routerLink='/'>Main</a>
+                <a routerLink='/' class="{{ (router.url === '/') ? 'current-route' : '' }}">Main</a>
             </li>
             <li>
-                <a routerLink='skills'>Skills</a>
+                <a routerLink='skills' class="{{ (router.url === '/skills') ? 'current-route' : '' }}">Skills</a>
             </li>
             <li>
-                <a routerLink='projects'>Projetos</a>
+                <a routerLink='projects' class="{{ (router.url === '/projects') ? 'current-route' : '' }}">Projetos</a>
             </li>
             <li>
-                <a routerLink='contact'>Contato</a>
+                <a routerLink='contact' class="{{ (router.url === '/contact') ? 'current-route' : '' }}">Contato</a>
             </li>
         </ul>
     </div>

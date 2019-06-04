@@ -2,12 +2,56 @@
 
 .nome-projeto {
     margin: 15px auto;
-    font-size: 3.25em;
+    font-size: 2em;
     text-align: center;
-    a {
-        text-decoration: none;
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    span {
+        margin-right: 10px;
+    }
+    
+    i {
+        cursor: pointer;
+        color: $main-gray-color;
+    }
+    
+    .project-description-container {
+        position: absolute; 
+        left: 100%;
+        top: 50%; 
+
+        z-index: 99;
+
+        margin-left: 20px;
+        padding: 15px;
+        min-width: 400px;
+
+        background-color: #111;
+        box-shadow: 0px 0px 5px $main-color;
+        border: 2px solid $secondary-color;
+
+        color: $main-color;
+        transform: translateY(-50%) scaleX(0);
+        transform-origin: left;
+        transition: transform 0.25s ease-in-out;
+        
+        .project-description {
+            font-size: 16px;
+            line-height: 20px;
+            text-align: justify;
+        }
+    }
+    
+    i:hover + .project-description-container, .project-description-container:hover {
+        transform: translateY(-50%) scaleX(1);
     }
 }
+
+
 
 hr {
     background-color: $main-color;
@@ -23,10 +67,47 @@ hr {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 10px;
+    padding: 10px;    
     
-    border: 2px solid white;
-    // border-bottom: 2px solid white;
+    .featured-image-container {
+        position: relative;
+        align-self: stretch;
+        max-width: 90%;
+        flex-basis: 100px;
+        padding: 5%;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .featured-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            img {
+                position: absolute;
+                margin: auto;
+                width: 100%;
+                height: 100%;
+                transition: opacity 1s ease-in-out;
+                border-radius: 5%;
+                
+                border: 1px solid $main-color;
+                box-shadow: 0 0 5px $main-color;
+            }
+        }
+        
+        img:not(.opaque) {
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+    }
     
     .lista-imagens-projeto {
         align-self: stretch;
@@ -36,8 +117,7 @@ hr {
         justify-content: space-evenly;
         padding: 10px 0px;
         
-        border-top: 2px solid white;
-        border-bottom: 2px solid white;
+        border-top: 2px solid $main-color;
         
         li {
             
@@ -46,8 +126,8 @@ hr {
             justify-content: center;
             
             img {
-                width: 60px;
-                height: 60px;
+                width: 40px;
+                height: 40px;
                 cursor: pointer;
                 transition: box-shadow 0.35s ease-in-out, transform 0.15s ease-in-out;
                 border-radius: 50%;
@@ -68,48 +148,31 @@ hr {
     }
 }
 
-.featured-image-container {
-    position: relative;
-    width: 450px;
-    height: 225px;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    .featured-image {
-        position: absolute;
-        width: 90%;
-        height: 90%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        img {
-            margin: auto;
-            max-width: 100%;
-            max-height: 100%;
-            transition: opacity 1s ease-in-out;
-            border-radius: 5%;
-            
-            border: 1px solid $main-color;
-            box-shadow: 0 0 5px $main-color;
-        }
-    }
-    
-    img:not(.opaque) {
-        opacity: 0;
-        filter: alpha(opacity=0);
-    }
-}
-
 .descricao-projeto {
     margin-top: 15px;
     margin-bottom: 15px;
-    font-size: 1.25em;
+    font-size: 1em;
     text-align: justify;
 }
 
-.link-projeto {
-    text-align: right;
+.links-projeto {
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 10px 20px;
+    
+    a {
+        border: 2px solid $secondary-color;
+        background-color: $tertiary-color;
+        color: $main-color;
+        padding: 5px 20px;
+        text-decoration: none;
+        transition-property: transform, background-color;
+        transition: 0.15s ease-in-out;
+        box-shadow: 0px 0px 3px $secondary-color;
+    }
+    
+    a:hover {
+        transform: scale(1.05);
+    }
 }

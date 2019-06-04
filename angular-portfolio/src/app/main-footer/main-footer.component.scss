@@ -7,14 +7,15 @@ footer {
     align-items: center;
     padding: 5px;
 
-    // background-color: black;
-    // opacity: 0;
-    // animation-name: fadeIn;
-    // animation-duration: 0.5s;
-    // animation-delay: 1.5s;
-    // animation-timing-function: ease-in-out;
-    // animation-iteration-count: 1;
-    // animation-fill-mode: forwards;
+    opacity: 0;
+
+
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-delay: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
     
     .social-media-links {
         
@@ -26,7 +27,7 @@ footer {
             font-size: 3em;
             text-decoration: none;
             transition: color 0.15s ease-in-out;
-            color: $secondary-color;
+            color: $main-color;
         }
         
         a:first-child {
@@ -34,7 +35,7 @@ footer {
         }
         
         a:hover {
-            color: $main-color;
+            color: $secondary-color;
         }
     }
 }

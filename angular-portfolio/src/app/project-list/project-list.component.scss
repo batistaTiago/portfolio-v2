@@ -1,9 +1,12 @@
 @import '../global-stylesheets/variables.scss';
 @import '../global-stylesheets/animations.scss';
 
-#projetos {
-    // background-color: rgba(0, 0, 0, 0.3);
+
+hr {
+    width: 50%; 
+    margin: 25px auto;
 }
+
 
 #header-projetos {
     color: $main-color;
@@ -11,10 +14,12 @@
     
     h3 {
         font-size: 1.25em;
+        margin-top: 10px;
     }
     
     p {
         font-size: 1em;
+        margin-top: 5px;
     }
     
 }
@@ -30,16 +35,15 @@
 .projeto {
     border: 2px solid #ccc;
     box-shadow: 0px 0px 15px 1px #ccc;
-    border-top-left-radius: 10%;
-    border-top-right-radius: 10%;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    padding: 10px 35px;
-    margin: 10px 35px;
-    flex-basis: 40%;
-    flex-shrink: 1;
+    // border-top-left-radius: 10%;
+    // border-top-right-radius: 10%;
+    // border-bottom-left-radius: 0;
+    // border-bottom-right-radius: 0;
+    border-radius: 10%;
+    padding: 15px 25px;
+    margin: 10px auto;
     flex-wrap: wrap;
     display: flex;
     flex-direction: column;
-    background: radial-gradient(rgba(55, 55, 55, 0.05), rgba(200, 200, 200, 0.05));
+    background-color: $card-background-color;
 }

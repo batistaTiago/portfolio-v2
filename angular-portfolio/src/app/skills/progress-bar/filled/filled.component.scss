@@ -3,9 +3,9 @@
 
 .filled {
     position: relative;
-    height: 25px;
+    height: $progress-bar-height;
 
     transform: translateX(-100%);
-    animation: resetTransform 2s ease-in-out 1 forwards;
+    animation: resetTransform 1.5s ease-in-out 1 forwards;
 
 }

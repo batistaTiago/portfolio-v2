@@ -1,17 +1,27 @@
 @import './app/global-stylesheets/variables.scss';
 @import './app/global-stylesheets/animations.scss';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Philosopher&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
 
 * {
     margin: 0;
     padding: 0;
     color: $main-color;
-    font-family: 'Philosopher', sans-serif;
+    font-family: monospace;
+    // font-family: 'Open Sans', sans-serif;
+    // font-family: 'Philosopher', sans-serif;
+    // font-family: sans-serif;
 }
 
 h1 {
     font-size: 3em;
     text-shadow: 1px 1px 5px $secondary-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    // font-family: sans-serif;
 }
 
 .centered-flex-container {
@@ -53,6 +63,8 @@ html, body {
 
 body {
     background: $hero-background-color;
+    padding-left: 150px;
+    padding-right: 150px;
 }
 
 body::before {

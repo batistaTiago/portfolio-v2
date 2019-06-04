@@ -60,6 +60,9 @@ export class ContactComponent implements OnInit {
     } else {
       // e.target.submit();
       this.showModal = true
+
+      this.clearForm()
+
       this.modalTimeoutId = Number(
       setTimeout(
         () => {
@@ -76,4 +79,17 @@ export class ContactComponent implements OnInit {
     this.showModal = false
   }
 
+  private clearForm() {
+    this.nameInput.nativeElement.value = ''
+    this.emailInput.nativeElement.value = ''
+    this.subjectInput.nativeElement.value = ''
+    this.phoneNumberInput.nativeElement.value = ''
+    this.messageBodyInput.nativeElement.value = ''
+
+    this.name = ''
+    this.email = ''
+    this.subject = ''
+    this.phoneNumber = ''
+    this.messageBody = ''
+  }
 }

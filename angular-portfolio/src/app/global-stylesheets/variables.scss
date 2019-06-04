@@ -1,7 +1,29 @@
 $main-color: #ddd;
-$secondary-color: #aaa;
+$secondary-color: rgb(82, 138, 138);
+$tertiary-color: #2F2F2F;
+
+$main-gray-color: #aaa;
 
 $outer-gradient-color: #000;
 $inner-gradient-color: #333;
 
 $hero-background-color: radial-gradient($inner-gradient-color, $outer-gradient-color);
+
+$card-background-color: rgba(47, 79, 79, 0.2);
+
+$progress-bar-height: 35px;
+
+@font-face {
+    font-family: "Amelya";
+    src: url("/assets/fonts/Amelya.woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+  @font-face {
+    font-family: "Hilland";
+    src: url("/assets/fonts/Hilland.woff");
+    font-weight: normal;
+    font-style: normal;
+  }
