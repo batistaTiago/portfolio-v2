@@ -15,7 +15,7 @@ const routes: Routes = [];
 export class AppRoutingModule {
   private static routes: Routes = [
     { path: '', component: HeroSectionComponent },
-    { path: 'skills', component: SkillsComponent },
+    // { path: 'skills', component: SkillsComponent },
     { path: 'projects', component: ProjectListComponent },
     { path: 'contact', component: ContactComponent}
   ]

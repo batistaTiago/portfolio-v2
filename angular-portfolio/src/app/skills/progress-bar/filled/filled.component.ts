@@ -7,22 +7,22 @@ import { Component, Input, ElementRef, ViewChild, AfterViewInit } from '@angular
 })
 export class FilledComponent implements AfterViewInit {
   
-  constructor() { }
+  // constructor() { }
   
-  ngOnInit() {
-  }
+  // ngOnInit() {
+  // }
   
-  @ViewChild('filled') componentReference: ElementRef;
+  // @ViewChild('filled') componentReference: ElementRef;
   
   ngAfterViewInit() {
     
-      this.componentReference.nativeElement.style.width = `${this.filledWidth}%`
-      this.componentReference.nativeElement.style.backgroundColor = this.fillColor
+  //     this.componentReference.nativeElement.style.width = `${this.filledWidth}%`
+  //     this.componentReference.nativeElement.style.backgroundColor = this.fillColor
 
   }
 
   
-  @Input() filledWidth: number = 0;
-  @Input() fillColor: string = ''
+  // @Input() filledWidth: number = 0;
+  // @Input() fillColor: string = ''
   
 }

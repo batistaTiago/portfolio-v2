@@ -33,14 +33,10 @@ hr {
 
 .projeto {
     border: 2px solid #ccc;
-    box-shadow: 0px 0px 15px 1px #ccc;
-    // border-top-left-radius: 10%;
-    // border-top-right-radius: 10%;
-    // border-bottom-left-radius: 0;
-    // border-bottom-right-radius: 0;
+    box-shadow: 0px 0px 5px 1px #ccc;
     border-radius: 10%;
     padding: 15px 25px;
-    margin: 10px auto;
+    margin: 20px auto;
     flex-wrap: wrap;
     flex-basis: 315px;
     display: flex;

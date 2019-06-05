@@ -1,8 +1,8 @@
 @import './app/global-stylesheets/variables.scss';
 @import './app/global-stylesheets/animations.scss';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Philosopher&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Philosopher&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 
 
 * {
@@ -63,8 +63,6 @@ html, body {
 
 body {
     background: $hero-background-color;
-    padding-left: 0px;
-    padding-right: 0px;
     overflow-x: hidden;
 }
 
@@ -86,6 +84,8 @@ app-root {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .transparent {
@@ -97,23 +97,19 @@ app-root {
 }
 
 @media (min-width: 768px) {
-    body {
-        padding-left: 25px;
-        padding-right: 25px;
+    app-root {
+        width: 750px;
     }
-    
 }
 
 @media (min-width: 992px) {
-    body {
-        padding-left: 75px;
-        padding-right: 75px;
+    app-root {
+        width: 970px;
     }
 }
 
 @media (min-width: 1200px) {
-    body {
-        padding-left: 100px;
-        padding-right: 100px;
+    app-root {
+        width: 1170px;
     }
 }
