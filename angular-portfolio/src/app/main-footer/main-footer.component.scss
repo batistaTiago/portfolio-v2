@@ -14,7 +14,7 @@ footer {
     animation-name: fadeIn;
     animation-duration: 0.5s;
     animation-delay: 1.5s;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: $default-timing-function;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     
@@ -27,7 +27,7 @@ footer {
         a {
             font-size: 3em;
             text-decoration: none;
-            transition: color 0.15s ease-in-out;
+            transition: color $transition-fast $default-timing-function;
             color: $main-color;
         }
         

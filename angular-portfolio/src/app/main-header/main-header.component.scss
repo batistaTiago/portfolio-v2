@@ -9,16 +9,16 @@ header {
     flex-wrap: wrap;
     color: white;
     padding: 20px;
-    
-    // background-color: rgba(0, 0, 0, 0.2);
+
     background-color: transparent;
     opacity: 0;
-    transform: translateY(-100%);
+
+    // transform: translateY(-100%);
     
-    animation-name: fadeIn, resetTransform;
+    animation-name: fadeIn;
     animation-duration: 0.5s;
     animation-delay: 1.5s;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: $default-timing-function;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -81,19 +81,54 @@ header {
     border-style: solid;
     background-color: transparent;
     font-size: 1.5em;
-    padding: 5px 10px;
+    padding: 10px;
     border-radius: 5px;
     border-color: $secondary-color;
     
     cursor: pointer;
     
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    i {
-        color: $secondary-color;
+
+    div.menu-bar {
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        // position: relative;
+        
+        background: $secondary-color;
+        border-radius: 3px;
+        
+        transition-property: transform, opacity;
+        transition: $transition-fast $default-timing-function;
+        transform-origin: center right;
+    }
+
+    div.menu-bar:last-child {
         margin-bottom: 0;
+    }
+
+
+}
+
+.navbar-toggler-button.menu-open {
+
+    padding-right: 13px;
+    padding-left: 7px;
+
+    div.menu-bar:first-child {
+        transform: rotate(-45deg) translate(1px, -3px);
+    }
+
+    div.menu-bar:nth-child(2) {
+        transform: scaleX(0.2);
+        opacity: 0;
+    }
+
+    div.menu-bar:last-child {
+        transform: rotate(45deg) translate(1px, 3px);
     }
 }
 
@@ -107,45 +142,63 @@ header {
 }
 
 .navbar {
-    transform-origin: top;
-    transform: scaleY(0);
-    max-height: 0;
+    // transform-origin: top;
+    // transform: scaleY(0);
+    // max-height: 0;
+    display: none;
     
     box-shadow: 0px 0px 10px $main-color;
     border: 2px solid $main-color;
     
-    transition-property: transform, max-height;
-    transition: 0.15s ease-in-out;
+    // transition-property: transform, max-height;
+    // transition: $transition-fast $default-timing-function;
     
     ul {
-
+        
         display: flex;
         flex-direction: column;    
         list-style: none;
         justify-content: space-around;
-
+        
         li {
-            padding: 20px;
-            margin-left: auto;
-            margin-right: auto;
-
+            margin: 5px auto;
             a {
-                padding-left: 5px;
-                padding-right: 5px;
                 text-decoration: none;
+                padding: 20px;
                 font-size: 2em;
                 color: $main-color;
-                transition: 0.15s ease-in-out;
-                transition-property: color, text-shadow, box-shadow, background-color, text-decoration;
+                transition: $transition-fast $default-timing-function;
+                transition-property: color, text-shadow, box-shadow, background-color;
+                display: flex;
+                flex-direction: column;
+            }
+
+            a::after {
+                content: "";
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: $secondary-color;
+                height: 2px;
+                transition: transform $transition-fast $default-timing-function;
+                transform: scaleX(0);
+                border-radius: 2px;
             }
             
             a.current-route {
                 color: $secondary-color;
                 text-shadow: 0px 0px 5px $secondary-color;
-                box-shadow: 0px 0px 5px $secondary-color;
-                background-color: $card-background-color;
                 cursor: default;
+            }    
+            
+            a.current-route::after, a:hover::after {
+                transform: scaleY(1);
             }
+
+            a:active, a:focus, a:visited {
+                background-color: transparent;
+            }
+            
         }
         
         li:hover {
@@ -153,31 +206,24 @@ header {
                 color: $secondary-color;
             }
         }
-        
-        
+
     }
 }
 
 #navbar-toggler:checked + .navbar {
     display: block;
-    transform: scaleY(1);
-    max-height: 400px;
 }
 
 @media (min-width: 768px) {
+
     .navbar {
         box-shadow: 0px 0px 10px $main-color;
         ul {
             flex-direction: row;
             padding: 5px;
             li {
-                padding: 20px;
                 margin-left: unset;
                 margin-right: unset;
-                a {
-                    padding-top: 15px;
-                    padding-bottom: 15px;
-                }
             }
         }
     }
@@ -185,6 +231,12 @@ header {
 
 @media (min-width: 992px) {
     
+    #navbar-toggler:checked + .navbar {
+        transform: scaleY(1);
+        max-height: 400px;
+    }
+
+
     .navbar-toggler-button {
         display: none;
     }
@@ -197,21 +249,31 @@ header {
     
     .navbar {
         display: block;
-        transform: scaleY(1);
-        max-height: 400px;
-
         box-shadow: none;
         border: none;
         
         ul {
-            display: flex;
             flex-direction: row;
             li {
                 margin-left: 10px;
                 a {
-                    padding-left: 10px;
-                    padding-right: 10px;
+                    padding: 5px 10px;
                 }
+
+                a.current-route {
+                    box-shadow: 0px 0px 5px $secondary-color;
+                    background-color: $card-background-color;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar {
+        ul {
+            li {
+                margin-left: 25px;
             }
         }
     }

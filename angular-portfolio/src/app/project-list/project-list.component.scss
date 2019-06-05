@@ -7,7 +7,6 @@ hr {
     margin: 25px auto;
 }
 
-
 #header-projetos {
     color: $main-color;
     text-align: center;
@@ -43,6 +42,7 @@ hr {
     padding: 15px 25px;
     margin: 10px auto;
     flex-wrap: wrap;
+    flex-basis: 315px;
     display: flex;
     flex-direction: column;
     background-color: $card-background-color;

@@ -7,27 +7,35 @@
     </div>
     
     
-    <div>
-        <label for="navbar-toggler" class="navbar-toggler-button">
-            <i class="fas fa-bars"></i>
-        </label>
-    </div>
+    <label for="navbar-toggler" class="navbar-toggler-button {{ menuOpen ? 'menu-open' : '' }}" (click)="menuTogglerButtonClick()">
+        <div class="menu-bar"></div>
+        <div class="menu-bar"></div>
+        <div class="menu-bar"></div>
+    </label>
     
     <div class="navbar-container">
         <input type="checkbox" id="navbar-toggler" />
         <nav class='navbar'>
             <ul>
                 <li>
-                    <a routerLink='/' class="{{ (router.url === '/') ? 'current-route' : '' }}">Main</a>
+                    <a routerLink='/' class="{{ (router.url === '/') ? 'current-route' : '' }}">
+                        Main
+                    </a>
                 </li>
                 <li>
-                    <a routerLink='skills' class="{{ (router.url === '/skills') ? 'current-route' : '' }}">Skills</a>
+                    <a routerLink='skills' class="{{ (router.url === '/skills') ? 'current-route' : '' }}">
+                        Skills
+                    </a>
                 </li>
                 <li>
-                    <a routerLink='projects' class="{{ (router.url === '/projects') ? 'current-route' : '' }}">Projetos</a>
+                    <a routerLink='projects' class="{{ (router.url === '/projects') ? 'current-route' : '' }}">
+                        Projects
+                    </a>
                 </li>
                 <li>
-                    <a routerLink='contact' class="{{ (router.url === '/contact') ? 'current-route' : '' }}">Contato</a>
+                    <a routerLink='contact' class="{{ (router.url === '/contact') ? 'current-route' : '' }}">
+                        Contato
+                    </a>
                 </li>
             </ul>
         </nav>

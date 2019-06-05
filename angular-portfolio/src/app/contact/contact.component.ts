@@ -32,6 +32,10 @@ export class ContactComponent implements OnInit {
   private showModal: boolean = false
   private modalTimeoutId: number = null
 
+  public modalIsShowing(): boolean {
+    return this.showModal
+  }
+
 
   private shakeElement(element: ElementRef<any>) {
     element.nativeElement.classList.add('shake-animation')

@@ -2,10 +2,13 @@
 @import '../../../global-stylesheets/animations.scss';
 
 .filled {
+
+    $default-timing-function: ease-in-out;
+
     position: relative;
     height: $progress-bar-height;
 
     transform: translateX(-100%);
-    animation: resetTransform 1.5s ease-in-out 1 forwards;
+    animation: resetTransform 1.5s $default-timing-function 1 forwards;
 
 }

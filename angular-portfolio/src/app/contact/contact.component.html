@@ -19,8 +19,8 @@
     
   </form>
   
-  <div class="{{ showModal ? 'modal-container' : '' }}" (click)="closeModal()">
-    <div class="modal {{ showModal ? 'd-unset' : 'd-none' }}" style="color: green">
+  <div class="{{ modalIsShowing() ? 'modal-container' : '' }}" (click)="closeModal()">
+    <div class="modal {{ modalIsShowing() ? 'd-unset' : 'd-none' }}" style="color: green">
       <div class="modal-header">
         <h2>Sucesso</h2>
 

@@ -17,15 +17,14 @@ app-main-header {
 }
 
 .router-outlet-container {
-    height: 100%; 
+    // height: 0px;
     display: flex; 
     flex-direction: column; 
     justify-content: center;
-    flex-grow: 1
+    flex-grow: 0;
 }
 
-app-hero-section {
-    // flex-basis: 80%;
+.router-outlet-container > * {
     flex-grow: 1;
     display: flex;
     justify-content: center;

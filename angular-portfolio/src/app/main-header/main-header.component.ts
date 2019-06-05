@@ -13,4 +13,8 @@ export class MainHeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  public menuOpen: boolean = false
+  public menuTogglerButtonClick() {
+    this.menuOpen = !this.menuOpen;
+  }
 }
