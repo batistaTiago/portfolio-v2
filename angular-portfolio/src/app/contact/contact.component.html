@@ -18,20 +18,10 @@
     <button type="submit">ENVIAR MENSAGEM<i class="fas fa-paper-plane"></i></button>
     
   </form>
-  
-  <div class="{{ modalIsShowing() ? 'modal-container' : '' }}" (click)="closeModal()">
-    <div class="modal {{ modalIsShowing() ? 'd-unset' : 'd-none' }}" style="color: green">
-      <div class="modal-header">
-        <h2>Sucesso</h2>
 
-      </div>
-      <div class="modal-body">
-        Sua mensagem foi enviada com sucesso. A resposta será enviada para o email fornecido.
-      </div>
-      <div class="modal-footer">
-          <button (click)="closeModal()">Fechar</button>
-      </div>
-    </div>
+
+  <div *ngIf="modalIsShowing()">
+    <app-modal [modalData]="modalData"></app-modal>
   </div>
   
 </div>

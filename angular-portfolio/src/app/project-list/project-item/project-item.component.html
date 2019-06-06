@@ -12,11 +12,9 @@
     </div>
   </div>
 
-
-
   <div class='imagens-projeto'>
 
-    <div class='featured-image-container'>
+    <div class='featured-image-container' (click)="featuredImageClicked($event)">
       <div class="featured-image" *ngFor='let image of projectData.imagens; let i = index'>
         <img [src]='image' class="{{ i === selectedImageIndex ? 'opaque' : '' }}" />
       </div>
@@ -30,13 +28,13 @@
 
   </div>
 
-  <!-- <div class='descricao-projeto'>
-    {{ projectData. descricao }}
-  </div> -->
-
   <div class="links-projeto">
     <a [href]='projectData.gitUrl' target="blank">Git</a>
     <a [href]='projectData.deployUrl' target="blank">Live Version</a>
+  </div>
+
+  <div *ngIf="showModal">
+    <app-modal [modalData]="modalData" (closeModalEvent)="dismissModal()"></app-modal>
   </div>
 
 </li>

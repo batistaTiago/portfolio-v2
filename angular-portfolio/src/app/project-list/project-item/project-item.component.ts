@@ -20,4 +20,21 @@ export class ProjectItemComponent implements OnInit {
 
   @Input() projectData: any = null;
 
+  public featuredImageClicked() {
+    this.showModal = true
+  }
+
+  public dismissModal() {
+    this.showModal = false
+  }
+
+  private showModal: boolean = false
+
+
+  public modalData: object = {
+    "imageIndex": this.selectedImageIndex,
+    "titulo": "preview",
+    "corpo": "<div style='color:white'> haiuhuaheua hjueahg uhg</div>"
+  }
+
 }

@@ -36,6 +36,10 @@ export class ContactComponent implements OnInit {
     return this.showModal
   }
 
+  public modalData = {
+    "titulo": "Sucesso",
+    "corpo": "Sua mensagem foi enviada com sucesso. A resposta será enviada para o email fornecido."
+  }
 
   private shakeElement(element: ElementRef<any>) {
     element.nativeElement.classList.add('shake-animation')

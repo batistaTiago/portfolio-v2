@@ -1,0 +1,13 @@
+<div class="modal-container" (click)="closeModal()" [@modal-container-fade-animations]="modalContainerState" (@modal-container-fade-animations.done)="dismissModal($event)">
+  <div class="modal" style="color: green" (click)="stopPropagation($event)">
+    <div class="modal-header">
+      <h2>{{ modalData.titulo }}</h2>
+    </div>
+    <div class="modal-body">
+      {{ modalData.corpo }}
+    </div>
+    <div class="modal-footer">
+      <button (click)="closeModal()">Fechar</button>
+    </div>
+  </div>
+</div>

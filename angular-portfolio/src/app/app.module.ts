@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
@@ -20,6 +21,7 @@ import { MainSpinnerComponent } from './main-spinner/main-spinner.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProgressBarComponent } from './skills/progress-bar/progress-bar.component';
 import { FilledComponent } from './skills/progress-bar/filled/filled.component';
+import { ModalComponent } from './modal/modal.component';
 
 
 @NgModule({
@@ -34,9 +36,11 @@ import { FilledComponent } from './skills/progress-bar/filled/filled.component';
     SkillsComponent,
     ProgressBarComponent,
     FilledComponent,
-    MainSpinnerComponent
+    MainSpinnerComponent,
+    ModalComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     RouterModule.forRoot(AppRoutingModule.AppRoutes())
   ],
