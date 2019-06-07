@@ -1,5 +1,5 @@
 <section>
-  <button class="bt-button" (click)="toggleMenu()">
+  <button class="bt-button {{ showMenu ? 'toggled' : '' }}" (click)="toggleMenu()">
     <span>Projetos menores</span>
     <i class="fa fa-caret-down"></i>
   </button>
