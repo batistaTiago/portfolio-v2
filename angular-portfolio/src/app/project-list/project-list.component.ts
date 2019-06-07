@@ -10,7 +10,7 @@ export class ProjectListComponent implements AfterViewInit {
   constructor() { }
 
   ngAfterViewInit() {
-    // const serverResponseDelay = Math.floor(Math.random() * 3500 + 500)
+    // const serverResponseDelay = Math.floor(Math.random() * 3500 + 1500)
 
     const serverResponseDelay = 0;
 

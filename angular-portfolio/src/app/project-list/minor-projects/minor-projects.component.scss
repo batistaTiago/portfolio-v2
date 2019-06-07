@@ -35,6 +35,31 @@ h3 {
     position: relative;
 }
 
+/*
+button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: none !important;
+
+    // color: black;
+    font-size: 1.15em;
+    align-self: flex-start;
+    padding: 0;
+    background-color: transparent;
+
+    border: none;
+    border-bottom: 1px solid $main-color;
+    // background-color: $tertiary-color;
+    
+    i {
+        margin-left: 15px;
+        font-size: 1.15em;
+        transition: transform 0.5s ease-in-out;
+    }
+}
+*/
+
 button {
     color: black;
     font-size: 1.15em;
@@ -50,6 +75,13 @@ button {
     i {
         margin-left: 15px;
         font-size: 1.15em;
+        transition: transform 0.5s ease-in-out;
+    }
+}
+
+button.toggled {
+    i {
+        transform: rotate(-90deg);
     }
 }
 
@@ -115,7 +147,7 @@ button {
         i:hover {
             color: $secondary-color;
         }
-
+        
         i.github {
             font-size: 2rem;
             cursor: pointer;
@@ -127,7 +159,7 @@ button {
             cursor: pointer;
         }
         
-
+        
         
         .titulo-projeto, i {
             transition: color 0.2s ease-in-out;
@@ -141,23 +173,5 @@ button {
     li:hover {
         background-color: #ffffff10;
         color: $tertiary-color;
-        
-        // .titulo-projeto {
-        //     color: $main-color;
-        // }
     }
-    
-    
-    // li:nth-child(odd) {
-        //     // background-color: $main-color;
-        //     background-color: darken($main-color, 15%);
-        //     color: $secondary-color;
-        // }
-        
-        // li:nth-child(even) {
-            //     // background-color: darken($main-color, 15%);
-            //     background-color: $secondary-color;
-            //     color: $main-color;
-            // }
-        }
-        
+}
