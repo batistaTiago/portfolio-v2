@@ -1,14 +1,22 @@
 <div class="modal-container" (click)="closeModal()" [@modal-container-fade-animations]="modalContainerState" (@modal-container-fade-animations.done)="dismissModal($event)">
   <div class="modal" style="color: green" (click)="stopPropagation($event)">
-    <div class="modal-header">
+    <div class="modal-header" *ngIf="modalData.titulo">
       <h2>{{ modalData.titulo }}</h2>
     </div>
     <div class="modal-body">
-      <ng-template>
-          {{ modalData.corpo }}
-      </ng-template>
-      
+      <div *ngIf="modalType == 'image'">
+        <div *ngIf='modalData.image; else modalError'>
+          <img [src]="modalData.image" style="max-width: 100%; position: relative;" />
+        </div>
+      </div>
+      <div *ngIf="modalType == 'text'">
+          {{ modalType }}
+      </div>
     </div>
+
+    <ng-template #modalError>
+      <h1 style="color: red">Erro na configuração do Modal</h1>
+    </ng-template>
     <div class="modal-footer">
       <button (click)="closeModal()">Fechar</button>
     </div>

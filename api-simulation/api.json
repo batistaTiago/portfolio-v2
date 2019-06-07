@@ -1,0 +1,62 @@
+{ 
+	"featured_projects": [
+		{
+			"id": 0,
+			"titulo": "Pássaro Urbano",
+			"techUsed": [
+				"HTML",
+				"CSS",
+				"TypeScript",
+				"Bootstrap",
+				"jQuery",
+				"Angular",
+				"Firebase"
+			],
+			"gitUrl": "https://github.com/batistatiago/passaro-urbano",
+			"imageUrls": [
+				"/assets/images/passaro-urbano/logo.png",
+				"/assets/images/passaro-urbano/passaro-urbano1.png",
+				"/assets/images/passaro-urbano/passaro-urbano2.png",
+				"/assets/images/passaro-urbano/passaro-urbano3.png"
+			],
+			"status": "Em desenvolvimento",
+			"percentageComplete": 60,
+			"description": "Web app baseado no Peixe Urbano. O app oferece a possibilidade de criar cadastro (consumidor / anunciante), publicar, editar e deletar ofertas (caso o usuário seja um anunciante) e realizar compras. Além disso, o app também é integrado a uma API de CEPs, fazendo a busca de endereço automaticamente utilizando abordagem AJAX. ",
+			"deployUrl": "http://batista-tiago-ekyidag.s3-website-sa-east-1.amazonaws.com"
+		}
+	],
+	"minor_projects": [
+		{
+			"id": 1,
+			"titulo": "Spotify Clone",
+			"techUsed": [
+				"HTML",
+				"CSS",
+				"Bootstrap",
+				"jQuery"
+			],
+			"gitUrl": "",
+			"imageUrls": [
+				"",
+				"",
+				"",
+				""
+			]
+		},
+				{
+			"id": 1,
+			"titulo": "Mountain Travel",
+			"techUsed": [
+				"HTML",
+				"CSS"
+			],
+			"gitUrl": "",
+			"imageUrls": [
+				"",
+				"",
+				"",
+				""
+			]
+		}
+	]
+}

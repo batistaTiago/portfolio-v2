@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
-import ContactFormValidator from '../services/contact-form-validator';
+import { ContactFormValidator } from '../services/contact-form-validator';
 
 @Component({
   selector: 'app-contact',

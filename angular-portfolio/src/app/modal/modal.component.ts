@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, AfterViewInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
@@ -51,15 +51,19 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   ]
 
 })
-export class ModalComponent {
+export class ModalComponent implements AfterViewInit {
 
   constructor() { }
 
+  ngAfterViewInit() { }
+
+
   @Input() modalData: any
+  @Input() modalType: string = null
+
   @Output() closeModalEvent = new EventEmitter();
 
   public modalContainerState: string = 'criado'
-  // public modalState: string = 'criado'
 
   public closeModal() {
     this.modalContainerState = 'removido'
@@ -67,7 +71,6 @@ export class ModalComponent {
 
   public dismissModal(event) {
     if (event.toState === 'removido') {
-      console.log('emitindo event de deletar modal')
       this.closeModalEvent.emit()
     }
   }

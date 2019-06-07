@@ -19,10 +19,13 @@ import { MainSpinnerComponent } from './main-spinner/main-spinner.component';
 
 
 import { SkillsComponent } from './skills/skills.component';
-import { ProgressBarComponent } from './skills/progress-bar/progress-bar.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { FilledComponent } from './skills/progress-bar/filled/filled.component';
 import { ModalComponent } from './modal/modal.component';
 import { MinorProjectsComponent } from './project-list/minor-projects/minor-projects.component';
+import { ProjectDescriptionComponent } from './project-list/project-item/project-description/project-description.component';
+import { ProjectService } from './services/projects.service';
+import { MinorProjectComponent } from './project-list/minor-projects/minor-project/minor-project.component';
 
 
 @NgModule({
@@ -39,14 +42,16 @@ import { MinorProjectsComponent } from './project-list/minor-projects/minor-proj
     FilledComponent,
     MainSpinnerComponent,
     ModalComponent,
-    MinorProjectsComponent
+    MinorProjectsComponent,
+    ProjectDescriptionComponent,
+    MinorProjectComponent
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
     RouterModule.forRoot(AppRoutingModule.AppRoutes())
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

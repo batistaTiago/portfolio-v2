@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { FeaturedProject } from '../../shared/models/featured-project.model';
 
 @Component({
   selector: 'app-project-item',
@@ -13,28 +14,16 @@ export class ProjectItemComponent implements OnInit {
   }
 
   public selectedImageIndex: number = 0;
+  @Output() imageClickedEvent: EventEmitter<string> = new EventEmitter();
 
   public imageClicked(i: number) {
     this.selectedImageIndex = i;
   }
 
-  @Input() projectData: any = null;
-
-  public featuredImageClicked(event: Event) {
-    // this.showModal = true
+  public featuredImageClicked() {
+    this.imageClickedEvent.emit(this.projectData.imageUrls[this.selectedImageIndex])
   }
 
-  public dismissModal() {
-    this.showModal = false
-  }
-
-  public showModal: boolean = false
-
-
-  public modalData = {
-    "imageIndex": this.selectedImageIndex,
-    "titulo": "preview",
-    "corpo": `<div>haiuhuaheua hjueahg uhg</div>`
-  }
+  @Input() projectData: FeaturedProject = null;
 
 }

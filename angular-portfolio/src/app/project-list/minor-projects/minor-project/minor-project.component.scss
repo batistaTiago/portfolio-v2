@@ -1,0 +1,40 @@
+@import '../../../global-stylesheets/variables.scss';
+
+.titulo-projeto {
+    color: $secondary-color;
+    font-size: 1.3em;
+    font-weight: 900;
+    text-shadow: 0px 0px 5px $secondary-color;
+}
+
+.techs-usadas {
+    color: $main-color;
+    font-size: 1.15em;
+    font-weight: 700;
+}
+
+.icones-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    // background: red;
+}
+
+i:hover {
+    color: $secondary-color;
+}
+
+i.github {
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+i.camera {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.titulo-projeto, i {
+    transition: color 0.2s ease-in-out;
+}

@@ -1,0 +1,52 @@
+@import '../global-stylesheets/variables.scss';
+
+$progress-bar-background-color: $main-color;
+
+.progress-bar {
+    position: relative;
+    background-color: $progress-bar-background-color;
+    
+    border: 2px solid $main-gray-color;
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 30px;
+    span {
+        position: absolute;
+        align-self: center;
+        color: $tertiary-color;
+        font-size: 22px;
+        font-weight: 900;
+    }
+}
+
+.progress-bar-filled {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    border-radius: 2px;
+    transform-origin: center left;
+    transition: transform 0.2s ease-in-out;
+    background: linear-gradient(to right, darken($secondary-color, 30%), lighten($secondary-color, 15%));
+    
+}
+
+.progress-bar-unfilled {
+    background-color: $progress-bar-background-color;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    transform-origin: center right;
+    // transform: translateX(50%);
+}

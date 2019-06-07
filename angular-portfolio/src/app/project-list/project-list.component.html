@@ -7,15 +7,19 @@
       menos que explicitado o contrário).</p>
   </div>
   <hr />
-  <div *ngIf="projects && projects.length; else loading">
+  <div *ngIf="featuredProjects && featuredProjects.length; else loading">
     <ol class="lista-projetos">
-      <app-project-item *ngFor="let project of projects" class="projeto" [projectData]='project'>
+      <app-project-item 
+        *ngFor="let featuredProject of featuredProjects" 
+        class="projeto" 
+        [projectData]='featuredProject'
+        (imageClickedEvent)="showModal($event)">
       </app-project-item>
     </ol>
 
     <hr>
 
-    <app-minor-projects></app-minor-projects>
+    <app-minor-projects [projects]="minorProjects"></app-minor-projects>
   </div>
 
   <ng-template #loading>
@@ -23,4 +27,8 @@
       <app-main-spinner>
         </app-main-spinner>
   </ng-template>
+
+  <div *ngIf="modalIsShowing">
+      <app-modal [modalData]="modalData" modalType="image" (closeModalEvent)="dismissModal()"></app-modal>
+    </div>
 </section>

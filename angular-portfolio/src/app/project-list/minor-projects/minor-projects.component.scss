@@ -15,50 +15,31 @@ h3 {
     text-align: center;
 }
 
-.down-scaled {
-    transform: scaleY(0);
-    height: 0px;
-}
 
-.minor-projects-list-container:not(.down-scaled) {
-    height: 400px;
-}
+// button {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     outline: none !important;
 
-.minor-projects-list-container {
-    transition-property: all;
-    transform-origin: top;
-    transition: 0.5s ease-in-out;
+//     // color: black;
+//     font-size: 1.15em;
+//     align-self: flex-start;
+//     padding: 0;
+//     background-color: transparent;
+//     text-transform: uppercase;
+
+//     border: none;
+//     border-bottom: 1px solid $main-color;
+//     // background-color: $tertiary-color;
     
-    overflow-y: scroll;
-    // background: green;
-    
-    position: relative;
-}
+//     i {
+//         margin-left: 15px;
+//         font-size: 1.15em;
+//         transition: transform 0.5s ease-in-out;
+//     }
+// }
 
-/*
-button {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    outline: none !important;
-
-    // color: black;
-    font-size: 1.15em;
-    align-self: flex-start;
-    padding: 0;
-    background-color: transparent;
-
-    border: none;
-    border-bottom: 1px solid $main-color;
-    // background-color: $tertiary-color;
-    
-    i {
-        margin-left: 15px;
-        font-size: 1.15em;
-        transition: transform 0.5s ease-in-out;
-    }
-}
-*/
 
 button {
     color: black;
@@ -87,6 +68,20 @@ button.toggled {
 
 
 
+.minor-projects-list-container {
+    overflow-y: scroll;
+    position: relative;
+}
+
+.down-scaled {
+    transform: scaleY(0);
+    height: 0px;
+}
+
+.minor-projects-list-container:not(.down-scaled) {
+    height: 400px;
+}
+
 .minor-projects-list {
     position: absolute;
     top: 15px;
@@ -100,69 +95,23 @@ button.toggled {
     
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
-    
-    // background-color: rgba(255, 255, 255, 1);
-    // background-color: blue;
     
     li {
         padding: 15px 20px;
         
         align-self: stretch;
         
-        
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        
         border: none;
         border-bottom: 2px solid $separator-color;
         
-        // background-color: red;
         color: $secondary-color;
         
-        transition: background-color 0.2s ease-in-out, color 0.15s ease-in-out;;
-        
-        
-        .titulo-projeto {
-            color: $secondary-color;
-            font-size: 1.3em;
-            font-weight: 900;
-            text-shadow: 0px 0px 5px $secondary-color;
-        }
-        
-        .techs-usadas {
-            color: $main-color;
-            font-size: 1.15em;
-            font-weight: 700;
-        }
-        
-        .icones-item {
+        transition: background-color 0.2s ease-in-out, color 0.15s ease-in-out;
+
+        app-minor-project {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: space-evenly;
-            // background: red;
-        }
-        
-        i:hover {
-            color: $secondary-color;
-        }
-        
-        i.github {
-            font-size: 2rem;
-            cursor: pointer;
-            margin-right: 15px;
-        }
-        
-        i.camera {
-            font-size: 2rem;
-            cursor: pointer;
-        }
-        
-        
-        
-        .titulo-projeto, i {
-            transition: color 0.2s ease-in-out;
         }
     }
     
@@ -173,5 +122,14 @@ button.toggled {
     li:hover {
         background-color: #ffffff10;
         color: $tertiary-color;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .minor-projects-list-container {
+        transition-property: all;
+        transform-origin: top;
+        transition: 0.5s ease-in-out;
     }
 }

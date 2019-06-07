@@ -1,6 +1,6 @@
 import FormErrors from "../shared/form-validation-errors";
 
-export default class ContactFormValidator {
+export class ContactFormValidator {
     constructor(
         private name: string = '',
         private email: string = '',

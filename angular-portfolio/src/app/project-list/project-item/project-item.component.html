@@ -5,58 +5,28 @@
         Pássaro Urbano
       </span>
       <i class="far fa-question-circle"></i>
-      
-      
-      <div class="project-description-container">
-        <h3>Pássaro Urbano</h3>
-        <p class="project-description">{{ projectData. descricao }}</p>
-        <h4>Tecnologias</h4>
-        <ul>
-          <li class="html">
-            <!-- <i class="fab fa-html5"></i> -->
-            HTML
-          </li>
-          <li class="css">
-            <!-- <i class="fab fa-css3-alt"></i> -->
-            CSS
-          </li>
-          <li  class="typescript">
-            TypeScript
-          </li>
-          <li class="bootstrap">
-            Bootstrap
-          </li>
-          <li class="jquery">
-            jQuery
-          </li>
-          <li class="angular">
-            <!-- <i class="fab fa-angular"></i> -->
-            Angular
-          </li>
-          <li class="firebase">
-            Firebase
-          </li>
-        </ul>
-
-        <hr>
-
-        <div class="project-status">Status: Em desenvolvimento</div>
-      </div>
-      
-      
+      <app-project-description 
+        [data]="{ 
+          description: projectData.description, 
+          techUsed: projectData.techUsed,
+          status: projectData.status,
+          percentageComplete: projectData.percentageComplete
+        }">
+    
+      </app-project-description>
     </div>
   </div>
   
   <div class='imagens-projeto'>
     
-    <div class='featured-image-container' (click)="featuredImageClicked($event)">
-      <div class="featured-image" *ngFor='let image of projectData.imagens; let i = index'>
+    <div class='featured-image-container' (click)="featuredImageClicked()">
+      <div class="featured-image" *ngFor='let image of projectData.imageUrls; let i = index'>
         <img [src]='image' class="{{ i === selectedImageIndex ? 'opaque' : '' }}" />
       </div>
     </div>
     
     <ul class='lista-imagens-projeto'>
-      <li *ngFor='let image of projectData.imagens; let i = index'>
+      <li *ngFor='let image of projectData.imageUrls; let i = index'>
         <img [src]='image' [class]="i === selectedImageIndex ? 'current' : ''" (click)="imageClicked(i)" />
       </li>
     </ul>
@@ -66,10 +36,5 @@
   <div class="links-projeto">
     <a [href]='projectData.gitUrl' target="blank">Git</a>
     <a [href]='projectData.deployUrl' target="blank">Live Version</a>
-  </div>
-  
-  <div *ngIf="showModal">
-    <app-modal [modalData]="modalData" (closeModalEvent)="dismissModal()"></app-modal>
-  </div>
-  
+  </div>  
 </li>
