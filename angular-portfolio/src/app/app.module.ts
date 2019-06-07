@@ -22,6 +22,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { ProgressBarComponent } from './skills/progress-bar/progress-bar.component';
 import { FilledComponent } from './skills/progress-bar/filled/filled.component';
 import { ModalComponent } from './modal/modal.component';
+import { MinorProjectsComponent } from './project-list/minor-projects/minor-projects.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { ModalComponent } from './modal/modal.component';
     ProgressBarComponent,
     FilledComponent,
     MainSpinnerComponent,
-    ModalComponent
+    ModalComponent,
+    MinorProjectsComponent
   ],
   imports: [
     BrowserAnimationsModule,

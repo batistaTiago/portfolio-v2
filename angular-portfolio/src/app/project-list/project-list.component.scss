@@ -2,10 +2,12 @@
 @import '../global-stylesheets/animations.scss';
 
 
-hr {
-    width: 50%; 
-    margin: 25px auto;
+#projetos {
+    hr {
+        margin: 25px auto;
+    }
 }
+
 
 #header-projetos {
     color: $main-color;
