@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router'
 
 @Component({
@@ -13,8 +13,26 @@ export class MainHeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  @ViewChild('logoRoot') logo: ElementRef
+
   public menuOpen: boolean = false
   public menuTogglerButtonClick() {
     this.menuOpen = !this.menuOpen;
+  }
+
+  public logoClick(event) {
+    this.logo.nativeElement.classList.add('animated')
+  }
+
+  public removeAnimatedClass(event: AnimationEvent) {
+    if (event.animationName === 'logoTopAnimation') {
+      setTimeout(
+        () => {
+          this.logo.nativeElement.classList.remove('animated')
+        }, 
+        200
+      )
+      
+    }
   }
 }

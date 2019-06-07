@@ -29,7 +29,7 @@ export class ContactComponent implements OnInit {
   private phoneNumber: string = ''
   private messageBody: string = ''
 
-  private showModal: boolean = false
+  private showModal: boolean = true
   private modalTimeoutId: number = null
 
   public modalIsShowing(): boolean {
@@ -69,14 +69,14 @@ export class ContactComponent implements OnInit {
       // e.target.submit();
       this.showModal = true
 
-      this.clearForm()
+      // this.clearForm()
 
-      this.modalTimeoutId = Number(
-      setTimeout(
-        () => {
-          this.showModal = false
-        }, 7000
-      ))
+      // this.modalTimeoutId = Number(
+      // setTimeout(
+      //   () => {
+      //     this.showModal = false
+      //   }, 7000
+      // ))
     }
   }
 

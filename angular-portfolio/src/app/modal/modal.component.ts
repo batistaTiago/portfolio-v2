@@ -55,7 +55,7 @@ export class ModalComponent {
 
   constructor() { }
 
-  @Input() modalData: object
+  @Input() modalData: any
   @Output() closeModalEvent = new EventEmitter();
 
   public modalContainerState: string = 'criado'

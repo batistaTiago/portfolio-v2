@@ -16,17 +16,18 @@ $progress-bar-height: 35px;
 $default-timing-function: cubic-bezier(0.77, 0.2, 0.05, .5);
 $transition-fast: 0.25s;
 
+$header-logo-animation-params: 3s cubic-bezier(.52,-0.22,.33,1.28) 1 forwards;
+
 @font-face {
-    font-family: "Amelya";
-    src: url("/assets/fonts/Amelya.woff");
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: "Amelya";
+  src: url("/assets/fonts/Amelya.woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
-
-  @font-face {
-    font-family: "Hilland";
-    src: url("/assets/fonts/Hilland.woff");
-    font-weight: normal;
-    font-style: normal;
-  }
+@font-face {
+  font-family: "Hilland";
+  src: url("/assets/fonts/Hilland.woff");
+  font-weight: normal;
+  font-style: normal;
+}

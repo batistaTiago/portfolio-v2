@@ -1,10 +1,11 @@
 <header>
     
-    <div class="logo-root">
-        <div class="bottom-rectangle"></div>
-        <div class="top-rectangle"></div>
+    <a class="logo-root" (click)="logoClick($event)" #logoRoot (animationend)="removeAnimatedClass($event)">
+        <div class="logo-rectangle bottom"></div>
+        <div class="logo-rectangle top"></div>
+        <div class="shadow-animation"></div>
         <div class="logo-text">BT</div>
-    </div>
+    </a>
     
     
     <label for="navbar-toggler" class="navbar-toggler-button {{ menuOpen ? 'menu-open' : '' }}" (click)="menuTogglerButtonClick()">
