@@ -10,16 +10,13 @@ export class ContactComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   @ViewChild('name') nameInput: ElementRef;
   @ViewChild('email') emailInput: ElementRef;
   @ViewChild('subject') subjectInput: ElementRef;
   @ViewChild('phoneNumber') phoneNumberInput: ElementRef;
   @ViewChild('messageBody') messageBodyInput: ElementRef;
-
-  private formIsValid: boolean = null;
 
   private validator: ContactFormValidator = new ContactFormValidator()
 
@@ -29,7 +26,7 @@ export class ContactComponent implements OnInit {
   private phoneNumber: string = ''
   private messageBody: string = ''
 
-  private showModal: boolean = true
+  private showModal: boolean = false
   private modalTimeoutId: number = null
 
   public modalIsShowing(): boolean {
@@ -69,14 +66,14 @@ export class ContactComponent implements OnInit {
       // e.target.submit();
       this.showModal = true
 
-      // this.clearForm()
+      this.clearForm()
 
-      // this.modalTimeoutId = Number(
-      // setTimeout(
-      //   () => {
-      //     this.showModal = false
-      //   }, 7000
-      // ))
+      this.modalTimeoutId = Number(
+      setTimeout(
+        () => {
+          this.showModal = false
+        }, 7000
+      ))
     }
   }
 
@@ -84,6 +81,9 @@ export class ContactComponent implements OnInit {
     if (this.modalTimeoutId) {
       clearTimeout(this.modalTimeoutId)
     }
+
+    console.log('closing modal')
+    
     this.showModal = false
   }
 

@@ -67,6 +67,7 @@ export class ModalComponent {
 
   public dismissModal(event) {
     if (event.toState === 'removido') {
+      console.log('emitindo event de deletar modal')
       this.closeModalEvent.emit()
     }
   }

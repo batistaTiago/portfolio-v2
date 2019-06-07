@@ -47,6 +47,7 @@ header {
 @keyframes logoBottomAnimation {
     100% {
         transform: rotate(30deg);
+        box-shadow: none;
     }
 }
 
@@ -74,9 +75,6 @@ header {
     width: 60px;
     height: 60px;
     cursor: pointer;
-
-    // $header-logo-animation-params: 2.5s cubic-bezier(1,.6,.33,1.28) 2.5s 1 forwards;
-    // $header-logo-animation-params: 2.5s cubic-bezier(.52,-0.22,.33,1.28) 2.5s 1 forwards;
     
     animation: logoRootAnimation $header-logo-animation-params;
     animation-timing-function: ease-in-out;
@@ -121,15 +119,21 @@ header {
     }
 
     .shadow-animation {
-    
         content: '';
         position: absolute;
         width: 0px;
         height: 0px;
         top: 50%;
         left: 50%;
-        box-shadow: 0px 0px 25px 25px rgb(0, 0, 0);
         opacity: 0;
+    }
+
+    .shadow-animation.top {
+        box-shadow: 0px 0px 25px 25px rgb(0, 0, 0);
+    }
+
+    .shadow-animation.bottom {
+        box-shadow: 0px 0px 25px 5px white;
     }
 }
 
