@@ -36,12 +36,7 @@
 				"jQuery"
 			],
 			"gitUrl": "",
-			"imageUrls": [
-				"",
-				"",
-				"",
-				""
-			]
+			"imageUrls": [ "/assets/images/minor-projects/spotify-clone/1.png" ]
 		},
 				{
 			"id": 1,
@@ -52,10 +47,10 @@
 			],
 			"gitUrl": "",
 			"imageUrls": [
-				"",
-				"",
-				"",
-				""
+				"/assets/images/minor-projects/mountain-travel/1.png",
+				"/assets/images/minor-projects/mountain-travel/2.png",
+				"/assets/images/minor-projects/mountain-travel/3.png",
+				"/assets/images/minor-projects/mountain-travel/4.png"
 			]
 		}
 	]

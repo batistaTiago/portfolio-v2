@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Project } from '../../../shared/models/project.model';
 
 @Component({
@@ -14,5 +14,11 @@ export class MinorProjectComponent implements OnInit {
   }
 
   @Input() data: Project = null
+  @Output() minorProjectImageClickedEvent: EventEmitter<string> = new EventEmitter();
+
+  public showMinorProjectImage() {
+    console.log('emitindo evento original')
+    this.minorProjectImageClickedEvent.emit(this.data.imageUrls[0]);
+  }
 
 }

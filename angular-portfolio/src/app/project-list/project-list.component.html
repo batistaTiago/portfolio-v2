@@ -19,7 +19,7 @@
 
     <hr>
 
-    <app-minor-projects [projects]="minorProjects"></app-minor-projects>
+    <app-minor-projects [projects]="minorProjects" (minorProjectImageClickedEvent)="showModal($event)"></app-minor-projects>
   </div>
 
   <ng-template #loading>

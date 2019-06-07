@@ -7,7 +7,7 @@
   <div class="minor-projects-list-container {{ showMenu ? 'opaque' : 'transparent down-scaled' }}">
     <ul class="minor-projects-list">
       <li *ngFor="let project of projects">
-        <app-minor-project [data]="project"></app-minor-project>
+        <app-minor-project [data]="project" (minorProjectImageClickedEvent)="propagate($event)"></app-minor-project>
       </li>
     </ul>
   </div>

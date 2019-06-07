@@ -22,7 +22,7 @@ export class ProjectListComponent implements AfterViewInit {
         const projects = await this.projectService.getProjects()
         this.featuredProjects = projects[0]
         this.minorProjects = projects[1]
-      }, 1250
+      }, 10
       )
     }
   
@@ -40,6 +40,11 @@ export class ProjectListComponent implements AfterViewInit {
     public modalData: any = {
       "titulo": "",
       "corpo": ""
+    }
+
+    public test(data: any) {
+
+      console.log('works!', data)
     }
 
 }

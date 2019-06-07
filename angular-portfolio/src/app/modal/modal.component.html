@@ -10,7 +10,9 @@
         </div>
       </div>
       <div *ngIf="modalType == 'text'">
-          {{ modalType }}
+          <div *ngIf='modalData.corpo; else modalError'>
+            {{ modalData.corpo }}
+          </div>
       </div>
     </div>
 

@@ -26,12 +26,14 @@ export class ContactComponent implements OnInit {
   private phoneNumber: string = ''
   private messageBody: string = ''
 
-  private showModal: boolean = false
+  private showModal: boolean = true
   private modalTimeoutId: number = null
 
   public modalIsShowing(): boolean {
     return this.showModal
   }
+
+  public modalType: string = 'text'
 
   public modalData = {
     "titulo": "Sucesso",

@@ -21,7 +21,7 @@
 
 
   <div *ngIf="modalIsShowing()">
-    <app-modal [modalData]="modalData" (closeModalEvent)="closeModal()"></app-modal>
+    <app-modal [modalData]="modalData" modalType="text" (closeModalEvent)="closeModal()"></app-modal>
   </div>
   
 </div>
