@@ -34,7 +34,7 @@ export class ProjectItemComponent implements OnInit {
   public modalData = {
     "imageIndex": this.selectedImageIndex,
     "titulo": "preview",
-    "corpo": "<div style='color:white'> haiuhuaheua hjueahg uhg</div>"
+    "corpo": `<div>haiuhuaheua hjueahg uhg</div>`
   }
 
 }

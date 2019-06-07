@@ -4,7 +4,10 @@
       <h2>{{ modalData.titulo }}</h2>
     </div>
     <div class="modal-body">
-      {{ modalData.corpo }}
+      <ng-template>
+          {{ modalData.corpo }}
+      </ng-template>
+      
     </div>
     <div class="modal-footer">
       <button (click)="closeModal()">Fechar</button>

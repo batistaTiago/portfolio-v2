@@ -1,0 +1,163 @@
+@import '../../global-stylesheets/variables.scss';
+
+$separator-color: #aaa8;;
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+    padding: 15px;
+}
+
+h3 {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.down-scaled {
+    transform: scaleY(0);
+    height: 0px;
+}
+
+.minor-projects-list-container:not(.down-scaled) {
+    height: 400px;
+}
+
+.minor-projects-list-container {
+    transition-property: all;
+    transform-origin: top;
+    transition: 0.5s ease-in-out;
+    
+    overflow-y: scroll;
+    // background: green;
+    
+    position: relative;
+}
+
+button {
+    color: black;
+    font-size: 1.15em;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    
+    border: 2px solid $main-color;
+    background-color: $tertiary-color;
+    
+    i {
+        margin-left: 15px;
+        font-size: 1.15em;
+    }
+}
+
+
+
+.minor-projects-list {
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: 35px;
+    right: 35px;
+    
+    padding: 5px;
+    
+    list-style: none;
+    
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    
+    // background-color: rgba(255, 255, 255, 1);
+    // background-color: blue;
+    
+    li {
+        padding: 15px 20px;
+        
+        align-self: stretch;
+        
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        border: none;
+        border-bottom: 2px solid $separator-color;
+        
+        // background-color: red;
+        color: $secondary-color;
+        
+        transition: background-color 0.2s ease-in-out, color 0.15s ease-in-out;;
+        
+        
+        .titulo-projeto {
+            color: $secondary-color;
+            font-size: 1.3em;
+            font-weight: 900;
+            text-shadow: 0px 0px 5px $secondary-color;
+        }
+        
+        .techs-usadas {
+            color: $main-color;
+            font-size: 1.15em;
+            font-weight: 700;
+        }
+        
+        .icones-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            // background: red;
+        }
+        
+        i:hover {
+            color: $secondary-color;
+        }
+
+        i.github {
+            font-size: 2rem;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+        
+        i.camera {
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        
+
+        
+        .titulo-projeto, i {
+            transition: color 0.2s ease-in-out;
+        }
+    }
+    
+    li:first-child {
+        border-top: 2px solid $separator-color;
+    }
+    
+    li:hover {
+        background-color: #ffffff10;
+        color: $tertiary-color;
+        
+        // .titulo-projeto {
+        //     color: $main-color;
+        // }
+    }
+    
+    
+    // li:nth-child(odd) {
+        //     // background-color: $main-color;
+        //     background-color: darken($main-color, 15%);
+        //     color: $secondary-color;
+        // }
+        
+        // li:nth-child(even) {
+            //     // background-color: darken($main-color, 15%);
+            //     background-color: $secondary-color;
+            //     color: $main-color;
+            // }
+        }
+        

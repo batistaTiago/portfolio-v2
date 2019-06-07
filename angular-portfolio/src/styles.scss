@@ -106,6 +106,14 @@ app-root {
     opacity: 1;
 }
 
+.bt-button {
+    appearance: none;
+    outline: none;
+    padding: 10px 20px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 @media (min-width: 768px) {
     app-root {
         width: 750px;
