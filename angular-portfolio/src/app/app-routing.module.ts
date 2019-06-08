@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HeroSectionComponent } from './hero-section/hero-section.component';
-import { ProjectListComponent } from './project-list/project-list.component';
+import { HeroPage } from './hero-page/hero-page.component';
+import { ProjectsPage } from './projects-page/projects-page.component';
 import { SkillsComponent } from './skills/skills.component';
-import { ContactComponent } from './contact/contact.component';
+import { ContactPage } from './contact-page/contact-page.component';
 
 const routes: Routes = [];
 
@@ -14,10 +14,10 @@ const routes: Routes = [];
 })
 export class AppRoutingModule {
   private static routes: Routes = [
-    { path: '', component: HeroSectionComponent },
+    { path: '', component: HeroPage },
     // { path: 'skills', component: SkillsComponent },
-    { path: 'projects', component: ProjectListComponent },
-    { path: 'contact', component: ContactComponent}
+    { path: 'projects', component: ProjectsPage },
+    { path: 'contact', component: ContactPage}
   ]
 
   public static AppRoutes(): Routes {
