@@ -12,7 +12,7 @@
     z-index: 1;
 
     .modal {
-        position: absolute;
+        position: fixed;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
@@ -26,13 +26,12 @@
         flex-direction: column;
         justify-content: space-between;
 
-        width: 90vw;
-        height: 80vh;
-        padding: 15px;
+        padding: 5px;
         height: auto;
 
         .modal-header {
             
+            flex-basis: 5%;
             padding: 0px 25px;
 
             h2 {
@@ -45,12 +44,17 @@
             padding: 5px 25px;
             margin: 25px 0px;
             text-align: justify;
+            flex-basis: 90%;
             flex-grow: 2;
+            display: flex;
+            justify-content: center;
         }
 
         .modal-footer {
             display: flex;
             justify-content: flex-end;
+
+            flex-basis: 5%;
 
             button {
                 border-radius: 5%;
