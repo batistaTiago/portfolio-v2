@@ -37,7 +37,6 @@ $progress-bar-background-color: $main-color;
     transform-origin: center left;
     transition: transform 0.2s ease-in-out;
     background: linear-gradient(to right, darken($secondary-color, 30%), lighten($secondary-color, 15%));
-    
 }
 
 .progress-bar-unfilled {
@@ -48,5 +47,4 @@ $progress-bar-background-color: $main-color;
     bottom: 0;
     width: 100%;
     transform-origin: center right;
-    // transform: translateX(50%);
 }

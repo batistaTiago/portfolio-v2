@@ -4,7 +4,9 @@
       <span>
         Pássaro Urbano
       </span>
-      <i class="far fa-question-circle"></i>
+      <i 
+        class="far fa-question-circle {{ showDescription ? 'toggled' : '' }}"
+        (click)="toggleDescription()"></i>
       <app-project-description 
         [data]="{ 
           description: projectData.description, 

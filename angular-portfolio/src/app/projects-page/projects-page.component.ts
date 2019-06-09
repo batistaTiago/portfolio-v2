@@ -4,12 +4,12 @@ import { ProjectService } from '../services/projects.service';
 import { Project } from '../shared/models/project.model';
 
 @Component({
-  selector: 'app-project-list',
-  templateUrl: './project-list.component.html',
-  styleUrls: ['./project-list.component.scss'],
+  selector: 'app-projects-page',
+  templateUrl: './projects-page.component.html',
+  styleUrls: ['./projects-page.component.scss'],
   providers: [ ProjectService ]
 })
-export class ProjectListComponent implements AfterViewInit {
+export class ProjectsPage implements AfterViewInit {
   
   constructor(private projectService: ProjectService) { }
   
@@ -30,9 +30,9 @@ export class ProjectListComponent implements AfterViewInit {
       this.modalIsShowing = false
     }
 
-    public showModal(url: string) {
+    public showModal(urls: string[]) {
       this.modalIsShowing = true
-      this.modalData.image = url
+      this.modalData.images = urls
     }
   
     public modalIsShowing: boolean = false
@@ -41,10 +41,4 @@ export class ProjectListComponent implements AfterViewInit {
       "titulo": "",
       "corpo": ""
     }
-
-    public test(data: any) {
-
-      console.log('works!', data)
-    }
-
 }

@@ -2,11 +2,11 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { ContactFormValidator } from '../services/contact-form-validator';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  selector: 'app-contact-page',
+  templateUrl: './contact-page.component.html',
+  styleUrls: ['./contact-page.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactPage implements OnInit {
 
   constructor() { }
 
@@ -26,7 +26,7 @@ export class ContactComponent implements OnInit {
   private phoneNumber: string = ''
   private messageBody: string = ''
 
-  private showModal: boolean = true
+  private showModal: boolean = false
   private modalTimeoutId: number = null
 
   public modalIsShowing(): boolean {
@@ -83,8 +83,6 @@ export class ContactComponent implements OnInit {
     if (this.modalTimeoutId) {
       clearTimeout(this.modalTimeoutId)
     }
-
-    console.log('closing modal')
     
     this.showModal = false
   }

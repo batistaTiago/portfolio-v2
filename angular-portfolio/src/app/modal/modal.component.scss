@@ -26,7 +26,8 @@
         flex-direction: column;
         justify-content: space-between;
 
-        width: 80%;
+        width: 90vw;
+        height: 80vh;
         padding: 15px;
         height: auto;
 
@@ -76,8 +77,6 @@
     .modal-container {
         .modal {
             padding: 25px;
-            width: auto;
-
             .modal-body {
                 padding: 5px 25px;
                 margin: 25px 0px;

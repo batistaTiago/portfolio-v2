@@ -7,13 +7,13 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { MainHeaderComponent } from './main-header/main-header.component';
-import { HeroSectionComponent } from './hero-section/hero-section.component';
+import { HeroPage } from './hero-page/hero-page.component';
 import { MainFooterComponent } from './main-footer/main-footer.component';
 
-import { ContactComponent } from './contact/contact.component';
+import { ContactPage } from './contact-page/contact-page.component';
 
-import { ProjectListComponent } from './project-list/project-list.component';
-import { ProjectItemComponent } from './project-list/project-item/project-item.component';
+import { ProjectsPage } from './projects-page/projects-page.component';
+import { FeaturedProjectComponent } from './projects-page/featured-project/featured-project.component';
 
 import { MainSpinnerComponent } from './main-spinner/main-spinner.component';
 
@@ -22,21 +22,22 @@ import { SkillsComponent } from './skills/skills.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { FilledComponent } from './skills/progress-bar/filled/filled.component';
 import { ModalComponent } from './modal/modal.component';
-import { MinorProjectsComponent } from './project-list/minor-projects/minor-projects.component';
-import { ProjectDescriptionComponent } from './project-list/project-item/project-description/project-description.component';
+import { MinorProjectsComponent } from './projects-page/minor-projects/minor-projects.component';
+import { ProjectDescriptionComponent } from './projects-page/featured-project/project-description/project-description.component';
 import { ProjectService } from './services/projects.service';
-import { MinorProjectComponent } from './project-list/minor-projects/minor-project/minor-project.component';
+import { MinorProjectComponent } from './projects-page/minor-projects/minor-project/minor-project.component';
+import { LogoComponent } from './main-header/logo/logo.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MainHeaderComponent,
-    HeroSectionComponent,
+    HeroPage,
     MainFooterComponent,
-    ProjectListComponent,
-    ContactComponent,
-    ProjectItemComponent,
+    ProjectsPage,
+    ContactPage,
+    FeaturedProjectComponent,
     SkillsComponent,
     ProgressBarComponent,
     FilledComponent,
@@ -44,7 +45,8 @@ import { MinorProjectComponent } from './project-list/minor-projects/minor-proje
     ModalComponent,
     MinorProjectsComponent,
     ProjectDescriptionComponent,
-    MinorProjectComponent
+    MinorProjectComponent,
+    LogoComponent
   ],
   imports: [
     BrowserAnimationsModule,

@@ -20,7 +20,7 @@
         color: $main-gray-color;
     }
     
-    i:hover + app-project-description {
+    i.toggled + app-project-description {
         display: block;
     }
 }
@@ -192,7 +192,7 @@ hr {
         transition: transform 0.25s ease-in-out;
     }
     
-    i:hover + app-project-description, app-project-description:hover {
+    i.toggled + app-project-description, app-project-description:hover {
         transform: translateY(-50%) scaleX(1);
     }
 }

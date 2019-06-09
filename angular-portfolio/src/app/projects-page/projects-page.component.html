@@ -9,12 +9,12 @@
   <hr />
   <div *ngIf="featuredProjects && featuredProjects.length; else loading">
     <ol class="lista-projetos">
-      <app-project-item 
+      <app-featured-project 
         *ngFor="let featuredProject of featuredProjects" 
         class="projeto" 
         [projectData]='featuredProject'
         (imageClickedEvent)="showModal($event)">
-      </app-project-item>
+      </app-featured-project>
     </ol>
 
     <hr>
@@ -29,6 +29,6 @@
   </ng-template>
 
   <div *ngIf="modalIsShowing">
-      <app-modal [modalData]="modalData" modalType="image" (closeModalEvent)="dismissModal()"></app-modal>
+      <app-modal [modalData]="modalData" modalType="images" (closeModalEvent)="dismissModal()"></app-modal>
     </div>
 </section>
