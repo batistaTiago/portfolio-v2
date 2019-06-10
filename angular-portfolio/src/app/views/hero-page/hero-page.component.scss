@@ -1,0 +1,77 @@
+@import '../../global-stylesheets/variables.scss';
+@import '../../global-stylesheets/animations.scss';
+
+.hero {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-container {
+    padding: 10px;
+    background-color: $card-background-color;
+    border: 3px solid $secondary-color;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px 2px $secondary-color;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+
+
+    opacity: 0;
+    animation: fadeIn 1s $default-timing-function 1 forwards;
+}
+
+.hero-image-container {
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    max-width: 250px;
+    max-height: 250px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    
+    
+    animation: resetTransform 0.5s 0.5s $default-timing-function 1 forwards;
+    transform: scale(0) rotateZ(-720deg);
+}
+
+.hero-image {
+    align-self: center;
+    position: relative;
+    max-width: 100%;
+}
+
+.titles-container {
+    opacity: 0;
+    transform: scale(0);
+    
+    animation-name: fadeIn, resetTransform;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-timing-function: $default-timing-function;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    margin-top: 25px;
+}
+
+.hero-title {    
+    color: $main-color;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.hero-subtitle {
+    margin-top: 5px;
+    color: $main-color;
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    .hero-container {
+        padding: 35px;
+    }
+}

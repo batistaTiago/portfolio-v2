@@ -1,0 +1,42 @@
+@import '../../global-stylesheets/variables.scss';
+@import '../../global-stylesheets/animations.scss';
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+
+    margin-top: 10px;
+    opacity: 0;
+
+
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-delay: 1.5s;
+    animation-timing-function: $default-timing-function;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    
+    .social-media-links {
+        
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        
+        a {
+            font-size: 3em;
+            text-decoration: none;
+            transition: color $transition-fast $default-timing-function;
+            color: $main-color;
+        }
+        
+        a:first-child {
+            margin-right: 10px;
+        }
+        
+        a:hover {
+            color: $secondary-color;
+        }
+    }
+}

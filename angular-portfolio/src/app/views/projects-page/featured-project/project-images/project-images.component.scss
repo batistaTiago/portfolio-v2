@@ -1,0 +1,93 @@
+@import '../../../../global-stylesheets/variables.scss';
+
+.imagens-projeto {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;    
+
+    min-height: 300px;
+    min-width: auto;
+    flex-grow: 1;
+    
+    .featured-image-container {
+        position: relative;
+        align-self: stretch;
+        max-width: 90%;
+        padding: 5%;
+
+        flex-grow: 1;
+        
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+
+        cursor: zoom-in;
+
+        .featured-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            img {
+                position: absolute;
+                margin: auto;
+                width: 100%;
+                height: 100%;
+                transition: opacity 1s ease-in-out;
+                border-radius: 5%;
+                
+                border: 1px solid $main-color;
+                box-shadow: 0 0 5px $main-color;
+                
+            }
+        }
+        
+        img:not(.opaque) {
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+    }
+    
+    .lista-imagens-projeto {
+        align-self: stretch;
+        list-style: none;
+        display: flex;
+        margin-top: 15px;
+        justify-content: space-evenly;
+        padding: 10px 0px;
+        
+        border-top: 2px solid $main-color;
+        
+        li {
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            img {
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+                transition: box-shadow 0.35s ease-in-out, transform 0.15s ease-in-out;
+                border-radius: 50%;
+                border: 2px solid $main-color;
+            }
+            
+            img:hover {
+                transform: scale(1.025);
+            }
+            
+            img.current {
+                box-shadow: 0 0 5px $main-color;
+                transform: scale(1.05);
+                cursor: pointer;
+            }
+            
+        }
+    }
+}

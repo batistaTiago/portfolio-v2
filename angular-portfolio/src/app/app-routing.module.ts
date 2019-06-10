@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HeroPage } from './hero-page/hero-page.component';
-import { ProjectsPage } from './projects-page/projects-page.component';
-import { SkillsComponent } from './skills/skills.component';
-import { ContactPage } from './contact-page/contact-page.component';
+import { HeroPage } from './views/hero-page/hero-page.component';
+import { ProjectsPage } from './views/projects-page/projects-page.component';
+import { SkillsComponent } from './views/skills/skills.component';
+import { ContactPage } from './views/contact-page/contact-page.component';
 
 const routes: Routes = [];
 
