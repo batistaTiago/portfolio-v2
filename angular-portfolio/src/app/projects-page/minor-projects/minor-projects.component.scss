@@ -110,7 +110,8 @@ button.toggled {
 
         app-minor-project {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            justify-content: center;
             align-items: center;
         }
     }
@@ -131,5 +132,13 @@ button.toggled {
         transition-property: all;
         transform-origin: top;
         transition: 0.5s ease-in-out;
+    }
+
+    .minor-projects-list {
+        li {
+            app-minor-project {
+                justify-content: space-between;
+            }
+        }
     }
 }

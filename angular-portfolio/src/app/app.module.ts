@@ -27,6 +27,7 @@ import { ProjectDescriptionComponent } from './projects-page/featured-project/pr
 import { ProjectService } from './services/projects.service';
 import { MinorProjectComponent } from './projects-page/minor-projects/minor-project/minor-project.component';
 import { LogoComponent } from './main-header/logo/logo.component';
+import { ProjectImagesComponent } from './projects-page/featured-project/project-images/project-images.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { LogoComponent } from './main-header/logo/logo.component';
     MinorProjectsComponent,
     ProjectDescriptionComponent,
     MinorProjectComponent,
-    LogoComponent
+    LogoComponent,
+    ProjectImagesComponent
   ],
   imports: [
     BrowserAnimationsModule,

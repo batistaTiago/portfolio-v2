@@ -19,21 +19,7 @@
     </div>
   </div>
   
-  <div class='imagens-projeto'>
-    
-    <div class='featured-image-container' (click)="featuredImageClicked()">
-      <div class="featured-image" *ngFor='let image of projectData.imageUrls; let i = index'>
-        <img [src]='image' class="{{ i === selectedImageIndex ? 'opaque' : '' }}" />
-      </div>
-    </div>
-    
-    <ul class='lista-imagens-projeto'>
-      <li *ngFor='let image of projectData.imageUrls; let i = index'>
-        <img [src]='image' [class]="i === selectedImageIndex ? 'current' : ''" (click)="imageClicked(i)" />
-      </li>
-    </ul>
-    
-  </div>
+  <app-project-images [images]="projectData.imageUrls" (imageClickedEvent)="propagate($event)"></app-project-images>
   
   <div class="links-projeto">
     <a [href]='projectData.gitUrl' target="blank">Git</a>

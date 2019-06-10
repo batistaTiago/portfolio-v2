@@ -1,0 +1,14 @@
+<div class='imagens-projeto'>
+  <div class='featured-image-container' (click)="featuredImageClicked()">
+    <div class="featured-image" *ngFor='let image of images; let i = index'>
+      <img [src]='image' class="{{ i === selectedImageIndex ? 'opaque' : '' }}" />
+    </div>
+  </div>
+
+  <ul class='lista-imagens-projeto'>
+    <li *ngFor='let image of images; let i = index'>
+      <img [src]='image' [class]="i === selectedImageIndex ? 'current' : ''" (click)="imageClicked(i)" />
+    </li>
+  </ul>
+
+</div>

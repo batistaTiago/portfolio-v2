@@ -23,7 +23,6 @@ export class ProjectService {
             ],
             "gitUrl": "https://github.com/batistatiago/passaro-urbano",
             "imageUrls": [
-                "/assets/images/passaro-urbano/logo.png",
                 "/assets/images/passaro-urbano/passaro-urbano1.png",
                 "/assets/images/passaro-urbano/passaro-urbano2.png",
                 "/assets/images/passaro-urbano/passaro-urbano3.png"

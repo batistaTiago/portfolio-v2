@@ -13,17 +13,11 @@ export class FeaturedProjectComponent implements OnInit {
   ngOnInit() {
   }
 
-  public selectedImageIndex: number = 0;
   @Output() imageClickedEvent: EventEmitter<string[]> = new EventEmitter();
 
-  public imageClicked(i: number) {
-    this.selectedImageIndex = i;
+  public featuredImageClicked(imageUrls: string[]) {
+    this.imageClickedEvent.emit(imageUrls)
   }
-
-  public featuredImageClicked() {
-    this.imageClickedEvent.emit(this.projectData.imageUrls)
-  }
-
 
   public showDescription: boolean = false
   public toggleDescription() {
@@ -31,5 +25,10 @@ export class FeaturedProjectComponent implements OnInit {
   }
 
   @Input() projectData: FeaturedProject = null;
+
+  public propagate(eventData) {
+    console.log('pai recebeu, passando para avô', eventData)
+    this.imageClickedEvent.emit(eventData)
+  }
 
 }
