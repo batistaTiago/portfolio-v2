@@ -22,7 +22,7 @@ export class ProjectsPage implements AfterViewInit {
         const projects = await this.projectService.getProjects()
         this.featuredProjects = projects[0]
         this.minorProjects = projects[1]
-      }, 10
+      }, 30
       )
     }
   

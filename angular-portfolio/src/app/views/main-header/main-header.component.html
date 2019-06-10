@@ -1,18 +1,14 @@
 <header>
-    
-    <!-- (click)="logoClick($event)" 
-    (animationend)="removeAnimatedClass($event)"
-{{ animateLogo ? 'animated' : '' }} -->
-    
+
     <app-logo></app-logo>
-    
-    
-    <label for="navbar-toggler" class="navbar-toggler-button {{ menuOpen ? 'menu-open' : '' }}" (click)="menuTogglerButtonClick()">
+
+    <label for="navbar-toggler" class="navbar-toggler-button {{ menuOpen ? 'menu-open' : '' }}"
+        (click)="menuTogglerButtonClick()">
         <div class="menu-bar"></div>
         <div class="menu-bar"></div>
         <div class="menu-bar"></div>
     </label>
-    
+
     <div class="navbar-container">
         <input type="checkbox" id="navbar-toggler" />
         <nav class='navbar'>
@@ -28,6 +24,11 @@
                     </a>
                 </li> -->
                 <li>
+                    <a routerLink='curriculo' class="{{ (router.url === '/curriculo') ? 'current-route' : '' }}">
+                        Currículo
+                    </a>
+                </li>
+                <li>
                     <a routerLink='projects' class="{{ (router.url === '/projects') ? 'current-route' : '' }}">
                         Projetos
                     </a>
@@ -40,6 +41,6 @@
             </ul>
         </nav>
     </div>
-    
-    
+
+
 </header>

@@ -27,6 +27,7 @@ import { ProjectDescriptionComponent } from './views/projects-page/featured-proj
 import { MinorProjectComponent } from './views/projects-page/minor-projects/minor-project/minor-project.component';
 import { LogoComponent } from './views/main-header/logo/logo.component';
 import { ProjectImagesComponent } from './views/projects-page/featured-project/project-images/project-images.component';
+import { ResumePage } from './views/resume-page/resume-page.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { ProjectImagesComponent } from './views/projects-page/featured-project/p
     ProjectDescriptionComponent,
     MinorProjectComponent,
     LogoComponent,
-    ProjectImagesComponent
+    ProjectImagesComponent,
+    ResumePage
   ],
   imports: [
     BrowserAnimationsModule,

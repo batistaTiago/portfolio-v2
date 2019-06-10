@@ -15,81 +15,13 @@ h3 {
     text-align: center;
 }
 
-
-// button {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     outline: none !important;
-
-//     // color: black;
-//     font-size: 1.15em;
-//     align-self: flex-start;
-//     padding: 0;
-//     background-color: transparent;
-//     text-transform: uppercase;
-
-//     border: none;
-//     border-bottom: 1px solid $main-color;
-//     // background-color: $tertiary-color;
-    
-//     i {
-//         margin-left: 15px;
-//         font-size: 1.15em;
-//         transition: transform 0.5s ease-in-out;
-//     }
-// }
-
-
-button {
-    color: black;
-    font-size: 1.15em;
-    align-self: flex-start;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 10px;
-    
-    border: 2px solid $main-color;
-    background-color: $tertiary-color;
-    
-    i {
-        margin-left: 15px;
-        font-size: 1.15em;
-        transition: transform 0.5s ease-in-out;
-    }
-}
-
-button.toggled {
-    i {
-        transform: rotate(-90deg);
-    }
-}
-
-
-
 .minor-projects-list-container {
     overflow-y: scroll;
-    position: relative;
-}
-
-.down-scaled {
-    transform: scaleY(0);
-    height: 0px;
-}
-
-.minor-projects-list-container:not(.down-scaled) {
-    height: 400px;
 }
 
 .minor-projects-list {
-    position: absolute;
-    top: 15px;
-    bottom: 15px;
-    left: 35px;
-    right: 35px;
-    
-    padding: 5px;
+
+    padding: 5px 10px;
     
     list-style: none;
     
@@ -129,12 +61,13 @@ button.toggled {
 
 @media (min-width: 992px) {
     .minor-projects-list-container {
-        transition-property: all;
+        transition-property: transform, opacity;
         transform-origin: top;
         transition: 0.5s ease-in-out;
     }
 
     .minor-projects-list {
+        padding: 20px 40px;
         li {
             app-minor-project {
                 justify-content: space-between;
