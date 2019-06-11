@@ -16,9 +16,9 @@ export class ProjectImagesComponent implements OnInit {
   @Output() imageClickedEvent: EventEmitter<string[]> = new EventEmitter();
   
   public featuredImageClicked() {
-    if (BTMobileDetector.isDesktop()) {
+    // if (BTMobileDetector.isDesktop()) {
       this.imageClickedEvent.emit(this.images)      
-    }
+    // }
   }
   
   @Input() images: string[] = []

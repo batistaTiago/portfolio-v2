@@ -34,7 +34,26 @@ app-project-description {
 }
 
 app-project-images {
-    min-height: 300px;
+    height: 250px;
+}
+
+
+@media (min-width: 768px) {
+    app-project-images {
+        height: 290px;
+    }
+}
+
+@media (min-width: 992px) {
+    app-project-images {
+        height: 330px;
+    }
+}
+
+@media (min-width: 1200px) {
+    app-project-images {
+        min-height: 380px;
+    }
 }
 
 

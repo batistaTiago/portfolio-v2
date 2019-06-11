@@ -62,6 +62,9 @@ form {
 
     border: 1px solid $main-color;
 
+    max-height: 80vh;
+
+    position: relative;
 
     background-color: $card-background-color;
 
@@ -88,6 +91,11 @@ form {
         
         border: 1px solid $main-color;
         border-radius: 5px;
+
+        width: 90%;
+
+        margin-left: auto;
+        margin-right: auto;
     }
     
     input::placeholder, textarea::placeholder {
@@ -97,15 +105,12 @@ form {
     
     input {
         padding: 10px 10px;
-        max-width: 100%;
         border: none;
         border-bottom: 1px solid $main-color;
         border-radius: 0;
     }
     
     textarea {
-        
-        min-width: 300px;
         height: 50px;
         resize: none;
         padding: 10px;

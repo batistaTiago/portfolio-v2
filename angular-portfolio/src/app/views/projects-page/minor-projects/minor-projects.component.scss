@@ -16,7 +16,8 @@ h3 {
 }
 
 .minor-projects-list-container {
-    overflow-y: scroll;
+    overflow-y: auto;
+    max-height: 400px;
 }
 
 .minor-projects-list {

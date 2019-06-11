@@ -29,6 +29,8 @@
         padding: 5px;
         height: auto;
 
+        //background: reg;
+
         .modal-header {
             
             flex-basis: 5%;
@@ -36,7 +38,7 @@
 
             padding: 0px 25px;
 
-            background: red;
+            // //background: green;
 
             h2 {
                 font-size: 2em;
@@ -46,13 +48,14 @@
 
         .modal-body {
             padding: 5px 25px;
-            margin: 25px 0px;
             text-align: justify;
             flex-basis: 90%;
             flex-grow: 2;
             flex-shrink: 2;
             display: flex;
             justify-content: center;
+
+            //background: blue;
 
             .modal-image-container {
                 position: relative; 
@@ -65,7 +68,7 @@
 
                 img {
                     position: absolute;
-                    width: 100%;
+                    width: auto;
                     height: 100%;
                 }
                 
@@ -81,6 +84,8 @@
 
             flex-basis: 5%;
             flex-shrink: 0;
+
+            //background: purple;
 
             button {
                 border-radius: 5%;
@@ -110,7 +115,6 @@
             transform: translate(-50%, -50%);
             .modal-body {
                 padding: 5px 25px;
-                margin: 25px 0px;
 
                 .modal-image-container {
                     width: 70vw; 
