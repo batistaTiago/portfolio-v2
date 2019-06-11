@@ -1,23 +1,23 @@
-<div class="project-description-container">
-    <h3>Pássaro Urbano</h3>
-    <p class="project-description">{{ data.description }}</p>
-    <h4>Tecnologias</h4>
-    <ul>
-      <li *ngFor="let tech of data.techUsed" class="html">
-        {{ tech }}
-      </li>
-    </ul>
+<h3>Pássaro Urbano</h3>
+<p class="project-description">{{ data.description }}</p>
+<h4>Tecnologias</h4>
+<ul>
+  <li *ngFor="let tech of data.techUsed" class="html">
+    {{ tech }}
+  </li>
+</ul>
 
-    <hr>
+<hr>
 
-    <div 
-      class="
-        project-status
-        {{ data.status == 'Em desenvolvimento' ? 'em-desenvolvimento' : '' }}
-        {{ data.status == 'Concluído' ? 'concluido' : '' }}
-      "
-    >
-      Status: {{ data.status }}
-    </div>
-    <app-progress-bar [percentageComplete]="data.percentageComplete"></app-progress-bar>
-  </div>
+<div 
+class="
+project-status
+{{ data.status == 'Em desenvolvimento' ? 'em-desenvolvimento' : '' }}
+{{ data.status == 'Concluído' ? 'concluido' : '' }}
+"
+>
+Status: {{ data.status }}
+</div>
+<app-progress-bar [percentageComplete]="data.percentageComplete"></app-progress-bar>
+
+<hr style="margin-top: 15px;">

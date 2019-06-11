@@ -19,7 +19,9 @@
     justify-content: center;
     align-self: center;
 
+}
 
+.hero-container-animation {
     opacity: 0;
     animation: fadeIn 1s $default-timing-function 1 forwards;
 }
@@ -32,8 +34,9 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
-    
-    
+}
+
+.hero-image-container-animation {
     animation: resetTransform 0.5s 0.5s $default-timing-function 1 forwards;
     transform: scale(0) rotateZ(-720deg);
 }
@@ -45,17 +48,15 @@
 }
 
 .titles-container {
+    margin-top: 25px;
+}
+
+.titles-container-animation {
     opacity: 0;
     transform: scale(0);
     
+    animation: 0.5s 1s $default-timing-function 1 forwards;
     animation-name: fadeIn, resetTransform;
-    animation-duration: 0.5s;
-    animation-delay: 1s;
-    animation-timing-function: $default-timing-function;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-
-    margin-top: 25px;
 }
 
 .hero-title {    

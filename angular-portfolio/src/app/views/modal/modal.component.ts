@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter, AfterViewInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { BTMobileDetector } from '../../shared/utils';
 
 @Component({
   selector: 'app-modal',
@@ -55,7 +56,9 @@ export class ModalComponent implements AfterViewInit {
 
   constructor() { }
 
-  ngAfterViewInit() { }
+  ngAfterViewInit() {
+    console.log(this.modalData, this.modalType)
+   }
 
 
   @Input() modalData: any
@@ -73,6 +76,10 @@ export class ModalComponent implements AfterViewInit {
     if (event.toState === 'removido') {
       this.closeModalEvent.emit()
     }
+  }
+
+  public isMobile() {
+    return BTMobileDetector.isMobile()
   }
 
   public stopPropagation(event: Event) {

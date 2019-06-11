@@ -1,5 +1,6 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { ContactFormValidator } from '../../shared/contact-form-validator';
+import { AnimationManager } from '../../shared/animation-manager';
 
 
 @Component({
@@ -100,5 +101,17 @@ export class ContactPage implements OnInit {
     this.subject = ''
     this.phoneNumber = ''
     this.messageBody = ''
+  }
+
+  public animateForm(): boolean {
+    return AnimationManager.getInstance().shouldAnimateContactPage()
+  }
+
+  public animationDidFinish(event: AnimationEvent) {
+    // if (event.animationName == 'fadeIn')  {
+    //   AnimationManager.contactAnimationDidFinish()
+    // }
+
+    AnimationManager.getInstance().animationDidFinish(event)
   }
 }

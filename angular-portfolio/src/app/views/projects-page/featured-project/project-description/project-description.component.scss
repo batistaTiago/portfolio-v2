@@ -101,4 +101,8 @@ hr {
     .project-description {
         margin-top: 10px;
     }
+
+    hr:last-child {
+        display: none;
+    }
 }    

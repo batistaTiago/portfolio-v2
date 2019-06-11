@@ -4,47 +4,32 @@
       <h2>{{ modalData.titulo }}</h2>
     </div>
     <div class="modal-body">
-
-      <div 
-        *ngIf="modalType == 'images' && modalData.images; else modalError"
-        style="
-        position: relative; 
-        width: 70vw; 
-        height: 70vh;
-        display: flex;
-        justify-content: center;
-        align-items: stretch;"
-      >
+      
+      <div *ngIf="modalType == 'images' && modalData.images;" class="modal-image-container">
         <app-project-images [images]="modalData.images"></app-project-images>
       </div>
-
-      <!-- <div 
-        *ngIf="modalType == 'images' && modalData.images; else modalError"
-        style="
-          position: relative; 
-          width: 70vw; 
-          height: 70vh;
-          display: flex; 
-          flex-wrap: nowrap;"
-        >
-            <img [src]="image" *ngFor="let image of modalData.images; let i = index" style="position: absolute; top: 0; left: 0; width: 70vw; height: 70vh; border: 2px solid #ddd; box-shadow: 0px 0px 5px #ddd" class="{{ i == 1 ? '' : 'transparent' }}" />
-      </div> -->
-
-
+      
+      <div *ngIf="modalType == 'image' && modalData.image" class="modal-image-container">
+        <img [src]="modalData.image" />
+      </div>
+      
       <div *ngIf="modalType == 'text'">
         <div *ngIf='modalData.corpo; else modalError'>
           {{ modalData.corpo }}
         </div>
       </div>
-
-
+      
+      
     </div>
     
     <ng-template #modalError>
       <h1 style="color: red">Erro na configuração do Modal</h1>
+      
+      {{ modalData.image }}
+      {{ modalType }}
     </ng-template>
     <div class="modal-footer">
-      <button (click)="closeModal()">Fechar</button>
+      <button (click)="closeModal()">{{ isMobile() ? 'X' : 'fechar' }}</button>
     </div>
   </div>
 </div>

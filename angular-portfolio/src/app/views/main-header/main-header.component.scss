@@ -38,7 +38,8 @@ app-logo {
     font-size: 1.5em;
     padding: 10px;
     border-radius: 5px;
-    border-color: $secondary-color;
+    border-color: $main-color;
+    box-shadow: 0px 0px 10px $main-color;
     
     cursor: pointer;
     
@@ -53,7 +54,7 @@ app-logo {
         margin-bottom: 5px;
         // position: relative;
         
-        background: $secondary-color;
+        background: $main-color;
         border-radius: 3px;
         
         transition-property: transform, opacity;

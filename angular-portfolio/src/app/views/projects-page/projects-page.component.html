@@ -28,6 +28,6 @@
   </ng-template>
   
   <div *ngIf="modalIsShowing">
-    <app-modal [modalData]="modalData" modalType="images" (closeModalEvent)="dismissModal()"></app-modal>
+    <app-modal [modalData]="modalData" [modalType]="modalType" (closeModalEvent)="dismissModal()"></app-modal>
   </div>
 </section>

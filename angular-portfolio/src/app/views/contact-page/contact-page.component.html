@@ -1,5 +1,5 @@
 <section class="centered-flex-container" >
-  <form (submit)="validateAndSubmit($event)">
+  <form (submit)="validateAndSubmit($event)" class="{{ animateForm() ? 'form-animation' : '' }}" (animationend)="animationDidFinish($event)">
     
     <h1>Contato</h1>
     
