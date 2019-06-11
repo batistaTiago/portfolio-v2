@@ -32,7 +32,11 @@
         .modal-header {
             
             flex-basis: 5%;
+            flex-shrink: 0;
+
             padding: 0px 25px;
+
+            background: red;
 
             h2 {
                 font-size: 2em;
@@ -46,6 +50,7 @@
             text-align: justify;
             flex-basis: 90%;
             flex-grow: 2;
+            flex-shrink: 2;
             display: flex;
             justify-content: center;
 
@@ -57,6 +62,7 @@
                 justify-content: center;
                 align-items: stretch;
                 padding-right: 25px;
+
                 img {
                     position: absolute;
                     width: 100%;
@@ -68,11 +74,13 @@
 
         .modal-footer {
             display: flex;
+            align-content: center;
             justify-content: flex-end;
-            padding-right: 15px;
-            padding-bottom: 15px;
+            margin-bottom: 10px;
+            margin-right: 10px;
 
             flex-basis: 5%;
+            flex-shrink: 0;
 
             button {
                 border-radius: 5%;

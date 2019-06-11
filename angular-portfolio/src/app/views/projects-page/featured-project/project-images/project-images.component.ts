@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { BTMobileDetector } from '../../../../shared/utils';
 
 @Component({
   selector: 'app-project-images',
@@ -15,7 +16,9 @@ export class ProjectImagesComponent implements OnInit {
   @Output() imageClickedEvent: EventEmitter<string[]> = new EventEmitter();
   
   public featuredImageClicked() {
-    this.imageClickedEvent.emit(this.images)
+    if (BTMobileDetector.isDesktop()) {
+      this.imageClickedEvent.emit(this.images)      
+    }
   }
   
   @Input() images: string[] = []

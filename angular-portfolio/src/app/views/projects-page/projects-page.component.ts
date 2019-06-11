@@ -35,12 +35,10 @@ export class ProjectsPage implements AfterViewInit {
         this.modalIsShowing = true
         this.modalData.images = urls
         this.modalType = 'images'
-        console.log('mostrando array de imgs')
       } else if ((<string>typeof(urls)).toLowerCase() === 'string') {
         this.modalIsShowing = true
         this.modalData.image = urls
         this.modalType = 'image'
-        console.log('mostrando unica img')
       }
     }
   

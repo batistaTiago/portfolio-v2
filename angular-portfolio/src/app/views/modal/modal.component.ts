@@ -56,9 +56,7 @@ export class ModalComponent implements AfterViewInit {
 
   constructor() { }
 
-  ngAfterViewInit() {
-    console.log(this.modalData, this.modalType)
-   }
+  ngAfterViewInit() { }
 
 
   @Input() modalData: any

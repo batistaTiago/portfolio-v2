@@ -27,7 +27,6 @@ export class FeaturedProjectComponent implements OnInit {
   @Input() projectData: FeaturedProject = null;
 
   public propagate(eventData) {
-    console.log('pai recebeu, passando para avô', eventData)
     this.imageClickedEvent.emit(eventData)
   }
 

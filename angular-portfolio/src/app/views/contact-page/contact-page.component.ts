@@ -1,6 +1,6 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { ContactFormValidator } from '../../shared/contact-form-validator';
-import { AnimationManager } from '../../shared/animation-manager';
+import { BTAnimationManager } from '../../shared/animation-manager';
 
 
 @Component({
@@ -104,14 +104,10 @@ export class ContactPage implements OnInit {
   }
 
   public animateForm(): boolean {
-    return AnimationManager.getInstance().shouldAnimateContactPage()
+    return BTAnimationManager.getInstance().shouldAnimateContactPage()
   }
 
   public animationDidFinish(event: AnimationEvent) {
-    // if (event.animationName == 'fadeIn')  {
-    //   AnimationManager.contactAnimationDidFinish()
-    // }
-
-    AnimationManager.getInstance().animationDidFinish(event)
+    BTAnimationManager.getInstance().animationDidFinish(event)
   }
 }

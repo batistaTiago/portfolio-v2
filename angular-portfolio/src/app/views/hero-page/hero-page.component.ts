@@ -1,5 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { AnimationManager } from '../../shared/animation-manager';
+import { Component, OnInit } from '@angular/core';
+import { BTAnimationManager } from '../../shared/animation-manager';
 
 @Component({
   selector: 'app-hero-page',
@@ -14,10 +14,10 @@ export class HeroPage implements OnInit {
   }
 
   public shouldAnimate(): boolean {
-    return AnimationManager.getInstance().shouldAnimateHeroPage()
+    return BTAnimationManager.getInstance().shouldAnimateHeroPage()
   }
 
   public animationDidFinish(event: AnimationEvent) {
-      AnimationManager.getInstance().animationDidFinish(event)
+      BTAnimationManager.getInstance().animationDidFinish(event)
   }
 }

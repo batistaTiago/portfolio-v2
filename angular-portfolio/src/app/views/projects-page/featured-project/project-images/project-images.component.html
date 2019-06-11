@@ -5,6 +5,8 @@
     </div>
   </div>
 
+  <hr>
+
   <ul class='lista-imagens-projeto'>
     <li *ngFor='let image of images; let i = index'>
       <img [src]='image' [class]="i === selectedImageIndex ? 'current' : ''" (click)="imageClicked(i)" />

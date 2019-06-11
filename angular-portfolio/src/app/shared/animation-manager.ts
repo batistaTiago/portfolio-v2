@@ -1,41 +1,38 @@
-export class AnimationManager {
+export class BTAnimationManager {
 
     private constructor() { }
 
-    private instance: AnimationManager;
-    public static getInstance(): AnimationManager {
+    private static instance: BTAnimationManager;
+
+    public static getInstance(): BTAnimationManager {
         
-        if (this.instance === undefined) {
-            this.instance = new AnimationManager()
+        if (BTAnimationManager.instance === undefined) {
+            BTAnimationManager.instance = new BTAnimationManager()
         }
-        return this.instance
+        return BTAnimationManager.instance
     }
 
     private static headerHasBeenAnimated: boolean = false    
 
     public shouldAnimateHeader(): boolean {
-        return !AnimationManager.headerHasBeenAnimated;
+        return !BTAnimationManager.headerHasBeenAnimated;
     }
 
-
-
-
-
-    private heroPageHasBeenAnimated: boolean = false
+    private static heroPageHasBeenAnimated: boolean = false
     public shouldAnimateHeroPage(): boolean {
-        return !AnimationManager.heroPageHasBeenAnimated;
+        return !BTAnimationManager.heroPageHasBeenAnimated;
     }
-    private contactPageHasBeenAnimated: boolean = false
+    private static contactPageHasBeenAnimated: boolean = false
     public shouldAnimateContactPage(): boolean {
-        return !AnimationManager.contactPageHasBeenAnimated
+        return !BTAnimationManager.contactPageHasBeenAnimated
     }
 
     public animationDidFinish(event: AnimationEvent) {
         const target = <HTMLElement>event.target
         if (target.classList.contains('titles-container-animation')) {
-            AnimationManager.heroPageHasBeenAnimated = true
+            BTAnimationManager.heroPageHasBeenAnimated = true
         } else if (target.classList.contains('form-animation')) {
-            AnimationManager.contactPageHasBeenAnimated = true
+            BTAnimationManager.contactPageHasBeenAnimated = true
         }
     }
 }

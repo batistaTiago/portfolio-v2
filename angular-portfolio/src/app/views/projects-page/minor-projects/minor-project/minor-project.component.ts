@@ -17,7 +17,6 @@ export class MinorProjectComponent implements OnInit {
   @Output() minorProjectImageClickedEvent: EventEmitter<string> = new EventEmitter();
 
   public showMinorProjectImage() {
-    console.log('emitindo evento original')
     this.minorProjectImageClickedEvent.emit(this.data.imageUrls[0]);
   }
 

@@ -26,7 +26,6 @@ export class MinorProjectsComponent implements OnInit {
 
 
   public propagate(eventData) {
-    console.log('pai recebeu, passando para avô', eventData)
     this.minorProjectImageClickedEvent.emit(eventData)
   }
 

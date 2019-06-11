@@ -68,6 +68,9 @@ html, body {
 body {
     background: $hero-background-color;
     overflow-x: hidden;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: unset;
 }
 
 body::before {
