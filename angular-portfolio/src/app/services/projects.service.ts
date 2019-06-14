@@ -95,7 +95,7 @@ import { Injectable } from "@angular/core";
 @Injectable()
 export class ProjectService {
 
-    private apiUrl = 'http://localhost:3000'
+    private apiUrl = 'http://localhost:420/api/projects'
 
     private featuredMocks: FeaturedProject[] = [
         {
@@ -155,9 +155,11 @@ export class ProjectService {
 
     private async getFeaturedProjects(): Promise<FeaturedProject[]> {
         try {
-            const request = fetch(`${this.apiUrl}/featured_projects`)
+            console.log('request enviado - featured')
+            const request = fetch(`${this.apiUrl}/featured`, {mode: 'cors'})
             const response = await request
             const data = await response.json()
+            console.log('request funcionou', data)
             return data
         } catch {
             console.log('retornando mocks - featured')
@@ -168,9 +170,11 @@ export class ProjectService {
 
     private async getMinorProjects(): Promise<Project[]> {
         try {
-            const request = fetch(`${this.apiUrl}/minor_projects`)
+            console.log('request enviado - minor')
+            const request = fetch(`${this.apiUrl}/minor`, {mode: 'cors'})
             const response = await request
             const data = await response.json()
+            console.log('request funcionou', data)
             return data
         } catch {
             console.log('retornando mocks - minor')

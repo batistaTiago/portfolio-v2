@@ -1,0 +1,7 @@
+SELECT 
+	titulo_projeto, url_imagem, nome_tecnologia
+FROM 
+	tb_projetos
+    LEFT JOIN tb_fotos_projetos ON (tb_projetos.id_projeto = tb_fotos_projetos.id_projeto)
+    LEFT JOIN tb_projetos_tecnologias ON (tb_projetos.id_projeto = tb_projetos_tecnologias.id_projeto)
+    LEFT JOIN tb_tecnologias ON (tb_projetos_tecnologias.id_tecnologia = tb_tecnologias.id_tecnologia)

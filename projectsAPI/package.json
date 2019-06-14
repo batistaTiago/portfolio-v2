@@ -1,0 +1,17 @@
+{
+  "name": "portfolio_api",
+  "version": "1.0.0",
+  "description": "api simples para portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./app/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "batistaTiago",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql": "^2.17.1"
+  }
+}
