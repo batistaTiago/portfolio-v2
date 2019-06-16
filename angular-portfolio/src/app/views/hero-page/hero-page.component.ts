@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BTAnimationManager } from '../../shared/animation-manager';
+import { BTConstants } from 'src/app/app.constants';
 
 @Component({
   selector: 'app-hero-page',
