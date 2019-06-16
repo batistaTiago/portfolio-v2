@@ -58,7 +58,8 @@ export class ProjectService {
 
             "description": 
                 `Este portfólio é uma aplicação full-stack simples. 
-                Além do front-end aqui apresentado, ele conta com uma REST API que fornece as informações dinamicamente.`,
+                Além do front-end aqui apresentado, ele conta com uma REST API que fornece as informações dinamicamente para a página de projetos e integra a página de contato com o servidor SMTP do Gmail através do NodeMailer.
+                `,
 
             "deployUrl": ""
         }
