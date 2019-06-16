@@ -1,16 +1,18 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { ContactFormValidator } from '../../shared/contact-form-validator';
 import { BTAnimationManager } from '../../shared/animation-manager';
+import { ContactService } from '../../services/contact.service';
 
 
 @Component({
   selector: 'app-contact-page',
   templateUrl: './contact-page.component.html',
-  styleUrls: ['./contact-page.component.scss']
+  styleUrls: ['./contact-page.component.scss'],
+  providers: [ ContactService ]
 })
 export class ContactPage implements OnInit {
 
-  constructor() { }
+  constructor(private contactService: ContactService) { }
 
   ngOnInit() { }
 
@@ -30,6 +32,8 @@ export class ContactPage implements OnInit {
 
   private showModal: boolean = false
   private modalTimeoutId: number = null
+
+  public awaitingResponse: boolean = false
 
   public modalIsShowing(): boolean {
     return this.showModal
@@ -57,27 +61,54 @@ export class ContactPage implements OnInit {
     this[property] = e.target.value
   }
 
-  public validateAndSubmit(e) {
+  public async validateAndSubmit(e) {
     e.preventDefault();
 
     this.validator.setFields(this.name, this.email, this.phoneNumber, this.subject, this.messageBody)
 
-    let error = this.validator.formHasErrors()
+    const error = this.validator.formHasErrors()
 
     if (error) {
       this.shakeElement(this[error.toLowerCase() + 'Input'])
     } else {
-      // e.target.submit();
-      this.showModal = true
 
-      this.clearForm()
+      const contactData = {
+        name: this.name,
+        email: this.email, 
+        phoneNumber: this.email, 
+        subject: this.subject, 
+        messageBody: this.messageBody
+     }
+      
 
-      this.modalTimeoutId = Number(
-      setTimeout(
-        () => {
-          this.showModal = false
-        }, 7000
-      ))
+      try {
+        console.log('esperando resposta!!!!')
+        this.awaitingResponse = true;
+
+        const response = await this.contactService.sendContactRequest(contactData)
+
+        
+
+        if (response) {
+          this.awaitingResponse = false
+          this.showModal = true
+          this.clearForm()
+    
+          this.modalTimeoutId = Number(
+          setTimeout(
+            () => {
+              this.showModal = false
+            }, 7000
+          ))
+        } else {
+          throw new Error()
+        }
+      } catch (e) {
+        console.log(e)
+        alert('Algum erro desconhecido ocorreu, tente novamente.')
+      } finally {
+        this.awaitingResponse = false
+      }
     }
   }
 

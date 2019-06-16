@@ -128,5 +128,6 @@ export class ProjectService {
         const minorProjects = await this.getMinorProjects();
 
         return [featuredProjects, minorProjects];
+        
     }
 }

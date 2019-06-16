@@ -15,7 +15,7 @@ import { ContactPage } from './views/contact-page/contact-page.component';
 import { ProjectsPage } from './views/projects-page/projects-page.component';
 import { FeaturedProjectComponent } from './views/projects-page/featured-project/featured-project.component';
 
-import { MainSpinnerComponent } from './views/main-spinner/main-spinner.component';
+import { LoadingSpinnerComponent } from './views/loading-spinner/loading-spinner.component';
 
 
 import { SkillsComponent } from './views/skills/skills.component';
@@ -29,6 +29,7 @@ import { LogoComponent } from './views/main-header/logo/logo.component';
 import { ProjectImagesComponent } from './views/projects-page/featured-project/project-images/project-images.component';
 import { ResumePage } from './views/resume-page/resume-page.component';
 
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import { ResumePage } from './views/resume-page/resume-page.component';
     SkillsComponent,
     ProgressBarComponent,
     FilledComponent,
-    MainSpinnerComponent,
+    LoadingSpinnerComponent,
     ModalComponent,
     MinorProjectsComponent,
     ProjectDescriptionComponent,
@@ -53,6 +54,7 @@ import { ResumePage } from './views/resume-page/resume-page.component';
   ],
   imports: [
     BrowserAnimationsModule,
+    HttpClientModule,
     BrowserModule,
     RouterModule.forRoot(AppRoutingModule.AppRoutes())
   ],

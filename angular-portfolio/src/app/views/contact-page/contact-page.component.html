@@ -1,5 +1,10 @@
-<section class="centered-flex-container" >
-  <form (submit)="validateAndSubmit($event)" class="{{ animateForm() ? 'form-animation' : '' }}" (animationend)="animationDidFinish($event)">
+<section class="centered-flex-container">
+  <form 
+    #contactForm 
+    (submit)="validateAndSubmit($event)" 
+    class="{{ animateForm() ? 'form-animation' : '' }} {{ awaitingResponse ? 'blurred' : '' }}" 
+    (animationend)="animationDidFinish($event)"
+  >
     
     <h1>Contato</h1>
     
@@ -19,6 +24,7 @@
     
   </form>
 
+  <app-loading-spinner style="position: absolute;" *ngIf="awaitingResponse"></app-loading-spinner>
 
   <div *ngIf="modalIsShowing()">
     <app-modal [modalData]="modalData" modalType="text" (closeModalEvent)="closeModal()"></app-modal>
