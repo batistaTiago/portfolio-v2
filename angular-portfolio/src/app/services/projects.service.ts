@@ -1,13 +1,12 @@
 import { Project } from "../shared/models/project.model";
 import { FeaturedProject } from "../shared/models/featured-project.model";
 import { Injectable } from "@angular/core";
-import { resetComponentState } from "@angular/core/src/render3/state";
 
 
 @Injectable()
 export class ProjectService {
 
-    private apiUrl = 'http://localhost:420/api/projects'
+    private apiUrl = 'http://localhost:3000/api/projects'
 
     private featuredMocks: FeaturedProject[] = [
         {
@@ -54,7 +53,7 @@ export class ProjectService {
             "imageUrls": [
             ],
             "status": "Em desenvolvimento",
-            "percentageComplete": 85,
+            "percentageComplete": 95,
 
             "description": 
                 `Este portfólio é uma aplicação full-stack simples. 

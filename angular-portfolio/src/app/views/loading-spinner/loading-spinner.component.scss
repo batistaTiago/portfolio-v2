@@ -1,0 +1,59 @@
+@import '../../global-stylesheets/variables.scss';
+@import '../../global-stylesheets/animations.scss';
+
+@keyframes spinnerAnimation {
+    0% {
+        transform: rotate(-360deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(-180deg) scale(1.2);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+.loading-container {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 30px;
+}
+
+.main-loading-spinner {
+    width: 80px; 
+    height: 80px; 
+    background-color: transparent; 
+    border-radius: 50%; 
+    border: 8px solid; 
+    border-color: $secondary-color $main-color;
+    opacity: 1; 
+    // transform: rotate(-720deg);
+    animation: spinnerAnimation 1.5s infinite forwards;
+    animation-timing-function: linear;
+    // animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    // animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    // animation-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+    // animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+    // animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    // animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    // animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    // animation-timing-function: cubic-bezier(1, 0, 0, 1);
+    
+    box-shadow: 0px 0px 15px $main-color;
+}
+
+.main-loading-spinner-descriptor {
+    text-align: center; 
+    font-size: 1.2em; 
+    color: $secondary-color;
+    margin-top: 20px;
+    font-weight: bold;
+    width: 80px;
+    display: block;
+}
+
