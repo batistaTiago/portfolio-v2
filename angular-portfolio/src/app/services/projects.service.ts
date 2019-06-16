@@ -1,95 +1,7 @@
-// import { Project } from "../shared/models/project.model";
-// import { FeaturedProject } from "../shared/models/featured-project.model";
-// import { Injectable } from "@angular/core";
-// import { Observable } from 'rxjs';
-// import { HttpClient } from '@angular/common/http';
-
-
-// @Injectable()
-// export class ProjectService {
-
-//     private apiUrl = 'http://localhost:3000'
-//     private featuredProjectsObservable: Observable<FeaturedProject[]>
-//     private minorProjectsObservable: Observable<FeaturedProject[]>
-
-//     constructor(private httpClient: HttpClient) { 
-//         this.featuredProjectsObservable = this.getFeaturedProjects()
-//         this.minorProjectsObservable = this.getMinorProjects()
-//     }
-
-//     private getFeaturedProjects(): any {
-//         return this.httpClient.get(`${this.apiUrl}/featured_projects`)
-//     }
-
-//     private getMinorProjects(): any {
-//         return this.httpClient.get(`${this.apiUrl}/minor_projects`)
-//     }
-
-//     public getProjectObservables(): [Observable<FeaturedProject[]>, Observable<Project[]>] {
-//         return [this.featuredProjectsObservable, this.minorProjectsObservable]
-//     }
-
-//     private featuredMocks: FeaturedProject[] = [
-//         {
-//             "id": 0,
-//             "titulo": "Pássaro Urbano",
-//             "techUsed": [
-//                 "HTML",
-//                 "CSS",
-//                 "TypeScript",
-//                 "Bootstrap",
-//                 "jQuery",
-//                 "Angular",
-//                 "Firebase"
-//             ],
-//             "gitUrl": "https://github.com/batistatiago/passaro-urbano",
-//             "imageUrls": [
-//                 "/assets/images/passaro-urbano/passaro-urbano1.png",
-//                 "/assets/images/passaro-urbano/passaro-urbano2.png",
-//                 "/assets/images/passaro-urbano/passaro-urbano3.png"
-//             ],
-//             "status": "Em desenvolvimento",
-//             "percentageComplete": 60,
-//             "description": "Web app baseado no Peixe Urbano. O app oferece a possibilidade de criar cadastro (consumidor / anunciante), publicar, editar e deletar ofertas (caso o usuário seja um anunciante) e realizar compras. Além disso, o app também é integrado a uma API de CEPs, fazendo a busca de endereço automaticamente utilizando abordagem AJAX. ",
-//             "deployUrl": "http://batista-tiago-ekyidag.s3-website-sa-east-1.amazonaws.com"
-//         }
-//     ]
-
-//     private minorMocks: Project[] = [
-//         {
-//             "id": 1,
-//             "titulo": "Spotify Clone",
-//             "techUsed": [
-//                 "HTML",
-//                 "CSS",
-//                 "Bootstrap",
-//                 "jQuery"
-//             ],
-//             "gitUrl": "",
-//             "imageUrls": ["/assets/images/minor-projects/spotify-clone/1.png"]
-//         },
-//         {
-//             "id": 1,
-//             "titulo": "Mountain Travel",
-//             "techUsed": [
-//                 "HTML",
-//                 "CSS"
-//             ],
-//             "gitUrl": "",
-//             "imageUrls": [
-//                 "/assets/images/minor-projects/mountain-travel/1.png",
-//                 "/assets/images/minor-projects/mountain-travel/2.png",
-//                 "/assets/images/minor-projects/mountain-travel/3.png",
-//                 "/assets/images/minor-projects/mountain-travel/4.png"
-//             ]
-//         }
-//     ]
-// }
-
-
 import { Project } from "../shared/models/project.model";
 import { FeaturedProject } from "../shared/models/featured-project.model";
 import { Injectable } from "@angular/core";
+import { resetComponentState } from "@angular/core/src/render3/state";
 
 
 @Injectable()
@@ -118,8 +30,37 @@ export class ProjectService {
             ],
             "status": "Em desenvolvimento",
             "percentageComplete": 60,
-            "description": "Web app baseado no Peixe Urbano. O app oferece a possibilidade de criar cadastro (consumidor / anunciante), publicar, editar e deletar ofertas (caso o usuário seja um anunciante) e realizar compras. Além disso, o app também é integrado a uma API de CEPs, fazendo a busca de endereço automaticamente utilizando abordagem AJAX. ",
+            
+            "description": 
+                `Web app baseado no Peixe Urbano. 
+                O app oferece a possibilidade de criar cadastro (consumidor / anunciante), publicar, editar e deletar ofertas (caso o usuário seja um anunciante) e realizar compras. 
+                Além disso, o app também é integrado a uma API de CEPs, fazendo a busca de endereço automaticamente utilizando abordagem AJAX.`,
+                
             "deployUrl": "http://batista-tiago-ekyidag.s3-website-sa-east-1.amazonaws.com"
+        },
+        {
+            "id": 3,
+            "titulo": "Portfólio",
+            "techUsed": [
+                "HTML",
+                "SASS",
+                "TypeScript",
+                "Angular",
+                "NodeJS",
+                "Express",
+                "MySQL"
+            ],
+            "gitUrl": "",
+            "imageUrls": [
+            ],
+            "status": "Em desenvolvimento",
+            "percentageComplete": 85,
+
+            "description": 
+                `Este portfólio é uma aplicação full-stack simples. 
+                Além do front-end aqui apresentado, ele conta com uma REST API que fornece as informações dinamicamente.`,
+
+            "deployUrl": ""
         }
     ]
 
@@ -137,7 +78,7 @@ export class ProjectService {
             "imageUrls": ["/assets/images/minor-projects/spotify-clone/1.png"]
         },
         {
-            "id": 1,
+            "id": 2,
             "titulo": "Mountain Travel",
             "techUsed": [
                 "HTML",

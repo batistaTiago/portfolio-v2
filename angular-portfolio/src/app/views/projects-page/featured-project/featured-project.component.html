@@ -1,14 +1,15 @@
 <li>
   <div style="display: flex">
-    <div class='nome-projeto'>
+    <div class='header-featured-project'>
       <span>
-        Pássaro Urbano
+        {{ projectData.titulo }}
       </span>
       <i 
         class="far fa-question-circle {{ showDescription ? 'toggled' : '' }}"
         (click)="toggleDescription()"></i>
       <app-project-description 
         [data]="{ 
+          titulo: projectData.titulo,
           description: projectData.description, 
           techUsed: projectData.techUsed,
           status: projectData.status,

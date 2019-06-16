@@ -29,6 +29,7 @@
 .lista-projetos {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
     margin-top: 35px;
     padding: 5px;
     list-style-type: none;
