@@ -1,7 +1,7 @@
 import { IProject, Project } from "../shared/models/project.model";
 import { IFeaturedProject, FeaturedProject } from "../shared/models/featured-project.model";
 import { Injectable } from "@angular/core";
-import { BTConstants } from '../app.constants'
+import { environment } from '../../environments/environment'
 
 @Injectable()
 export class ProjectService {
@@ -94,8 +94,8 @@ export class ProjectService {
 
     private async getFeaturedProjects(): Promise<IFeaturedProject[]> {
         try {
-            // console.log(`enviando request para: ${BTConstants.apiURL}/api/projects/featured` )
-            const request = fetch(`${BTConstants.apiURL}/api/projects/featured`, { mode: 'cors' })
+            // console.log(`enviando request para: ${environment.apiURL}/api/projects/featured` )
+            const request = fetch(`${environment.apiURL}/api/projects/featured`, { mode: 'cors' })
             const response = await request
             const data = await response.json()
             // console.log('request funcionou', data)
@@ -117,8 +117,8 @@ export class ProjectService {
 
     private async getMinorProjects(): Promise<IProject[]> {
         try {
-            // console.log(`enviando request para: ${BTConstants.apiURL}/api/projects/minor` )
-            const request = fetch(`${BTConstants.apiURL}/api/projects/minor`, { mode: 'cors' })
+            // console.log(`enviando request para: ${environment.apiURL}/api/projects/minor` )
+            const request = fetch(`${environment.apiURL}/api/projects/minor`, { mode: 'cors' })
             const response = await request
             const data = await response.json()
 
