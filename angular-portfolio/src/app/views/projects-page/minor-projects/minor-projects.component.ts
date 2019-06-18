@@ -10,7 +10,7 @@ import { Project } from '../../../shared/models/project.model';
 })
 export class MinorProjectsComponent implements OnInit {
 
-  constructor(private projectService: ProjectService) { }
+  constructor() { }
 
   ngOnInit() {
   }

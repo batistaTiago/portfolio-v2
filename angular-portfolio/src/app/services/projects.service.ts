@@ -1,14 +1,14 @@
-import { Project } from "../shared/models/project.model";
-import { FeaturedProject } from "../shared/models/featured-project.model";
+import { IProject, Project } from "../shared/models/project.model";
+import { IFeaturedProject, FeaturedProject } from "../shared/models/featured-project.model";
 import { Injectable } from "@angular/core";
 import { BTConstants } from '../app.constants'
 
 @Injectable()
 export class ProjectService {
 
-    private featuredMocks: FeaturedProject[] = [
+    private featuredMocks: IFeaturedProject[] = [
         {
-            "id": 0,
+            "projectId": 0,
             "titulo": "Pássaro Urbano",
             "techUsed": [
                 "HTML",
@@ -62,9 +62,9 @@ export class ProjectService {
         // }
     ]
 
-    private minorMocks: Project[] = [
+    private minorMocks: IProject[] = [
         {
-            "id": 1,
+            "projectId": 1,
             "titulo": "Spotify Clone",
             "techUsed": [
                 "HTML",
@@ -76,7 +76,7 @@ export class ProjectService {
             "imageUrls": ["/assets/images/minor-projects/spotify-clone/1.png"]
         },
         {
-            "id": 2,
+            "projectId": 2,
             "titulo": "Mountain Travel",
             "techUsed": [
                 "HTML",
@@ -92,57 +92,51 @@ export class ProjectService {
         }
     ]
 
-    private async getFeaturedProjects(): Promise<FeaturedProject[]> {
+    private async getFeaturedProjects(): Promise<IFeaturedProject[]> {
         try {
-            console.log(`enviando request para: ${BTConstants.apiURL}/api/projects/featured` )
+            // console.log(`enviando request para: ${BTConstants.apiURL}/api/projects/featured` )
             const request = fetch(`${BTConstants.apiURL}/api/projects/featured`, { mode: 'cors' })
             const response = await request
             const data = await response.json()
-            console.log('request funcionou', data)
+            // console.log('request funcionou', data)
 
-            return data.payload.map(element => {
-                return new FeaturedProject(
-                    element.projectId,
-                    element.titulo,
-                    []                    ,
-                    element.gitURL,
-                    element.photos,
-                    element.descricao,
-                    element.status,
-                    element.percentageComplete,
-                    element.deployURL
-                )
-            });
+            
+            // const proj = FeaturedProject.createFeaturedProjects(data.payload)
+            // console.log(data.payload)
+            // console.log(proj)
+            // return proj
+
+            return FeaturedProject.createFeaturedProjects(data.payload)
+
         } catch {
             console.log('retornando mocks - featured')
-            return null
+            return this.featuredMocks
         } 
         
     }
 
-    private async getMinorProjects(): Promise<Project[]> {
+    private async getMinorProjects(): Promise<IProject[]> {
         try {
-            console.log(`enviando request para: ${BTConstants.apiURL}/api/projects/minor` )
+            // console.log(`enviando request para: ${BTConstants.apiURL}/api/projects/minor` )
             const request = fetch(`${BTConstants.apiURL}/api/projects/minor`, { mode: 'cors' })
             const response = await request
             const data = await response.json()
-            console.log('request funcionou', data)
-            return data.payload.map(element => {
-                return new Project(
-                    element.projectId,
-                    element.titulo,
-                    [],
-                    element.gitURL,
-                    element.photos,
-                )
-            })
+
+            // console.log(data.payload)
+
+            // const proj = Project.createProjects(data.payload)
+            // console.log(data.payload[0])
+            // console.log(proj[0])
+            // return proj
+
+            return Project.createProjects(data.payload)
         } catch {
             console.log('retornando mocks - minor')
             return this.minorMocks
         }
     }
 
-    public async getProjects(): Promise<[FeaturedProject[], Project[]]> {
+    public async getProjects(): Promise<[IFeaturedProject[], IProject[]]> {
         const featuredProjects = await this.getFeaturedProjects()
         const minorProjects = await this.getMinorProjects();
 

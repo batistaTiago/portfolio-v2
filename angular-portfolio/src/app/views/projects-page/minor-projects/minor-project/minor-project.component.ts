@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Project } from '../../../../shared/models/project.model';
+import { IProject } from '../../../../shared/models/project.model';
 
 @Component({
   selector: 'app-minor-project',
@@ -13,7 +13,7 @@ export class MinorProjectComponent implements OnInit {
   ngOnInit() {
   }
 
-  @Input() data: Project = null
+  @Input() data: IProject = null
   @Output() minorProjectImageClickedEvent: EventEmitter<string> = new EventEmitter();
 
   public showMinorProjectImage() {
