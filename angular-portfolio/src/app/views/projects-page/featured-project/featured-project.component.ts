@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { FeaturedProject } from '../../../shared/models/featured-project.model';
+import { IFeaturedProject } from '../../../shared/models/featured-project.model';
 
 @Component({
   selector: 'app-featured-project',
@@ -24,7 +24,7 @@ export class FeaturedProjectComponent implements OnInit {
     this.showDescription = !this.showDescription
   }
 
-  @Input() projectData: FeaturedProject = null;
+  @Input() projectData: IFeaturedProject = null;
 
   public propagate(eventData) {
     this.imageClickedEvent.emit(eventData)

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FeaturedProject } from '../../../../shared/models/featured-project.model';
+import { IFeaturedProject } from '../../../../shared/models/featured-project.model';
 
 @Component({
   selector: 'app-project-description',
@@ -13,6 +13,6 @@ export class ProjectDescriptionComponent implements OnInit {
   ngOnInit() {
   }
 
-  @Input() data: FeaturedProject = null
+  @Input() data: IFeaturedProject = null
 
 }
