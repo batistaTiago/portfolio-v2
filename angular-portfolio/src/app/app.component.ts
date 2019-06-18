@@ -12,7 +12,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     if(!BTBrowserDetector.browserIsSupported()) {
-      alert('Esta página não é bem suportada no seu navegador. Recomenda-se a utilização do Chrome, Firefox ou Opera.')
+      // alert(`${BTBrowserDetector.parser.getBrowserName()}`)
+      alert(`Para a utilização de todas as funcionalidades deste site, recomenda-se o uso de um nos navegadores a seguir: Chrome, Firefox ou Opera.`)
     }
   }
 }
