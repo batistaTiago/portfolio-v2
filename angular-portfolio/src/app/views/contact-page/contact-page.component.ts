@@ -75,7 +75,7 @@ export class ContactPage implements OnInit {
       const contactData = {
         name: this.name,
         email: this.email, 
-        phoneNumber: this.email, 
+        phoneNumber: this.phoneNumber, 
         subject: this.subject, 
         messageBody: this.messageBody
      }
