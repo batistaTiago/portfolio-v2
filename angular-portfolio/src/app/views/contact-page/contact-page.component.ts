@@ -87,7 +87,6 @@ export class ContactPage implements OnInit {
         const response = await this.contactService.sendContactRequest(contactData)
 
         if (response) {
-          console.log(response)
           this.awaitingResponse = false
           this.showModal = true
           this.clearForm()
@@ -98,12 +97,9 @@ export class ContactPage implements OnInit {
               this.showModal = false
             }, 7000
           ))
-        } else {
-          console.log(response)
         }
       } catch (e) {
-        console.log(e.response)
-        alert('Algum erro desconhecido ocorreu, tente novamente.')
+        alert('Algum erro desconhecido ocorreu, tente novamente. Se o problema persistir, tente novamente mais tarde.')
       } finally {
         this.awaitingResponse = false
       }

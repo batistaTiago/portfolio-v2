@@ -23,6 +23,17 @@ i {
     color: pink;
 }
 
+a.centered-flex-container {
+    text-decoration: none;
+}
+
+a.centered-flex-container:hover {
+    span {
+        text-decoration: underline;
+    }
+    
+}
+
 .intro {
     h1 {
         font-size: 2.5em;

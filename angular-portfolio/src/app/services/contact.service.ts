@@ -7,6 +7,8 @@ export class ContactService {
     constructor(private http: HttpClient) { }
 
     public async sendContactRequest(data: any): Promise<boolean> {
-        return await (await this.http.post(`${environment.apiURL}/api/contact/`, data, { observe: 'response' }).toPromise()).ok
+        const response = await this.http.post(`${environment.apiURL}/api/contact/`, data, { observe: 'response' }).toPromise()
+        console.log(response.status)
+        return response.ok
     }
 }
