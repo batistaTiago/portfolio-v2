@@ -20,9 +20,6 @@ export class ProjectsPage implements AfterViewInit {
     const projects = await this.projectService.getProjects()
     this.featuredProjects = projects[0]
     this.minorProjects = projects[1]
-
-    // console.log(this.featuredProjects)
-    // console.log(this.minorProjects)
   }
 
   public dismissModal() {
