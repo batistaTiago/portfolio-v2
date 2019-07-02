@@ -8,7 +8,7 @@ export class ProjectService {
 
     private featuredMocks: IFeaturedProject[] = [
         {
-            "projectId": 0,
+            "projectId": 1,
             "titulo": "Pássaro Urbano",
             "techUsed": [
                 "HTML",
@@ -34,37 +34,12 @@ export class ProjectService {
                 Além disso, o app também é integrado a uma API de CEPs, fazendo a busca de endereço automaticamente utilizando abordagem AJAX.`,
                 
             "deployUrl": "http://batista-tiago-ekyidag.s3-website-sa-east-1.amazonaws.com"
-        },
-        // {
-        //     "id": 3,
-        //     "titulo": "Portfólio",
-        //     "techUsed": [
-        //         "HTML",
-        //         "SASS",
-        //         "TypeScript",
-        //         "Angular",
-        //         "NodeJS",
-        //         "Express",
-        //         "MySQL"
-        //     ],
-        //     "gitUrl": "",
-        //     "imageUrls": [
-        //     ],
-        //     "status": "Em desenvolvimento",
-        //     "percentageComplete": 95,
-
-        //     "description": 
-        //         `Este portfólio é uma aplicação full-stack simples. 
-        //         Além do front-end aqui apresentado, ele conta com uma REST API que fornece as informações dinamicamente para a página de projetos e integra a página de contato com o servidor SMTP do Gmail através do NodeMailer.
-        //         `,
-
-        //     "deployUrl": ""
-        // }
+        }
     ]
 
     private minorMocks: IProject[] = [
         {
-            "projectId": 1,
+            "projectId": 2,
             "titulo": "Spotify Clone",
             "techUsed": [
                 "HTML",
@@ -72,17 +47,17 @@ export class ProjectService {
                 "Bootstrap",
                 "jQuery"
             ],
-            "gitUrl": "",
+            "gitUrl": "https://github.com/batistaTiago/web-module-1/tree/master/spotify-clone",
             "imageUrls": ["/assets/images/minor-projects/spotify-clone/1.png"]
         },
         {
-            "projectId": 2,
+            "projectId": 3,
             "titulo": "Mountain Travel",
             "techUsed": [
                 "HTML",
                 "CSS"
             ],
-            "gitUrl": "",
+            "gitUrl": "https://github.com/batistaTiago/web-module-4/tree/master/mountains-project",
             "imageUrls": [
                 "/assets/images/minor-projects/mountain-travel/1.png",
                 "/assets/images/minor-projects/mountain-travel/2.png",
@@ -93,18 +68,14 @@ export class ProjectService {
     ]
 
     private async getFeaturedProjects(): Promise<IFeaturedProject[]> {
+        
+        return this.featuredMocks
+        
         try {
-            // console.log(`enviando request para: ${environment.apiURL}/api/projects/featured` )
+            console.log(`enviando request para: ${environment.apiURL}/api/projects/featured` )
             const request = fetch(`${environment.apiURL}/api/projects/featured`, { mode: 'cors' })
             const response = await request
             const data = await response.json()
-            // console.log('request funcionou', data)
-
-            
-            // const proj = FeaturedProject.createFeaturedProjects(data.payload)
-            // console.log(data.payload)
-            // console.log(proj)
-            // return proj
 
             return FeaturedProject.createFeaturedProjects(data.payload)
 
@@ -116,18 +87,14 @@ export class ProjectService {
     }
 
     private async getMinorProjects(): Promise<IProject[]> {
+        
+        return this.minorMocks
+        
         try {
-            // console.log(`enviando request para: ${environment.apiURL}/api/projects/minor` )
+            console.log(`enviando request para: ${environment.apiURL}/api/projects/minor` )
             const request = fetch(`${environment.apiURL}/api/projects/minor`, { mode: 'cors' })
             const response = await request
             const data = await response.json()
-
-            // console.log(data.payload)
-
-            // const proj = Project.createProjects(data.payload)
-            // console.log(data.payload[0])
-            // console.log(proj[0])
-            // return proj
 
             return Project.createProjects(data.payload)
         } catch {
