@@ -1,8 +1,8 @@
 @import './app/global-stylesheets/variables.scss';
 @import './app/global-stylesheets/animations.scss';
-// @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-// @import url('https://fonts.googleapis.com/css?family=Philosopher&display=swap');
-// @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Philosopher&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 
 
 * {
@@ -12,6 +12,7 @@
     font-family: monospace;
     // font-family: 'Open Sans', sans-serif;
     // font-family: 'Philosopher', sans-serif;
+    // font-family: 'Quicksand', sans-serif;
     // font-family: sans-serif;
 }
 

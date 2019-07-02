@@ -1,5 +1,9 @@
 @import '../../global-stylesheets/variables.scss';
 
+*:not(i) {
+    font-family: 'Open Sans', sans-serif;
+}
+
 section {
     padding: 0px;
     padding-bottom: 15px;
@@ -38,6 +42,9 @@ i {
     
     .centered-flex-container:not(:last-child) {
         margin-bottom: 10px;
+        span {
+            font-weight: 100;
+        }
     }
     
     i {
@@ -95,7 +102,7 @@ i {
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            height: 100px;
+            height: 150px;
             border: 2px solid $main-color;
             box-shadow: 0px 5px 25px $main-color;
             padding-top: 5px;
@@ -103,6 +110,7 @@ i {
             
             li {
                 font-size: 1em;
+                // line-height: 12px;
                 margin: auto;
             }
             
