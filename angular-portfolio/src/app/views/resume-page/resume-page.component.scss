@@ -184,6 +184,8 @@ a.centered-flex-container:hover {
     
     #general-info {
         flex-direction: row;
+        padding-left: 200px;
+        padding-right: 200px;
 
         .centered-flex-container:not(:last-child) {
             margin-bottom: unset;

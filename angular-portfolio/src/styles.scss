@@ -131,6 +131,18 @@ app-root {
     }
 }
 
+@media (min-width: 1600px) {
+    app-root {
+        width: 1400px;
+    }
+}
+
+@media (min-width: 2000px) {
+    app-root {
+        width: 1700px;
+    }
+}
+
 app-project-images {
     display: flex;
     flex-grow: 1;

@@ -6,9 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { MainHeaderComponent } from './views/main-header/main-header.component';
+import { HeaderComponent } from './views/header/header.component';
 import { HeroPage } from './views/hero-page/hero-page.component';
-import { MainFooterComponent } from './views/main-footer/main-footer.component';
+import { FooterComponent } from './views/footer/footer.component';
 
 import { ContactPage } from './views/contact-page/contact-page.component';
 
@@ -25,7 +25,7 @@ import { ModalComponent } from './views/modal/modal.component';
 import { MinorProjectsComponent } from './views/projects-page/minor-projects/minor-projects.component';
 import { ProjectDescriptionComponent } from './views/projects-page/featured-project/project-description/project-description.component';
 import { MinorProjectComponent } from './views/projects-page/minor-projects/minor-project/minor-project.component';
-import { LogoComponent } from './views/main-header/logo/logo.component';
+import { LogoComponent } from './views/header/logo/logo.component';
 import { ProjectImagesComponent } from './views/projects-page/featured-project/project-images/project-images.component';
 import { ResumePage } from './views/resume-page/resume-page.component';
 
@@ -34,9 +34,9 @@ import { HttpClientModule } from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
-    MainHeaderComponent,
+    HeaderComponent,
     HeroPage,
-    MainFooterComponent,
+    FooterComponent,
     ProjectsPage,
     ContactPage,
     FeaturedProjectComponent,

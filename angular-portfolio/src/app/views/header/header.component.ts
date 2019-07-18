@@ -2,11 +2,11 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router'
 
 @Component({
-  selector: 'app-main-header',
-  templateUrl: './main-header.component.html',
-  styleUrls: ['./main-header.component.scss']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
 })
-export class MainHeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit {
   
   constructor(public router: Router) { }
   

@@ -12,6 +12,11 @@
 #header-projetos {
     color: $main-color;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     
     h3 {
         font-size: 1.25em;

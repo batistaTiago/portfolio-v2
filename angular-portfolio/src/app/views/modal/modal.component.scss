@@ -15,7 +15,6 @@
         position: fixed;
         left: 50%;
         top: 50%;
-        // transform: translate(-50%, -50%) rotate(90deg);
         transform: translate(-50%, -50%);
         border: 2px solid $secondary-color;
         box-shadow: 0px 0px 15px $secondary-color;
@@ -28,10 +27,10 @@
         justify-content: space-between;
 
         padding: 5px;
-        width: 85%;
-        height: auto;
 
-        //background: reg;
+        max-width: 85%;
+        
+        height: auto;
 
         .modal-header {
             
@@ -44,7 +43,6 @@
 
             font-size: 17px;
 
-            // //background: green;
 
             h2 {
                 font-size: 2em;
@@ -67,8 +65,8 @@
 
             .modal-image-container {
                 position: relative; 
-                width: 70vh; 
-                height: 55vw;
+                width: 70vw; 
+                height: 55vh;
                 display: flex;
                 justify-content: center;
                 align-items: stretch;
@@ -94,8 +92,6 @@
             flex-shrink: 0;
             margin-bottom: 10px;
 
-            //background: purple;
-
             button {
                 border-radius: 5%;
                 border: 1px solid $main-color;
@@ -119,7 +115,7 @@
 @media (min-width: 576px) {
     .modal-container {
         .modal {
-            max-width: 420px;
+            // max-width: 420px;
         }
     }
 }
@@ -130,13 +126,13 @@
         .modal {
             padding: 25px;
             transform: translate(-50%, -50%);
-            max-width: 600px;
+            // max-width: 600px;
             font-size: 1.25em;
             .modal-body {
                 padding: 5px 25px;
 
                 .modal-image-container {
-                    width: 70vw; 
+                    width: 70vw;
                     height: 70vh;
                 }
             }
