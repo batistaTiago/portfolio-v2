@@ -26,12 +26,35 @@ export class ProjectService {
                 "/assets/images/passaro-urbano/passaro-urbano3.png"
             ],
             "status": "Em desenvolvimento",
-            "percentageComplete": 60,
+            "percentageComplete": 59,
             
             "description": 
                 `Web app baseado no Peixe Urbano. 
                 O app oferece a possibilidade de criar cadastro (consumidor / anunciante), publicar, editar e deletar ofertas (caso o usuário seja um anunciante) e realizar compras. 
                 Além disso, o app também é integrado a uma API de CEPs, fazendo a busca de endereço automaticamente utilizando abordagem AJAX.`,
+                
+            "deployUrl": "http://batista-tiago-ekyidag.s3-website-sa-east-1.amazonaws.com"
+        },
+        {
+            "projectId": 2,
+            "titulo": "Authentication Microservice",
+            "techUsed": [
+                "NodeJS",
+                "MongoDB",
+                "Docker",
+                "Docker-compose",
+                "Redis",
+                "Python",
+                "JWT"
+            ],
+            "gitUrl": "https://github.com/batistatiago/passaro-urbano",
+            "imageUrls": [],
+            "status": "Em desenvolvimento",
+            "percentageComplete": 40,
+            
+            "description": 
+                `Microserviço de autenticação e gestão de usuários.
+                O serviço conta com uma fila de emails implementada no Redis e workers escritos em python para envio dos emails de confirmação de cadastro e redefinição de senha`,
                 
             "deployUrl": "http://batista-tiago-ekyidag.s3-website-sa-east-1.amazonaws.com"
         }
