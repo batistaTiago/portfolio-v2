@@ -21,6 +21,7 @@ export class ProjectService {
                 "/assets/images/natal-empregos/NE-1.png",
                 "/assets/images/natal-empregos/NE-2.png"
             ],
+            "colabs": [],
             "status": "Em desenvolvimento",
             "percentageComplete": 70,
             
@@ -49,6 +50,7 @@ export class ProjectService {
                 "/assets/images/passaro-urbano/passaro-urbano2.png",
                 "/assets/images/passaro-urbano/passaro-urbano3.png"
             ],
+            "colabs": [],
             "status": "Em desenvolvimento",
             "percentageComplete": 59,
             
@@ -76,6 +78,7 @@ export class ProjectService {
             "imageUrls": [
                 '/assets/images/auth-microservice/fluxograma.png'
             ],
+            "colabs": [],
             "status": "Em desenvolvimento",
             "percentageComplete": 40,
             

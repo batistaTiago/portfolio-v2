@@ -1,3 +1,4 @@
+import { Colaborator } from './colaborator.model';
 import { IProject } from "./project.model";
 
 export interface IFeaturedProject extends IProject {
@@ -6,6 +7,7 @@ export interface IFeaturedProject extends IProject {
     techUsed: string[]
     gitUrl: string
     imageUrls: string[]
+    colabs: Colaborator[]
     realProject: boolean
     description: string
     status: string
@@ -18,8 +20,8 @@ export class FeaturedProject {
 
     private constructor() { }
 
-    public static createFeaturedProject({ projectId, titulo, techUsed, gitUrl, imageUrls, realProject, description, status, percentageComplete, deployUrl }: any): IFeaturedProject {
-        return { projectId, titulo, techUsed, gitUrl, imageUrls, realProject, description, status, percentageComplete, deployUrl }
+    public static createFeaturedProject({ projectId, titulo, techUsed, gitUrl, imageUrls, colabs, realProject, description, status, percentageComplete, deployUrl }: any): IFeaturedProject {
+        return { projectId, titulo, techUsed, gitUrl, imageUrls, colabs, realProject, description, status, percentageComplete, deployUrl }
     }
 
     public static createFeaturedProjects(data: any[]): IFeaturedProject[] {
