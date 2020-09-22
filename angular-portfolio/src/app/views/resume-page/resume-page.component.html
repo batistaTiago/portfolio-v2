@@ -1,100 +1,70 @@
 <section>
-  <div class="intro">
-    <h1>Tiago Batista</h1>
-    <hr>
-    <div id="general-info">
-      <a target="_blank" href="https://linkedin.com/in/batistatiago" class="centered-flex-container">
-        <i class="fab fa-linkedin"></i>
-        <span>/in/batistaTiago</span>
-      </a>
-      <a href="mailto:ekyidag@gmail.com" class="centered-flex-container">
-        <i class="fas fa-envelope"></i>
-        <span>ekyidag@gmail.com</span>
-      </a>
-      <a target="_blank" href="https://github.com/batistatiago" class="centered-flex-container">
-        <i class="fab fa-github"></i>
-        <span>/batistaTiago</span>
-      </a>
-      
+    <div class="intro">
+        <h1>Tiago Batista</h1>
+        <hr>
+        <div id="general-info">
+            <a target="_blank" href="https://linkedin.com/in/batistatiago" class="centered-flex-container">
+                <i class="fab fa-linkedin"></i>
+                <span>/in/batistaTiago</span>
+            </a>
+            <a href="mailto:ekyidag@gmail.com" class="centered-flex-container">
+                <i class="fas fa-envelope"></i>
+                <span>ekyidag@gmail.com</span>
+            </a>
+            <a target="_blank" href="https://github.com/batistatiago" class="centered-flex-container">
+                <i class="fab fa-github"></i>
+                <span>/batistaTiago</span>
+            </a>
+
+        </div>
+
     </div>
-    
-  </div>
-  
-  <hr>
-  
-  <div id="education">
-    <h2>Formação</h2>
-    <ul class="lista-formacoes">
-      <li>
-        Bacharelado em Ciências e Tecnologia (UFRN)
-      </li>
-      <li>
-        Engenharia Mecatrônica (UFRN)
-      </li>
-    </ul>
-  </div>
-  
-  <hr>
-  
-  
-  <div id="qualifications">
-    <h2>Qualificações</h2>
-    <div class="general-qualifications">
-      
-      <div class="general-qualification">
-        <span>Front-end</span>
-        <ul class="specific-qualifications">
-          <li>
-            HTML
-          </li>
-          <li>
-            CSS
-          </li>
-          <li>
-            JavaScript
-          </li>
-          <li>
-            Bootsrap
-          </li>
-          <li>
-            jQuery
-          </li>
-          <li>
-            SASS
-          </li>
-          <li>
-            TypeScript
-          </li>
-          <li>
-            Angular
-          </li>
+
+    <hr>
+
+    <div id="education">
+        <h2>Formação</h2>
+        <ul class="lista-formacoes">
+            <li>
+                Bacharelado em Ciências e Tecnologia (UFRN)
+            </li>
+            <li>
+                Engenharia Mecatrônica (UFRN)
+            </li>
         </ul>
-      </div>
-      
-      <!-- <div class="separator"></div> -->
-      
-      <div class="general-qualification">
-        <span>Back-end</span>
-        <ul class="specific-qualifications">
-          <li>
-            NodeJS/Express
-          </li>
-          <li>
-            PHP (Laravel)
-          </li>
-          <li>
-            MySQL
-          </li>
-          <li>
-            MongoDB
-          </li>
-          <li>
-            Firebase
-          </li>
-        </ul>
-      </div>
-      
-      <!-- <div class="separator"></div>
+    </div>
+
+    <hr>
+
+
+    <div id="qualifications">
+        <h2>Qualificações</h2>
+        <div class="general-qualifications">
+
+            <div class="general-qualification">
+                <span>Front-end</span>
+                <ul class="specific-qualifications">
+                    <li *ngFor="let qual of frontEndQualifications">{{ qual.name }}</li>
+                </ul>
+            </div>
+
+            <!-- <div class="separator"></div> -->
+
+            <div class="general-qualification">
+                <span>Back-end</span>
+                <ul class="specific-qualifications">
+                    <li *ngFor="let qual of backEndQualifications">{{ qual.name }}</li>
+                </ul>
+            </div>
+
+            <div class="general-qualification">
+                <span>Outros</span>
+                <ul class="specific-qualifications">
+                    <li *ngFor="let qual of otherQualifications">{{ qual.name }}</li>
+                </ul>
+            </div>
+
+            <!-- <div class="separator"></div>
         
         <div class="general-qualification">
           <span>Mobile</span>
@@ -110,107 +80,47 @@
             </li>
           </ul>
         </div> -->
-      </div>
-      
-      
-      
-      
+        </div>
+
+
+
+
     </div>
-    
+
     <hr>
-    
+
     <div>
-      <div class="hideable-content-toggler">
-        <label for="expand-icon">Informações adicionais</label>
-        <button id="expand-icon" class="{{ showAdditionalInfo ? 'toggled' : '' }}" (click)="toggleAdditionalInfo()">
+        <div class="hideable-content-toggler">
+            <label for="expand-icon">Informações adicionais</label>
+            <button id="expand-icon" class="{{ showAdditionalInfo ? 'toggled' : '' }}" (click)="toggleAdditionalInfo()">
           <div class="vertical"></div>
           <div class="horizontal"></div>
         </button>
-      </div>
-      
-      <div class="hideable-content {{ showAdditionalInfo ? 'visible' : '' }}">
-        
-        <ul class="additional-info-list">
-          <li>
-            <h2>Cursos a distância</h2>
-            <ul class="courses-list">
-              
-              <li>
-                <a target="_blank" href="https://www.udemy.com/web-completo">
-                  <i class="fas fa-link"></i>
-                  'Desenvolvedor web completo 2019'
-                </a>
-              </li>
-              
-              <li>
-                <a target="_blank" href="https://www.udemy.com/curso-de-desenvolvimento-web-com-es6-typescript-e-angular-4/">
-                  <i class="fas fa-link"></i>
-                  'Desenvolvedor web com ES6, TypeScript e Angular'
-                </a>
-              </li>
-              
-              <li>
-                <a target="_blank" href="https://www.udemy.com/the-advanced-web-developer-bootcamp/">
-                  <i class="fas fa-link"></i>
-                  'The Advanced Web Developer Bootcamp'
-                </a>
-              </li>
-              
-              <li>
-                <a target="_blank" href="https://www.udemy.com/curso-completo-do-desenvolvedor-nodejs/">
-                  <i class="fas fa-link"></i>
-                  'Desenvolvedor NodeJS'
-                </a>
-              </li>
-              
-              <li>
-                <a target="_blank" href="https://www.udemy.com/the-complete-junior-to-senior-web-developer-roadmap/">
-                  <i class="fas fa-link"></i>
-                  'The Complete Junior to Senior Web Developer Roadmap (2019)'
-                </a>
-              </li>
-              
-              <li>
-                <a target="_blank" href="https://www.udemy.com/laravelcompleto/">
-                  <i class="fas fa-link"></i>
-                  'Laravel 5.6 Completo - O mais poderoso Framework PHP'
-                </a>
-              </li>
+        </div>
 
+        <div class="hideable-content {{ showAdditionalInfo ? 'visible' : '' }}">
 
-              <li>
-                <a target="_blank" href="https://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript">
-                  <i class="fas fa-link"></i>
-                  'TypeScript, Node, ES6 e Postgres - CRIE PROJETOS DO ZERO'
-                </a>
-              </li>
+            <ul class="additional-info-list">
+                <li>
+                    <h2>Cursos a distância</h2>
+                    <ul class="courses-list">
+                        <li *ngFor="let course of courses">
+                            <a target="_blank" href="{{ course.url }}" title="{{ course.linkTitle }}">
+                                <i class="fas fa-link"></i> {{ course.courseTitle }}
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
-              <li>
-                <a target="_blank" href="https://www.udemy.com/firebase-para-web-e-apps-hibridos">
-                  <i class="fas fa-link"></i>
-                  'Firebase para Web e Apps híbridos'
-                </a>
-              </li>
-              
+                <li>
+                    <h2>Linguagens de programação</h2>
+                    <ul class="programming-languages-list">
+                        <li *ngFor="let lang of programmingLanguages">{{ lang.name }}</li>
+                    </ul>
+                </li>
             </ul>
-          </li>
-          
-          <li>
-            <h2>Linguagens de programação</h2>
-            <ul class="programming-languages-list">
-              <li>JavaScript</li>
-              <li>TypeScript</li>
-              <li>PHP</li>
-              <li>Swift</li>
-              <li>C</li>
-              <li>C++</li>
-              <li>C#</li>
-              <li>Python</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+        </div>
     </div>
-    
-    
-  </section>
+
+
+</section>

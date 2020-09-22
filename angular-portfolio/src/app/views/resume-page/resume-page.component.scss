@@ -1,5 +1,4 @@
 @import '../../global-stylesheets/variables.scss';
-
 *:not(i) {
     font-family: 'Open Sans', sans-serif;
 }
@@ -7,14 +6,13 @@
 section {
     padding: 0px;
     padding-bottom: 15px;
-    
     hr {
         margin-top: 10px;
         margin-bottom: 10px;
     }
 }
 
-section > div {
+section>div {
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -31,7 +29,6 @@ a.centered-flex-container:hover {
     span {
         text-decoration: underline;
     }
-    
 }
 
 .intro {
@@ -40,7 +37,6 @@ a.centered-flex-container:hover {
         text-shadow: 0px 0px 15px $secondary-color;
         text-align: right;
     }
-    
     * {
         color: $main-color;
     }
@@ -50,32 +46,30 @@ a.centered-flex-container:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    
     .centered-flex-container:not(:last-child) {
         margin-bottom: 10px;
         span {
             font-weight: 100;
         }
     }
-    
     i {
         margin-right: 5px;
     }
 }
 
-#education, #qualifications {
+#education,
+#qualifications {
     h2 {
         text-align: center;
         margin-bottom: 10px;
         font-size: 1.65em;
-        
     }
 }
 
 .lista-formacoes {
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    font-size: 1.5em; 
+    font-size: 1.5em;
     font-weight: 100;
     flex-wrap: wrap;
     li {
@@ -84,7 +78,6 @@ a.centered-flex-container:hover {
         text-align: center;
         font-size: 0.9em;
     }
-    
     li:first-child {
         margin-top: 25px;
         margin-bottom: 25px;
@@ -95,7 +88,6 @@ a.centered-flex-container:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    
     .general-qualification {
         flex-basis: 100%;
         display: flex;
@@ -108,29 +100,25 @@ a.centered-flex-container:hover {
             text-align: center;
             margin-bottom: 15px;
         }
-        
         ul {
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            height: 150px;
+            height: 200px;
             border: 2px solid $main-color;
-            box-shadow: 0px 5px 25px $main-color;
+            box-shadow: 0px 0px 10px $main-color;
             padding-top: 5px;
             padding-bottom: 5px;
-            
             li {
                 font-size: 1em;
                 // line-height: 12px;
                 margin: auto;
             }
-            
             li:not(:last-child) {
                 margin-bottom: 5px;
             }
         }
     }
-    
 }
 
 .additional-info-list {
@@ -140,19 +128,17 @@ a.centered-flex-container:hover {
     li {
         text-align: justify;
     }
-
     ul {
         padding: 0px 15px;
         margin-top: 10px;
         font-size: 1.1em;
     }
-
-    ul > li:not(:last-child) {
+    ul>li:not(:last-child) {
         margin-bottom: 15px;
     }
 }
 
-.additional-info-list > li:first-child {
+.additional-info-list>li:first-child {
     margin-bottom: 25px;
 }
 
@@ -167,45 +153,35 @@ a.centered-flex-container:hover {
             }
         }
     }
-    
 }
 
-
 @media (min-width: 992px) {
-    
     section {
         margin-top: 15px;
         padding: 15px;
     }
-    
-    section > div:not(.intro):not(:last-child) {
+    section>div:not(.intro):not(:last-child) {
         padding: 15px 50px;
     }
-    
     #general-info {
         flex-direction: row;
         padding-left: 200px;
         padding-right: 200px;
-
         .centered-flex-container:not(:last-child) {
             margin-bottom: unset;
         }
     }
-    
     // .lista-formacoes {
     //     flex-direction: row;
     //     justify-content: space-between; 
     // }
-    
     .general-qualifications {
         .general-qualification {
             flex-basis: 25%;
         }
     }
-
-
     .additional-info-list {
         flex-direction: row;
         justify-content: space-around;
-    }    
+    }
 }
