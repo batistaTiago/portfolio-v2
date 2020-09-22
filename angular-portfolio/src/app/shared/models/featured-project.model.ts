@@ -6,6 +6,7 @@ export interface IFeaturedProject extends IProject {
     techUsed: string[]
     gitUrl: string
     imageUrls: string[]
+    realProject: boolean
     description: string
     status: string
     percentageComplete: number
@@ -17,8 +18,8 @@ export class FeaturedProject {
 
     private constructor() { }
 
-    public static createFeaturedProject({ projectId, titulo, techUsed, gitUrl, imageUrls, description, status, percentageComplete, deployUrl }: any): IFeaturedProject {
-        return { projectId, titulo, techUsed, gitUrl, imageUrls, description, status, percentageComplete, deployUrl }
+    public static createFeaturedProject({ projectId, titulo, techUsed, gitUrl, imageUrls, realProject, description, status, percentageComplete, deployUrl }: any): IFeaturedProject {
+        return { projectId, titulo, techUsed, gitUrl, imageUrls, realProject, description, status, percentageComplete, deployUrl }
     }
 
     public static createFeaturedProjects(data: any[]): IFeaturedProject[] {

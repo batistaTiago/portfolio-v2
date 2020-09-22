@@ -1,51 +1,38 @@
 @import '../../../../global-stylesheets/variables.scss';
-
 .imagens-projeto {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    
     flex-grow: 1;
     width: 100%;
-    
     hr {
         margin: 10px;
     }
-    
     .featured-image-container {
         position: relative;
         align-self: center;
         width: 100%;
         height: 100%;
         flex-basis: 75%;
-        
         flex-grow: 1;
-        
-        // display: flex;
-        // justify-content: center;
-        // align-items: stretch;
-        
         cursor: zoom-in;
-
         .featured-image {
             position: absolute;
             top: 50%;
             left: 50%;
-            width: auto;
-            height: 100%;
+            width: 80%;
+            height: 80%;
             transform: translate(-50%, -50%);
             transition: opacity 1s ease-in-out;
             border: 1px solid $main-color;
             border-radius: 10px;
             box-shadow: 0 0 5px $main-color;
         }
-        
         .featured-image:not(.opaque) {
             opacity: 0;
             filter: alpha(opacity=0);
         }
     }
-    
     .lista-imagens-projeto {
         list-style: none;
         display: flex;
@@ -53,54 +40,43 @@
         justify-content: space-evenly;
         margin-left: 5%;
         margin-right: 5%;
-        
         // background: aqua;
         flex-basis: 20%;
         flex-shrink: 0;
-
-    
         li {
             position: relative;
             flex-basis: 20%;
             // overflow: hidden;
-            
             // background: red;
-            
             display: flex;
             // flex-direction: column;
             justify-content: center;
             align-items: center;
-            
             img {
                 position: absolute;
                 // top: 50%; left: 50%;
                 // transform: translate(-50%, -50%);
                 width: 100%;
-                height: auto;      
-                          
+                height: auto;
                 cursor: pointer;
                 transition: box-shadow 0.35s ease-in-out, transform 0.15s ease-in-out;
                 border-radius: 15px;
                 border: 2px solid $main-color;
                 // border: 3px solid green;
             }
-            
             img:hover {
                 // transform: translate(-50%, -50%) scale(1.025);
                 transform: scale(1.0125);
             }
-            
             img.current {
                 box-shadow: 0 0 5px $main-color;
                 // transform: translate(-50%, -50%) scale(1.05);
                 transform: scale(1.025);
                 cursor: pointer;
             }
-            
         }
     }
 }
-
 
 @media (min-width: 992px) {
     .imagens-projeto {
@@ -112,15 +88,14 @@
                 }
             }
         }
-
         .lista-imagens-projeto {
             flex-basis: 15%;
-            max-height: 90px;            
+            max-height: 90px;
             li {
                 img {
                     position: absolute;
                     width: auto;
-                    height: 80%;  
+                    height: 80%;
                 }
             }
         }
@@ -129,9 +104,9 @@
 
 @media (min-width: 1200px) {
     .imagens-projeto {
-        .lista-imagens-projeto {            
-                flex-basis: 15%;
-                max-height: 60px;
+        .lista-imagens-projeto {
+            flex-basis: 15%;
+            max-height: 60px;
         }
     }
 }

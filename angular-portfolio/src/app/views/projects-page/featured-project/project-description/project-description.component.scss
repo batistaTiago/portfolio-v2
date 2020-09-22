@@ -1,6 +1,4 @@
 @import '../../../../global-stylesheets/variables.scss';
-
-
 h3 {
     display: none;
     font-size: 1.3em;
@@ -23,7 +21,6 @@ ul {
     list-style: none;
     padding: 25px;
     padding-bottom: 5px;
-    
     li {
         padding: 5px 10px;
         border-radius: 10px;
@@ -36,35 +33,27 @@ ul {
         transition: background-color 0.2s ease-in-out;
         cursor: default;
     }
-    
     li:hover {
         font-weight: normal;
     }
-    
     li.html:hover {
         background-color: #DE4B25;
     }
-    
     li.css:hover {
         background-color: #016FBA;
     }
-    
     li.typescript:hover {
         background-color: #007ACC;
     }
-    
     li.bootstrap:hover {
         background-color: #563D7C;
     }
-    
     li.jquery:hover {
         background-color: #1168AE
     }
-    
     li.angular:hover {
         background-color: #D7032F;
     }
-    
     li.firebase:hover {
         background-color: #F5830F;
     }
@@ -76,11 +65,14 @@ hr {
     margin-right: auto;
 }
 
-.project-status {
+.project-label {
     font-size: 0.55em;
     margin-top: 10px;
-    margin-bottom: 10px;
-    font-weight: bold;   
+    font-weight: bold;
+}
+
+.project-label:last-child {
+    margin-bottom: 25px;
 }
 
 .project-status.concluido {
@@ -91,18 +83,14 @@ hr {
     color: yellow;
 }
 
-
 @media (min-width: 992px) {
-   
     h3 {
         display: block;
     }
-    
     .project-description {
         margin-top: 10px;
     }
-
     hr:last-child {
         display: none;
     }
-}    
+}

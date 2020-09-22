@@ -9,6 +9,30 @@ export class ProjectService {
     private featuredMocks: IFeaturedProject[] = [
         {
             "projectId": 1,
+            "titulo": "Natal Empregos",
+            "techUsed": [
+                "Laravel",
+                "MySQL",
+                "jQuery",
+                "Docker/compose"
+            ],
+            "gitUrl": "https://github.com/batistatiago/natal-empregos-containerized",
+            "imageUrls": [
+                "/assets/images/natal-empregos/NE-1.png",
+                "/assets/images/natal-empregos/NE-2.png"
+            ],
+            "status": "Em desenvolvimento",
+            "percentageComplete": 70,
+            
+            "realProject": true,
+            "description": 
+                `Projeto Real, feito para uma cliente de Natal/RN para candidatos a vagas de emprego na cidade.`,
+                
+            "deployUrl": "https://natal-empregos.herokuapp.com"
+        },
+
+        {
+            "projectId": 2,
             "titulo": "Pássaro Urbano",
             "techUsed": [
                 "HTML",
@@ -28,6 +52,7 @@ export class ProjectService {
             "status": "Em desenvolvimento",
             "percentageComplete": 59,
             
+            "realProject": false,
             "description": 
                 `Web app baseado no Peixe Urbano. 
                 O app oferece a possibilidade de criar cadastro (consumidor / anunciante), publicar, editar e deletar ofertas (caso o usuário seja um anunciante) e realizar compras. 
@@ -47,16 +72,19 @@ export class ProjectService {
                 "Python",
                 "JWT"
             ],
-            "gitUrl": "https://github.com/batistatiago/passaro-urbano",
-            "imageUrls": [],
+            "gitUrl": "https://github.com/batistatiago/bt-authentication-microservice",
+            "imageUrls": [
+                '/assets/images/auth-microservice/fluxograma.png'
+            ],
             "status": "Em desenvolvimento",
             "percentageComplete": 40,
             
+            "realProject": false,
             "description": 
                 `Microserviço de autenticação e gestão de usuários.
                 O serviço conta com uma fila de emails implementada no Redis e workers escritos em python para envio dos emails de confirmação de cadastro e redefinição de senha`,
                 
-            "deployUrl": "http://batista-tiago-ekyidag.s3-website-sa-east-1.amazonaws.com"
+            "deployUrl": null
         }
     ]
 
