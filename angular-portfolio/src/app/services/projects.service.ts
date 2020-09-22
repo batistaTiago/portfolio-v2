@@ -21,7 +21,20 @@ export class ProjectService {
                 "/assets/images/natal-empregos/NE-1.png",
                 "/assets/images/natal-empregos/NE-2.png"
             ],
-            "colabs": [],
+            "colabs": [
+                {
+                    nome: 'abilioN',
+                    gitUrlProfile: 'https://github.com/abilioN'
+                },
+                {
+                    nome: 'lucaslaricchia',
+                    gitUrlProfile: 'https://github.com/lucaslaricchia'
+                },
+                {
+                    nome: 'danieelvaraujo',
+                    gitUrlProfile: 'https://github.com/danieelvaraujo'
+                }
+            ],
             "status": "Em desenvolvimento",
             "percentageComplete": 70,
             

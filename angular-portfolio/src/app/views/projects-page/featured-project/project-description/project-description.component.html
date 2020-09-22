@@ -25,4 +25,14 @@ project-status
 
 <app-progress-bar [percentageComplete]="data.percentageComplete"></app-progress-bar>
 
-<hr style="margin-top: 15px;">
+<div *ngIf="data.colabs.length > 0" style="margin-top: 15px; margin-bottom: 15px;">
+    <hr>
+    <div class="project-label">Colaboradores</div>
+    <ul>
+        <li *ngFor="let colab of data.colabs">
+            <a href="{{ colab.gitUrlProfile }}" target="_blank">
+                {{ colab.nome }}
+            </a>
+        </li>
+    </ul>
+</div>

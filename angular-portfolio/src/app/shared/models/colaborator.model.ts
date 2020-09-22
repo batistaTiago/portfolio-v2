@@ -1,5 +1,3 @@
-import { IProject } from "./project.model";
-
 export interface IColaborator {
     nome: number
     gitUrlProfile: string
