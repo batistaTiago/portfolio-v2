@@ -148,12 +148,6 @@ export class ProjectService {
                 "Redis",
                 "OAuth2"
             ],
-            "gitUrl": null,
-            "imageUrls": [
-                "/assets/images/natal-empregos/NE-1.png",
-                "/assets/images/natal-empregos/NE-2.png"
-            ],
-            "status": "Em produção",
             
             "description": `
                 Sistema de bilhetagem responsável por venda de eventos nos estádios Arena das Dunas (Natal/RN), Arena Fonte Nova (Salvador/BA) e Arena Portoalegrense (Porto Alegre/RS), além de outras produtoras independentes que utilizam a solução. O sistema tem cerca de 200 mil usuários somando o público dos 3 estádios. <br />
