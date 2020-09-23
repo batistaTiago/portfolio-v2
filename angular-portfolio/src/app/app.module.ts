@@ -29,7 +29,8 @@ import { LogoComponent } from './views/header/logo/logo.component';
 import { ProjectImagesComponent } from './views/projects-page/featured-project/project-images/project-images.component';
 import { ResumePage } from './views/resume-page/resume-page.component';
 
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { CompanyProjectsComponent } from './views/projects-page/company-projects/company-projects.component'
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { HttpClientModule } from '@angular/common/http'
     MinorProjectComponent,
     LogoComponent,
     ProjectImagesComponent,
-    ResumePage
+    ResumePage,
+    CompanyProjectsComponent
   ],
   imports: [
     BrowserAnimationsModule,
