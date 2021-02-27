@@ -9,6 +9,29 @@ export class ProjectService {
     private featuredMocks: IFeaturedProject[] = [
         {
             "projectId": 1,
+            "titulo": "Natal Empregos",
+            "techUsed": [
+                "Laravel",
+                "MySQL",
+                "jQuery",
+                "Docker/compose"
+            ],
+            "gitUrl": "https://github.com/batistatiago/natal-empregos-containerized",
+            "imageUrls": [
+                "/assets/images/natal-empregos/NE-1.png",
+                "/assets/images/natal-empregos/NE-2.png"
+            ],
+            "status": "Em desenvolvimento",
+            "percentageComplete": 70,
+            
+            "description": 
+                `Projeto Real, feito para uma cliente de Natal/RN para candidatos a vagas de emprego na cidade.`,
+                
+            "deployUrl": "https://natal-empregos.herokuapp.com"
+        },
+        
+        {
+            "projectId": 2,
             "titulo": "Pássaro Urbano",
             "techUsed": [
                 "HTML",
@@ -35,14 +58,14 @@ export class ProjectService {
                 
             "deployUrl": "http://batista-tiago-ekyidag.s3-website-sa-east-1.amazonaws.com"
         },
+
         {
-            "projectId": 2,
+            "projectId": 3,
             "titulo": "Authentication Microservice",
             "techUsed": [
                 "NodeJS",
                 "MongoDB",
-                "Docker",
-                "Docker-compose",
+                "Docker/compose",
                 "Redis",
                 "Python",
                 "JWT"

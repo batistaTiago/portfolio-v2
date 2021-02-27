@@ -63,12 +63,58 @@ a.centered-flex-container:hover {
     }
 }
 
-#education, #qualifications {
+#education, #qualifications, #experience {
     h2 {
         text-align: center;
         margin-bottom: 10px;
         font-size: 1.65em;
         
+    }
+}
+
+.lista-experience {
+
+    margin-top: 20px;
+
+    li {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        & > div {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2px;
+
+            .company-name {
+                font-size: 1.35em;
+                font-weight: bolder;
+            }
+            .job-location {
+                font-style: italic;
+                font-size: 0.8em;
+            }
+            .job-title {
+                font-size: 0.8em;
+                font-weight: bold;
+            }
+
+            .job-timeline {
+                font-size: 0.8em;
+            }
+        }
+
+        & > ul.job-items {
+            margin-top: 10px;
+            margin-left: 15px;
+            list-style: circle;
+            font-size: 0.8em;
+            li {
+                margin-bottom: 5px;
+            }
+        }
     }
 }
 
