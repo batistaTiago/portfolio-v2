@@ -1,5 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { IFeaturedProject } from '../../shared/models/featured-project.model';
+import { ICompanyProject } from '../../shared/models/company-project.model';
 import { ProjectService } from '../../services/projects.service';
 import { IProject } from '../../shared/models/project.model';
 
@@ -14,12 +15,16 @@ export class ProjectsPage implements AfterViewInit {
   constructor(private projectService: ProjectService) { }
 
   public featuredProjects: IFeaturedProject[] = []
+  public companyProjects: ICompanyProject[] = []
   public minorProjects: IProject[] = []
 
   async ngAfterViewInit() {
-    const projects = await this.projectService.getProjects()
-    this.featuredProjects = projects[0]
-    this.minorProjects = projects[1]
+
+    const projects = await this.projectService.getProjects();
+    this.featuredProjects = projects[0];
+    this.minorProjects = projects[1];
+    this.companyProjects = projects[2];
+
   }
 
   public dismissModal() {

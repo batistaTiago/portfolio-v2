@@ -1,0 +1,19 @@
+<section>
+    <div class="hideable-content-toggler">
+        <label for="expand-icon">Projetos de Empresas</label>
+        <button id="expand-icon" class="{{ showMenu ? 'toggled' : '' }}" (click)="toggleMenu()">
+    <div class="vertical"></div>
+    <div class="horizontal"></div>
+  </button>
+    </div>
+    <div class="company-projects-list-container hideable-content {{ showMenu ? 'visible' : '' }}">
+        <ul class="company-projects">
+            <li *ngFor="let project of projects">
+                <h2>
+                    <a href="{{ project.deployUrl }}" target="_blank" title="{{ project.titulo }}">{{ project.titulo }}</a>
+                </h2>
+                <p [innerHTML]="project.description"></p>
+            </li>
+        </ul>
+    </div>
+</section>

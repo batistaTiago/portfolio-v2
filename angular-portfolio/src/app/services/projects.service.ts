@@ -2,6 +2,7 @@ import { IProject, Project } from "../shared/models/project.model";
 import { IFeaturedProject, FeaturedProject } from "../shared/models/featured-project.model";
 import { Injectable } from "@angular/core";
 import { environment } from '../../environments/environment'
+import { ICompanyProject } from '../shared/models/company-project.model';
 
 @Injectable()
 export class ProjectService {
@@ -21,15 +22,30 @@ export class ProjectService {
                 "/assets/images/natal-empregos/NE-1.png",
                 "/assets/images/natal-empregos/NE-2.png"
             ],
+            "colabs": [
+                {
+                    nome: 'abilioN',
+                    gitUrlProfile: 'https://github.com/abilioN'
+                },
+                {
+                    nome: 'lucaslaricchia',
+                    gitUrlProfile: 'https://github.com/lucaslaricchia'
+                },
+                {
+                    nome: 'danieelvaraujo',
+                    gitUrlProfile: 'https://github.com/danieelvaraujo'
+                }
+            ],
             "status": "Em desenvolvimento",
             "percentageComplete": 70,
             
+            "realProject": true,
             "description": 
-                `Projeto Real, feito para uma cliente de Natal/RN para candidatos a vagas de emprego na cidade.`,
+                `Projeto feito para uma Cliente de Natal/RN para candidatos a vagas de emprego na cidade.`,
                 
             "deployUrl": "https://natal-empregos.herokuapp.com"
         },
-        
+
         {
             "projectId": 2,
             "titulo": "Pássaro Urbano",
@@ -48,9 +64,11 @@ export class ProjectService {
                 "/assets/images/passaro-urbano/passaro-urbano2.png",
                 "/assets/images/passaro-urbano/passaro-urbano3.png"
             ],
+            "colabs": [],
             "status": "Em desenvolvimento",
-            "percentageComplete": 59,
+            "percentageComplete": 60,
             
+            "realProject": false,
             "description": 
                 `Web app baseado no Peixe Urbano. 
                 O app oferece a possibilidade de criar cadastro (consumidor / anunciante), publicar, editar e deletar ofertas (caso o usuário seja um anunciante) e realizar compras. 
@@ -70,22 +88,26 @@ export class ProjectService {
                 "Python",
                 "JWT"
             ],
-            "gitUrl": "https://github.com/batistatiago/passaro-urbano",
-            "imageUrls": [],
+            "gitUrl": "https://github.com/batistatiago/bt-authentication-microservice",
+            "imageUrls": [
+                '/assets/images/auth-microservice/fluxograma.png'
+            ],
+            "colabs": [],
             "status": "Em desenvolvimento",
             "percentageComplete": 40,
             
+            "realProject": false,
             "description": 
                 `Microserviço de autenticação e gestão de usuários.
                 O serviço conta com uma fila de emails implementada no Redis e workers escritos em python para envio dos emails de confirmação de cadastro e redefinição de senha`,
                 
-            "deployUrl": "http://batista-tiago-ekyidag.s3-website-sa-east-1.amazonaws.com"
+            "deployUrl": null
         }
     ]
 
     private minorMocks: IProject[] = [
         {
-            "projectId": 2,
+            "projectId": 1,
             "titulo": "Spotify Clone",
             "techUsed": [
                 "HTML",
@@ -97,7 +119,7 @@ export class ProjectService {
             "imageUrls": ["/assets/images/minor-projects/spotify-clone/1.png"]
         },
         {
-            "projectId": 3,
+            "projectId": 2,
             "titulo": "Mountain Travel",
             "techUsed": [
                 "HTML",
@@ -113,47 +135,91 @@ export class ProjectService {
         }
     ]
 
+
+    private companyMocks = [
+        {
+            "projectId": 1,
+            "titulo": "Bilheteria LessClick",
+            "techUsed": [
+                "Laravel",
+                "MySQL",
+                "jQuery",
+                "SASS",
+                "Redis",
+                "OAuth2"
+            ],
+            
+            "description": `
+                Sistema de bilhetagem responsável por venda de eventos nos estádios Arena das Dunas (Natal/RN), Arena Fonte Nova (Salvador/BA) e Arena Portoalegrense (Porto Alegre/RS), além de outras produtoras independentes que utilizam a solução. O sistema tem cerca de 200 mil usuários somando o público dos 3 estádios. <br />
+                Neste projeto, fui o principal responsável pela arquitetura e desenvolvimento back-end da maior parte do sistema, como modelagem do banco de dados, integrações com serviços terceiros (PayPal, GooglePay, GoogleMaps, GetNet, ClearSale, FirebaseAuth, etc), implementação do protocolo OAuth2 para comunicação com as aplicações-cliente Web e Pontos de Venda internos dos estádios. 
+                Além disso, também fui responsável por boa parte do desenvolvimento front-end do módulo de administração, que conta com relatórios, dashboards, configurações de eventos, ingressos, etc. 
+                Também fui o principal responsável pela administração do servidor de homologação utilizado.
+            `,
+                
+            "deployUrl": "https://web.lessclick.com.br",
+            "companyName": "LessClick"
+        }
+    ]
+
     private async getFeaturedProjects(): Promise<IFeaturedProject[]> {
         
-        return this.featuredMocks
+        return this.featuredMocks;
         
-        try {
-            console.log(`enviando request para: ${environment.apiURL}/api/projects/featured` )
-            const request = fetch(`${environment.apiURL}/api/projects/featured`, { mode: 'cors' })
-            const response = await request
-            const data = await response.json()
+        // try {
+        //     console.log(`enviando request para: ${environment.apiURL}/api/projects/featured` )
+        //     const request = fetch(`${environment.apiURL}/api/projects/featured`, { mode: 'cors' })
+        //     const response = await request
+        //     const data = await response.json()
 
-            return FeaturedProject.createFeaturedProjects(data.payload)
+        //     return FeaturedProject.createFeaturedProjects(data.payload)
 
-        } catch {
-            console.log('retornando mocks - featured')
-            return this.featuredMocks
-        } 
+        // } catch {
+        //     console.log('retornando mocks - featured')
+        //     return this.featuredMocks
+        // } 
         
     }
 
     private async getMinorProjects(): Promise<IProject[]> {
         
-        return this.minorMocks
+        return this.minorMocks;
         
-        try {
-            console.log(`enviando request para: ${environment.apiURL}/api/projects/minor` )
-            const request = fetch(`${environment.apiURL}/api/projects/minor`, { mode: 'cors' })
-            const response = await request
-            const data = await response.json()
+        // try {
+        //     console.log(`enviando request para: ${environment.apiURL}/api/projects/minor` )
+        //     const request = fetch(`${environment.apiURL}/api/projects/minor`, { mode: 'cors' })
+        //     const response = await request
+        //     const data = await response.json()
 
-            return Project.createProjects(data.payload)
-        } catch {
-            console.log('retornando mocks - minor')
-            return this.minorMocks
-        }
+        //     return Project.createProjects(data.payload)
+        // } catch {
+        //     console.log('retornando mocks - minor')
+        //     return this.minorMocks
+        // }
     }
 
-    public async getProjects(): Promise<[IFeaturedProject[], IProject[]]> {
-        const featuredProjects = await this.getFeaturedProjects()
-        const minorProjects = await this.getMinorProjects();
+    private async getCompanyProjects(): Promise<ICompanyProject[]> {
+        
+        return this.companyMocks;
+        
+        // try {
+        //     console.log(`enviando request para: ${environment.apiURL}/api/projects/minor` )
+        //     const request = fetch(`${environment.apiURL}/api/projects/minor`, { mode: 'cors' })
+        //     const response = await request
+        //     const data = await response.json()
 
-        return [featuredProjects, minorProjects];
+        //     return Project.createProjects(data.payload)
+        // } catch {
+        //     console.log('retornando mocks - minor')
+        //     return this.minorMocks
+        // }
+    }
+
+    public async getProjects(): Promise<[IFeaturedProject[], IProject[], ICompanyProject[]]> {
+        const featuredProjects = await this.getFeaturedProjects();
+        const minorProjects = await this.getMinorProjects();
+        const companyProjects = await this.getCompanyProjects();
+
+        return [featuredProjects, minorProjects, companyProjects];
         
     }
 }

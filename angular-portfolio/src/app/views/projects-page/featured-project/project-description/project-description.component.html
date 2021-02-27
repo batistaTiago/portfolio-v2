@@ -2,22 +2,37 @@
 <p class="project-description">{{ data.description }}</p>
 <h4>Tecnologias</h4>
 <ul>
-  <li *ngFor="let tech of data.techUsed" class="html">
-    {{ tech }}
-  </li>
+    <li *ngFor="let tech of data.techUsed" class="html">
+        {{ tech }}
+    </li>
 </ul>
 
 <hr>
 
-<div 
-class="
+<div class="labels">
+
+    <div class="
+project-label
 project-status
 {{ data.status == 'Em desenvolvimento' ? 'em-desenvolvimento' : '' }}
 {{ data.status == 'Concluído' ? 'concluido' : '' }}
-"
->
-Status: {{ data.status }}
+">
+        Status: {{ data.status }}
+    </div>
+
+    <div class="project-label">Tipo: {{ data.realProject ? 'Projeto real' : 'Projeto de estudos' }}</div>
 </div>
+
 <app-progress-bar [percentageComplete]="data.percentageComplete"></app-progress-bar>
 
-<hr style="margin-top: 15px;">
+<div *ngIf="data.colabs.length > 0" style="margin-top: 15px; margin-bottom: 15px;">
+    <hr>
+    <div class="project-label">Colaboradores</div>
+    <ul>
+        <li *ngFor="let colab of data.colabs">
+            <a href="{{ colab.gitUrlProfile }}" target="_blank">
+                {{ colab.nome }}
+            </a>
+        </li>
+    </ul>
+</div>

@@ -1,23 +1,16 @@
 <section>
-  
-  <div class="hideable-content-toggler">
-    <label for="expand-icon">Projetos Menores</label>
-    <button id="expand-icon" class="{{ showMenu ? 'toggled' : '' }}" (click)="toggleMenu()">
+    <div class="hideable-content-toggler">
+        <label for="expand-icon">Projetos Menores</label>
+        <button id="expand-icon" class="{{ showMenu ? 'toggled' : '' }}" (click)="toggleMenu()">
       <div class="vertical"></div>
       <div class="horizontal"></div>
     </button>
-  </div>
-  
-  <!-- <button class="bt-button {{ showMenu ? 'toggled' : '' }}" (click)="toggleMenu()">
-    <span>Projetos menores</span>
-    <i class="fa fa-caret-down"></i>
-  </button> -->
-  
-  <div class="minor-projects-list-container hideable-content {{ showMenu ? 'visible' : '' }}">
-    <ul class="minor-projects-list">
-      <li *ngFor="let project of projects">
-        <app-minor-project [data]="project" (minorProjectImageClickedEvent)="propagate($event)"></app-minor-project>
-      </li>
-    </ul>
-  </div>
+    </div>
+    <div class="minor-projects-list-container hideable-content {{ showMenu ? 'visible' : '' }}">
+        <ul class="minor-projects-list">
+            <li *ngFor="let project of projects">
+                <app-minor-project [data]="project" (minorProjectImageClickedEvent)="propagate($event)"></app-minor-project>
+            </li>
+        </ul>
+    </div>
 </section>

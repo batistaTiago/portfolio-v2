@@ -1,6 +1,5 @@
 <footer>
-  <div class="social-media-links">
-      <a href="https://www.github.com/batistaTiago" class="fab fa-github-square"></a>
-      <a href="https://www.linkedin.com/in/batistaTiago" class="fab fa-linkedin"></a>
-  </div>
+    <div class="social-media-links">
+        <a *ngFor="let media of socialMedia" href="{{ media.url }}" class="{{ media.iconClass }}" title="{{ media.linkTitle }}"></a>
+    </div>
 </footer>

@@ -1,29 +1,28 @@
 <li>
-  <div style="display: flex">
-    <div class='header-featured-project'>
-      <span>
+    <div style="display: flex">
+        <div class='header-featured-project'>
+            <span>
         {{ projectData.titulo }}
       </span>
-      <i 
-        class="far fa-question-circle {{ showDescription ? 'toggled' : '' }}"
-        (click)="toggleDescription()"></i>
-      <app-project-description 
-        [data]="{ 
+            <i class="far fa-question-circle {{ showDescription ? 'toggled' : '' }}" (click)="toggleDescription()"></i>
+            <app-project-description [data]="{ 
           titulo: projectData.titulo,
+          realProject: projectData.realProject, 
           description: projectData.description, 
           techUsed: projectData.techUsed,
+          colabs: projectData.colabs,
           status: projectData.status,
           percentageComplete: projectData.percentageComplete
         }">
-    
-      </app-project-description>
+
+            </app-project-description>
+        </div>
     </div>
-  </div>
-  
-  <app-project-images [images]="projectData.imageUrls" (imageClickedEvent)="propagate($event)"></app-project-images>
-  
-  <div class="links-projeto">
-    <a [href]='projectData.gitUrl' target="blank">Git</a>
-    <a [href]='projectData.deployUrl' target="blank">Live Version</a>
-  </div>  
+
+    <app-project-images [images]="projectData.imageUrls" (imageClickedEvent)="propagate($event)"></app-project-images>
+
+    <div class="links-projeto">
+        <a [href]='projectData.gitUrl' target="blank">Git</a>
+        <a [href]="projectData.deployUrl" class="{{ !!projectData.deployUrl ? '' : 'unavailable' }}" target="blank" (click)="!projectData.deployUrl ? $event.preventDefault() : ''">Live Version</a>
+    </div>
 </li>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SocialMedia } from 'src/app/shared/models/social-media.model';
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  public socialMedia: SocialMedia[];
+
+  constructor() {
+    this.socialMedia = SocialMedia.createSocialMedias([
+      {
+        linkTitle: 'GitHub',
+        iconClass: 'fab fa-github',
+        url: 'https://www.github.com/batistaTiago'
+      },
+      {
+        linkTitle: 'LinkedIn',
+        iconClass: 'fab fa-linkedin-in',
+        url: 'https://www.linkedin.com/in/batistaTiago'
+      },
+      {
+        iconClass: 'fas fa-code',
+        linkTitle: 'CodersRank',
+        url: 'https://profile.codersrank.io/user/batistatiago'
+      }
+    ]);
+  }
 
   ngOnInit() {
   }

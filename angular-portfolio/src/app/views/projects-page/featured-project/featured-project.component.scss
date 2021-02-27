@@ -1,26 +1,21 @@
 @import '../../../global-stylesheets/variables.scss';
-
 .header-featured-project {
     margin: 15px auto;
     font-size: 2em;
     text-align: center;
-    
     position: relative;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    
     span {
         margin-right: 10px;
     }
-    
     i {
         cursor: pointer;
         color: $main-gray-color;
     }
-    
-    i.toggled + app-project-description {
+    i.toggled+app-project-description {
         display: block;
     }
 }
@@ -29,14 +24,12 @@ app-project-description {
     display: none;
     padding: 15px;
     margin-top: 10px;
-
     z-index: 1; //necessario
 }
 
 app-project-images {
     height: 250px;
 }
-
 
 @media (min-width: 768px) {
     app-project-images {
@@ -55,7 +48,6 @@ app-project-images {
         min-height: 380px;
     }
 }
-
 
 hr {
     background-color: $main-color;
@@ -76,9 +68,7 @@ hr {
 .links-projeto {
     display: flex;
     justify-content: space-between;
-    
     padding: 10px 20px;
-    
     a {
         border: 2px solid $secondary-color;
         background-color: $tertiary-color;
@@ -89,38 +79,38 @@ hr {
         transition: 0.15s ease-in-out;
         box-shadow: 0px 0px 3px $secondary-color;
     }
-    
-    a:hover {
+    a:hover:not(.unavailable) {
         transform: scale(1.05);
+    }
+    a.unavailable {
+        color: gray;
+        opacity: 0.8;
+        box-shadow: none;
+    }
+    a.unavailable:hover {
+        cursor: not-allowed;
     }
 }
 
-
 @media (min-width: 992px) {
     app-project-description {
-        
         background-color: $tertiary-color;
         box-shadow: 0px 0px 5px $main-color;
         border: 2px solid $main-color;
-
         display: block;
-        position: absolute; 
+        position: absolute;
         left: 100%;
-        top: 50%; 
-        
+        top: 50%;
         margin-left: 20px;
-        
         margin-top: unset;
-        
         min-width: 300px;
         max-width: 400px;
-        
         transform: translateY(-50%) scaleX(0);
         transform-origin: left;
         transition: transform 0.25s ease-in-out;
     }
-    
-    i.toggled + app-project-description, app-project-description:hover {
+    i.toggled+app-project-description,
+    app-project-description:hover {
         transform: translateY(-50%) scaleX(1);
     }
 }

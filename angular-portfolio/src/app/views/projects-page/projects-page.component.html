@@ -1,32 +1,36 @@
 <section id="projetos" class="flex-columns">
 
-  <div *ngIf="featuredProjects && featuredProjects.length; else loading">
-    <div id="header-projetos">
-      <h1>Projetos</h1>
-      <h3>Aqui estão os principais projetos já realizados.</h3>
-      <p>Todos os projetos desta lista foram construídos inteiramente por mim, ambas as partes de front-end e back-end
-        (a menos que explicitado o contrário).</p>
+    <div *ngIf="featuredProjects && featuredProjects.length; else loading">
+        <div id="header-projetos">
+            <h1>Projetos</h1>
+            <h3>Aqui estão os principais projetos já realizados.</h3>
+            <p>Todos os projetos desta lista foram construídos inteiramente por mim, ambas as partes de front-end e back-end (a menos que explicitado o contrário).</p>
+        </div>
+        <hr />
+        <ol class="lista-projetos">
+            <app-featured-project *ngFor="let featuredProject of featuredProjects" class="projeto" [projectData]='featuredProject' (imageClickedEvent)="showModal($event)">
+            </app-featured-project>
+        </ol>
+
+        <hr>
+
+        <app-company-projects [projects]="companyProjects">
+        </app-company-projects>
+
+        <hr>
+
+
+        <app-minor-projects [projects]="minorProjects" (minorProjectImageClickedEvent)="showModal($event)">
+        </app-minor-projects>
     </div>
-    <hr />
-    <ol class="lista-projetos">
-      <app-featured-project *ngFor="let featuredProject of featuredProjects" class="projeto"
-        [projectData]='featuredProject' (imageClickedEvent)="showModal($event)">
-      </app-featured-project>
-    </ol>
 
-    <hr>
+    <ng-template #loading>
+        <app-loading-spinner>
+        </app-loading-spinner>
+    </ng-template>
 
-    <app-minor-projects [projects]="minorProjects" (minorProjectImageClickedEvent)="showModal($event)">
-    </app-minor-projects>
-  </div>
+    <div *ngIf="modalIsShowing">
+        <app-modal [modalData]="modalData" [modalType]="modalType" (closeModalEvent)="dismissModal()"></app-modal>
+    </div>
 
-  <ng-template #loading>
-    <app-loading-spinner>
-    </app-loading-spinner>
-  </ng-template>
-
-  <div *ngIf="modalIsShowing">
-    <app-modal [modalData]="modalData" [modalType]="modalType" (closeModalEvent)="dismissModal()"></app-modal>
-  </div>
-  
 </section>

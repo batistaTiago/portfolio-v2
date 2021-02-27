@@ -15,7 +15,7 @@ export class MinorProjectsComponent implements OnInit {
   ngOnInit() {
   }
 
-  public showMenu: boolean = false
+  public showMenu: boolean = true
 
   @Input() public projects: IProject[] = []
   @Output() minorProjectImageClickedEvent: EventEmitter<string> = new EventEmitter()
