@@ -2,9 +2,9 @@
 
     <div *ngIf="featuredProjects && featuredProjects.length; else loading">
         <div id="header-projetos">
-            <h1>Projetos</h1>
-            <h3>Aqui estão os principais projetos já realizados.</h3>
-            <p>Todos os projetos desta lista foram construídos inteiramente por mim, ambas as partes de front-end e back-end (a menos que explicitado o contrário).</p>
+            <h1>{{ headings.mainHeading }}</h1>
+            <h3>{{ headings.subHeading }}</h3>
+            <p>{{ headings.paragraph }}</p>
         </div>
         <hr />
         <ol class="lista-projetos">

@@ -82,21 +82,6 @@ export class ResumePage implements OnInit {
         linkTitle: 'Certificação AWS Desenvolvedor 2020',
         url: 'https://www.udemy.com/course/aws-developer/'
       }, 
-      // {
-      //   courseTitle: '',
-      //   linkTitle: '',
-      //   url: ''
-      // }, 
-      // {
-      //   courseTitle: '',
-      //   linkTitle: '',
-      //   url: ''
-      // }, 
-      // {
-      //   courseTitle: '',
-      //   linkTitle: '',
-      //   url: ''
-      // }, 
     ]);
 
     this.programmingLanguages = GeneralQualification.createGeneralQualifications([
@@ -137,6 +122,9 @@ export class ResumePage implements OnInit {
         name: 'SASS',
       },
       {
+        name: 'Javascript',
+      },
+      {
         name: 'Bootstrap',
       },
       {
@@ -144,6 +132,9 @@ export class ResumePage implements OnInit {
       },
       {
         name: 'Angular',
+      },
+      {
+        name: 'React',
       }
     ]);
 
@@ -155,17 +146,20 @@ export class ResumePage implements OnInit {
         name: 'NodeJS',
       },
       {
-        name: 'Express',
+        name: 'Kafka',
+      },
+      {
+        name: 'Redis',
       },
       {
         name: 'MySQL',
       },
       {
-        name: 'Firebase',
+        name: 'MongoDB',
       },
       {
-        name: 'MongoDB',
-      }
+        name: 'Firebase',
+      },
     ]);
 
     this.otherQualifications = GeneralQualification.createGeneralQualifications([
@@ -173,7 +167,7 @@ export class ResumePage implements OnInit {
         name: 'Git',
       },
       {
-        name: 'Docker/Compose',
+        name: 'Docker',
       },
       {
         name: 'SSH/Linux Terminal',

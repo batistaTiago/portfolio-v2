@@ -1,8 +1,10 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { IFeaturedProject } from '../../shared/models/featured-project.model';
 import { ICompanyProject } from '../../shared/models/company-project.model';
 import { ProjectService } from '../../services/projects.service';
 import { IProject } from '../../shared/models/project.model';
+import i18n from 'src/app/views/projects-page/projects-page.i18n';
+import { currentLanguage, Language } from 'src/app/shared/i18n/language';
 
 @Component({
   selector: 'app-projects-page',
@@ -10,21 +12,24 @@ import { IProject } from '../../shared/models/project.model';
   styleUrls: ['./projects-page.component.scss'],
   providers: [ProjectService]
 })
-export class ProjectsPage implements AfterViewInit {
+export class ProjectsPage implements OnInit, AfterViewInit {
+  private language: Language = currentLanguage;
+
+  public headings: { mainHeading: string, subHeading: string, paragraph: string };
 
   constructor(private projectService: ProjectService) { }
+
 
   public featuredProjects: IFeaturedProject[] = []
   public companyProjects: ICompanyProject[] = []
   public minorProjects: IProject[] = []
 
   async ngAfterViewInit() {
+    [ this.featuredProjects, this.minorProjects, this.companyProjects ] = await this.projectService.getProjects();
+  }
 
-    const projects = await this.projectService.getProjects();
-    this.featuredProjects = projects[0];
-    this.minorProjects = projects[1];
-    this.companyProjects = projects[2];
-
+  ngOnInit() {
+    this.headings = { ...i18n[this.language] }
   }
 
   public dismissModal() {

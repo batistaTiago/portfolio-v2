@@ -8,7 +8,6 @@ export class ContactService {
 
     public async sendContactRequest(data: any): Promise<boolean> {
         const response = await this.http.post(`${environment.apiURL}/api/contact/`, data, { observe: 'response' }).toPromise()
-        console.log(response.status)
         return response.ok
     }
 }

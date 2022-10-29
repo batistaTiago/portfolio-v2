@@ -1,28 +1,27 @@
 export class BTAnimationManager {
+    private static heroPageHasBeenAnimated: boolean = false
+    private static headerHasBeenAnimated: boolean = false    
+    private static contactPageHasBeenAnimated: boolean = false
 
     private constructor() { }
 
     private static instance: BTAnimationManager;
 
     public static getInstance(): BTAnimationManager {
-        
         if (BTAnimationManager.instance === undefined) {
             BTAnimationManager.instance = new BTAnimationManager()
         }
         return BTAnimationManager.instance
     }
 
-    private static headerHasBeenAnimated: boolean = false    
-
     public shouldAnimateHeader(): boolean {
         return !BTAnimationManager.headerHasBeenAnimated;
     }
 
-    private static heroPageHasBeenAnimated: boolean = false
     public shouldAnimateHeroPage(): boolean {
         return !BTAnimationManager.heroPageHasBeenAnimated;
     }
-    private static contactPageHasBeenAnimated: boolean = false
+    
     public shouldAnimateContactPage(): boolean {
         return !BTAnimationManager.contactPageHasBeenAnimated
     }

@@ -10,12 +10,42 @@ export class ProjectService {
     private featuredMocks: IFeaturedProject[] = [
         {
             "projectId": 1,
+            "titulo": "2FA App",
+            "techUsed": [
+                "Typescript",
+                "NodeJS",
+                "Kafka",
+                "Redis",
+                "MySQL",
+                "MongoDB",
+                "Docker",
+            ],
+            "gitUrl": "https://github.com/batistaTiago/typescript-kafka-clean-api",
+            "imageUrls": [],
+            "colabs": [
+                {
+                    nome: 'abilioN',
+                    gitUrlProfile: 'https://github.com/abilioN'
+                }
+            ],
+            "status": "Em desenvolvimento",
+            "percentageComplete": 35,
+            
+            "realProject": true,
+            "description": 
+                `Projeto feito para uma Cliente de Natal/RN para candidatos a vagas de emprego na cidade.`,
+                
+            "deployUrl": null
+        },
+
+        {
+            "projectId": 2,
             "titulo": "Natal Empregos",
             "techUsed": [
                 "Laravel",
                 "MySQL",
                 "jQuery",
-                "Docker/compose"
+                "Docker"
             ],
             "gitUrl": "https://github.com/batistatiago/natal-empregos-containerized",
             "imageUrls": [
@@ -47,7 +77,7 @@ export class ProjectService {
         },
 
         {
-            "projectId": 2,
+            "projectId": 3,
             "titulo": "Pássaro Urbano",
             "techUsed": [
                 "HTML",
@@ -78,12 +108,12 @@ export class ProjectService {
         },
 
         {
-            "projectId": 3,
+            "projectId": 4,
             "titulo": "Authentication Microservice",
             "techUsed": [
                 "NodeJS",
                 "MongoDB",
-                "Docker/compose",
+                "Docker",
                 "Redis",
                 "Python",
                 "JWT"

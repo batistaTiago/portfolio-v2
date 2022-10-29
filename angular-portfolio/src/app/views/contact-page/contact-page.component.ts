@@ -2,7 +2,8 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { ContactFormValidator } from '../../shared/contact-form-validator';
 import { BTAnimationManager } from '../../shared/animation-manager';
 import { ContactService } from '../../services/contact.service';
-
+import i18n from './contact-page.i18n';
+import { currentLanguage, Language } from 'src/app/shared/i18n/language';
 
 @Component({
   selector: 'app-contact-page',
@@ -11,11 +12,6 @@ import { ContactService } from '../../services/contact.service';
   providers: [ ContactService ]
 })
 export class ContactPage implements OnInit {
-
-  constructor(private contactService: ContactService) { }
-
-  ngOnInit() { }
-
   @ViewChild('name') nameInput: ElementRef;
   @ViewChild('email') emailInput: ElementRef;
   @ViewChild('subject') subjectInput: ElementRef;
@@ -34,6 +30,28 @@ export class ContactPage implements OnInit {
   private modalTimeoutId: number = null
 
   public awaitingResponse: boolean = false
+
+  public heading: string;
+  public namePlaceholderText: string;
+  public emailPlaceholderText: string;
+  public phonePlaceholderText: string;
+  public subjectPlaceholderText: string;
+  public messagePlaceholderText: string;
+  public submitButton: string;
+
+  private language: Language = currentLanguage;
+
+  constructor(private contactService: ContactService) { }
+
+  ngOnInit() {
+    this.heading = i18n[this.language].heading;
+    this.namePlaceholderText = i18n[this.language].namePlaceholderText;
+    this.emailPlaceholderText = i18n[this.language].emailPlaceholderText;
+    this.phonePlaceholderText = i18n[this.language].phonePlaceholderText;
+    this.subjectPlaceholderText = i18n[this.language].subjectPlaceholderText;
+    this.messagePlaceholderText = i18n[this.language].messagePlaceholderText;
+    this.submitButton = i18n[this.language].submitButton;
+  }
 
   public modalIsShowing(): boolean {
     return this.showModal

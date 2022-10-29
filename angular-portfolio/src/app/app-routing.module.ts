@@ -18,7 +18,7 @@ export class AppRoutingModule {
     { path: '', component: HeroPage },
     // { path: 'skills', component: SkillsComponent },
     { path: 'projects', component: ProjectsPage },
-    { path: 'curriculo', component: ResumePage},
+    { path: 'resume', component: ResumePage},
     { path: 'contact', component: ContactPage}
   ]
 

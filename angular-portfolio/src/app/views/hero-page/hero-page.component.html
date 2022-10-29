@@ -5,10 +5,8 @@
         </div>
         <div class='titles-container {{ shouldAnimate() ? "titles-container-animation" : "" }}' (animationend)="animationDidFinish($event)">
             <h1 class='hero-title'>Batista Tiago</h1>
-            <h3 class='hero-subtitle'>Engenheiro Mecatrônico</h3>
-            <h3 class='hero-subtitle'>Bacharel em Ciências e Tecnologia</h3>
-            <h3 class='hero-subtitle'>Desenvolvedor Web Full Stack</h3>
+            <h3 class='hero-subtitle' *ngFor="let title of titles">{{ title }}</h3>
         </div>
     </div>
-    
+
 </section>
