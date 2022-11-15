@@ -12,11 +12,11 @@
 <div class="labels">
 
     <div class="
-project-label
-project-status
-{{ data.status == 'Em desenvolvimento' ? 'em-desenvolvimento' : '' }}
-{{ data.status == 'Concluído' ? 'concluido' : '' }}
-">
+        project-label
+        project-status
+        {{ data.status == 'Em desenvolvimento' ? 'em-desenvolvimento' : '' }}
+        {{ data.status == 'Concluído' ? 'concluido' : '' }}
+        ">
         Status: {{ data.status }}
     </div>
 
@@ -25,7 +25,7 @@ project-status
 
 <app-progress-bar [percentageComplete]="data.percentageComplete"></app-progress-bar>
 
-<div *ngIf="data.colabs.length > 0" style="margin-top: 15px; margin-bottom: 15px;">
+<div *ngIf="data.colabs.length > 0" style="margin-top: 15px; margin-bottom: 5px;">
     <hr>
     <div class="project-label">Colaboradores</div>
     <ul>

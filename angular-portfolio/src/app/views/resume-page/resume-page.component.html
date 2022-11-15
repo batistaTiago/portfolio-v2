@@ -23,65 +23,62 @@
     <hr>
 
     <div id="experience">
-        <h2>Experiência Profissional</h2>
+        <h2>{{ headings.professionalExperience }}</h2>
         <ul class="lista-experience">
             <li>
                 <div>
                     <span class="company-name">Olist Serviços Digitais</span>
-                    <span class="job-location">Remoto</span>
+                    <span class="job-location">Remote</span>
                 </div>
                 <div>
-                    <span class="job-title">Desenvolvedor Back End Senior</span>
-                    <span class="job-timeline">Maio/2021 - Atual</span>
+                    <span class="job-title">Senior Backend Software Engineer</span>
+                    <span class="job-timeline">May/2021 - Current</span>
                 </div>
                 <ul class="job-items">
-                    <li>Atuação no ciclo completo de desenvolvimento de uma aplicação para gerenciamento operações logísticas em níveis municipais, estaduais e nacional, desde a sua concepção e passando por desenvolvimento, testes, operação e manutenção.</li>
-                    <li>Linguagens: PHP, MySQL, MongoDB</li>
-                    <li>Frameworks: Laravel</li>
+                    <li>Worked on all stages of the development lifecycle, from the conception of new features to the shipment to production of a nation-wide TMS (Transportation Management System)</li>
+                    <li>Stack: PHP, TypeScript, Node, Laravel, Kafka, MySQL, MongoDB, Redis, Docker</li>
                 </ul>
             </li>
             <li>
                 <div>
                     <span class="company-name">LessClick Systems LTDA</span>
-                    <span class="job-location">Remoto</span>
+                    <span class="job-location">Remote</span>
                 </div>
                 <div>
-                    <span class="job-title">Desenvolvedor Back End Pleno</span>
-                    <span class="job-timeline">Outubro/2018 - Maio/2021</span>
+                    <span class="job-title">Mid-level Back End Software Engineer</span>
+                    <span class="job-timeline">October/2018 - May/2021</span>
                 </div>
                 <ul class="job-items">
-                    <li>Atuação no ciclo completo de desenvolvimento das aplicações de sistemas de vendas de ingressos e consumíveis para eventos (marketplace), desde a sua concepção e passando por desenvolvimento, testes, operação e manutenção.</li>
-                    <li>Linguagens: HTML, CSS, JavaScript, PHP</li>
-                    <li>Frameworks: Bootstrap, Laravel</li>
-                    <li>Serviços integrados: Pagamento (GetNet e PayPal), Firebase (Auth e Firestore), ViaCEP, Google Maps, Google Pay, entre outros</li>
+                    <li>Worked on all stages of the development lifecycle, from the conception of new features to the shipment to production of a ticketing system with 400k users</li>
+                    <li>Stack: PHP, Node, ReactJS, TypeScript, Laravel, MySQL, Redis, Docker, Firebase, Bootstrap, jQuery</li>
                 </ul>
             </li>
             <li>
                 <div>
                     <span class="company-name">BraveCloud Tecnologia da Informação</span>
-                    <span class="job-location">Natal/RN - Brasil</span>
+                    <span class="job-location">Natal - Brazil</span>
                 </div>
                 <div>
-                    <span class="job-title">Analista de Desenvolvimento</span>
-                    <span class="job-timeline">Março/2018 - Outubro/2018</span>
+                    <span class="job-title">Junior Software Engineer</span>
+                    <span class="job-timeline">March/2018 - October/2018</span>
                 </div>
                 <ul class="job-items">
-                    <li>Desenvolvimento de um framework para edição e processamento de imagens para MacOS e aplicações escritas em cima do próprioframework.</li>
-                    <li>Linguagens: Swift</li>
+                    <li>Worked on the development of a framework to process and edit images (macOS/iOS) and some commercial websites</li>
+                    <li>Linguagens: HTML, CSS, JavaScript, PHP, MySQL, Swift</li>
                 </ul>
             </li>
             <li>
                 <div>
                     <span class="company-name">BraveCloud Tecnologia da Informação</span>
-                    <span class="job-location">Natal/RN - Brasil</span>
+                    <span class="job-location">Natal - Brazil</span>
                 </div>
                 <div>
-                    <span class="job-title">Estagiário</span>
-                    <span class="job-timeline">Junho/2017 - Março/2018</span>
+                    <span class="job-title">Software Engineering Intern</span>
+                    <span class="job-timeline">June/2017 - March/2018</span>
                 </div>
                 <ul class="job-items">
-                    <li>Desenvolvimento de aplicações para Universal Windows Platform e MacOS.</li>
-                    <li>Linguagens: C# e Swift</li>
+                    <li>Worked on the development of a framework to process and edit images (macOS/iOS) and some commercial websites</li>
+                    <li>Linguagens: HTML, CSS, JavaScript, PHP, MySQL, Swift</li>
                 </ul>
             </li>
         </ul>
@@ -90,13 +87,13 @@
     <hr>
 
     <div id="education">
-        <h2>Formação</h2>
+        <h2>{{ headings.education }}</h2>
         <ul class="lista-formacoes">
             <li>
-                Bacharelado em Ciências e Tecnologia (UFRN)
+                Bachelor in Science and Technology
             </li>
             <li>
-                Engenharia Mecatrônica (UFRN)
+                Mechatronics and Robotics engineer
             </li>
         </ul>
     </div>
@@ -104,7 +101,7 @@
     <hr>
 
     <div id="qualifications">
-        <h2>Qualificações</h2>
+        <h2>{{ headings.qualifications }}</h2>
         <div class="general-qualifications">
 
             <div class="general-qualification">
@@ -124,7 +121,7 @@
             </div>
 
             <div class="general-qualification">
-                <span>Outros</span>
+                <span>{{ headings.otherQualifications }}</span>
                 <ul class="specific-qualifications">
                     <li *ngFor="let qual of otherQualifications">{{ qual.name }}</li>
                 </ul>
@@ -154,7 +151,7 @@
     </div>
 
     <hr>
-
+    <!-- 
     <div>
         <div class="hideable-content-toggler">
             <label for="expand-icon">Informações adicionais</label>
@@ -186,7 +183,7 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
 
 
 </section>

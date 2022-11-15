@@ -1,6 +1,6 @@
 <div class="titulo-projeto">{{ data.titulo }}</div>
-<div class="techs-usadas">{{ data.techUsed }}</div>
+<div class="techs-usadas">{{ data.techUsed.join(', ') }}</div>
 <div class="icones-item">
-  <a target="_blank" [href]="data.gitUrl"><i class="fab fa-github-square github"></i></a>
-  <i class="fas fa-camera camera" (click)="showMinorProjectImage()"></i>
+    <a target="_blank" [href]="data.gitUrl"><i class="fab fa-github-square github"></i></a>
+    <i class="fas fa-camera camera" (click)="showMinorProjectImage()"></i>
 </div>

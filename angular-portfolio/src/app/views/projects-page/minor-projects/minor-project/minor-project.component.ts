@@ -10,8 +10,7 @@ export class MinorProjectComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   @Input() data: IProject = null
   @Output() minorProjectImageClickedEvent: EventEmitter<string> = new EventEmitter();

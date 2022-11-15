@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
     const sectionLinks = {
       home: '/',
       resume: '/resume',
-      // projects: '/projects',
+      projects: '/projects',
       contact: '/contact',
     };
 

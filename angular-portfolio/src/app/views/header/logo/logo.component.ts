@@ -32,5 +32,4 @@ export class LogoComponent implements OnInit {
   public onLogoExit() {
     this.animateLogo = false
   }
-
 }

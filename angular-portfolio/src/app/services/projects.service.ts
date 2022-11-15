@@ -10,74 +10,46 @@ export class ProjectService {
     private featuredMocks: IFeaturedProject[] = [
         {
             "projectId": 1,
-            "titulo": "2FA App",
+            "titulo": "MFA App",
             "techUsed": [
-                "Typescript",
                 "NodeJS",
+                "ReactJS",
+                "Typescript",
                 "Kafka",
+                "MongoDB",
+                "Jest",
+                "React Testing Library",
                 "Redis",
                 "MySQL",
-                "MongoDB",
                 "Docker",
             ],
             "gitUrl": "https://github.com/batistaTiago/typescript-kafka-clean-api",
-            "imageUrls": [],
+            "imageUrls": [
+                "/assets/images/mfa-app/home.jpeg",
+                "/assets/images/mfa-app/signup.jpeg",
+                "/assets/images/mfa-app/login.jpeg",
+                "/assets/images/mfa-app/notfound.jpeg",
+            ],
             "colabs": [
                 {
-                    nome: 'abilioN',
-                    gitUrlProfile: 'https://github.com/abilioN'
+                    nome: 'Nicholas Tavares',
+                    gitUrlProfile: 'https://github.com/NicholasTavares'
                 }
             ],
-            "status": "Em desenvolvimento",
-            "percentageComplete": 35,
+            "status": "Under construction",
+            "percentageComplete": 65,
             
             "realProject": true,
             "description": 
-                `Projeto feito para uma Cliente de Natal/RN para candidatos a vagas de emprego na cidade.`,
+                `Multi-factor Authentication (MFA) is an authentication method that requires the user to provide two or more verification factors to gain access to a resource. This app can be used to serve as a MFA provider.`,
                 
             "deployUrl": null
         },
+    ]
 
+    private minorMocks: IProject[] = [
         {
-            "projectId": 2,
-            "titulo": "Natal Empregos",
-            "techUsed": [
-                "Laravel",
-                "MySQL",
-                "jQuery",
-                "Docker"
-            ],
-            "gitUrl": "https://github.com/batistatiago/natal-empregos-containerized",
-            "imageUrls": [
-                "/assets/images/natal-empregos/NE-1.png",
-                "/assets/images/natal-empregos/NE-2.png"
-            ],
-            "colabs": [
-                {
-                    nome: 'abilioN',
-                    gitUrlProfile: 'https://github.com/abilioN'
-                },
-                {
-                    nome: 'lucaslaricchia',
-                    gitUrlProfile: 'https://github.com/lucaslaricchia'
-                },
-                {
-                    nome: 'danieelvaraujo',
-                    gitUrlProfile: 'https://github.com/danieelvaraujo'
-                }
-            ],
-            "status": "Em desenvolvimento",
-            "percentageComplete": 70,
-            
-            "realProject": true,
-            "description": 
-                `Projeto feito para uma Cliente de Natal/RN para candidatos a vagas de emprego na cidade.`,
-                
-            "deployUrl": "https://natal-empregos.herokuapp.com"
-        },
-
-        {
-            "projectId": 3,
+            "projectId": 1,
             "titulo": "Pássaro Urbano",
             "techUsed": [
                 "HTML",
@@ -89,55 +61,22 @@ export class ProjectService {
                 "Firebase"
             ],
             "gitUrl": "https://github.com/batistatiago/passaro-urbano",
-            "imageUrls": [
-                "/assets/images/passaro-urbano/passaro-urbano1.png",
-                "/assets/images/passaro-urbano/passaro-urbano2.png",
-                "/assets/images/passaro-urbano/passaro-urbano3.png"
-            ],
-            "colabs": [],
-            "status": "Em desenvolvimento",
-            "percentageComplete": 60,
-            
-            "realProject": false,
-            "description": 
-                `Web app baseado no Peixe Urbano. 
-                O app oferece a possibilidade de criar cadastro (consumidor / anunciante), publicar, editar e deletar ofertas (caso o usuário seja um anunciante) e realizar compras. 
-                Além disso, o app também é integrado a uma API de CEPs, fazendo a busca de endereço automaticamente utilizando abordagem AJAX.`,
-                
-            "deployUrl": "http://batista-tiago-ekyidag.s3-website-sa-east-1.amazonaws.com"
+            "imageUrls": ["/assets/images/passaro-urbano/passaro-urbano1.png"],
         },
-
         {
-            "projectId": 4,
-            "titulo": "Authentication Microservice",
+            "projectId": 2,
+            "titulo": "Natal Empregos",
             "techUsed": [
-                "NodeJS",
-                "MongoDB",
-                "Docker",
-                "Redis",
-                "Python",
-                "JWT"
+                "Laravel",
+                "MySQL",
+                "jQuery",
+                "Docker"
             ],
-            "gitUrl": "https://github.com/batistatiago/bt-authentication-microservice",
-            "imageUrls": [
-                '/assets/images/auth-microservice/fluxograma.png'
-            ],
-            "colabs": [],
-            "status": "Em desenvolvimento",
-            "percentageComplete": 40,
-            
-            "realProject": false,
-            "description": 
-                `Microserviço de autenticação e gestão de usuários.
-                O serviço conta com uma fila de emails implementada no Redis e workers escritos em python para envio dos emails de confirmação de cadastro e redefinição de senha`,
-                
-            "deployUrl": null
-        }
-    ]
-
-    private minorMocks: IProject[] = [
+            "gitUrl": "https://github.com/batistatiago/natal-empregos-containerized",
+            "imageUrls": ["/assets/images/natal-empregos/NE-1.png"],
+        },
         {
-            "projectId": 1,
+            "projectId": 3,
             "titulo": "Spotify Clone",
             "techUsed": [
                 "HTML",
@@ -146,44 +85,61 @@ export class ProjectService {
                 "jQuery"
             ],
             "gitUrl": "https://github.com/batistaTiago/web-module-1/tree/master/spotify-clone",
-            "imageUrls": ["/assets/images/minor-projects/spotify-clone/1.png"]
+            "imageUrls": ["/assets/images/minor-projects/spotify-clone/1.png"],
         },
         {
-            "projectId": 2,
+            "projectId": 4,
             "titulo": "Mountain Travel",
             "techUsed": [
                 "HTML",
                 "CSS"
             ],
             "gitUrl": "https://github.com/batistaTiago/web-module-4/tree/master/mountains-project",
-            "imageUrls": [
-                "/assets/images/minor-projects/mountain-travel/1.png",
-                "/assets/images/minor-projects/mountain-travel/2.png",
-                "/assets/images/minor-projects/mountain-travel/3.png",
-                "/assets/images/minor-projects/mountain-travel/4.png"
-            ]
+            "imageUrls": ["/assets/images/minor-projects/mountain-travel/1.png"],
         }
     ]
 
-
+    // @@TODO: colocar varios paragrafos dinamicamente para cada linha do campo description
     private companyMocks = [
         {
             "projectId": 1,
-            "titulo": "Bilheteria LessClick",
+            "titulo": "TMS Olist Pax",
+            "techUsed": [
+                "Laravel",
+                "MySQL",
+                "Kafka",
+                "Redis",
+                "Docker",
+                "Kubernetes",
+                "Gitlab CI",
+                "AWS",
+            ],
+            
+            "description": `
+                Nation-wide TMS (Transportation Management System). Serves as a logistics gate for many e-commerce and marketplaces, such as Amazon, Shopee, Carrefour, VTEX, among others. The system is responsible for all the logistics management, from driver onboarding and payment to the PnD (Pickup and Delivery) operation itself.
+                The operations run at around 50 thousand packages a day, working 24 hours a day and 7 days a week.
+            `,
+                
+            "deployUrl": "https://olistpax.com",
+            "companyName": "Olist Serviços Digitais"
+        },
+        {
+            "projectId": 2,
+            "titulo": "LessClick Ticketing",
             "techUsed": [
                 "Laravel",
                 "MySQL",
                 "jQuery",
                 "SASS",
                 "Redis",
-                "OAuth2"
+                "Firebase",
+                "Google Pay",
             ],
             
             "description": `
-                Sistema de bilhetagem responsável por venda de eventos nos estádios Arena das Dunas (Natal/RN), Arena Fonte Nova (Salvador/BA) e Arena Portoalegrense (Porto Alegre/RS), além de outras produtoras independentes que utilizam a solução. O sistema tem cerca de 200 mil usuários somando o público dos 3 estádios. <br />
-                Neste projeto, fui o principal responsável pela arquitetura e desenvolvimento back-end da maior parte do sistema, como modelagem do banco de dados, integrações com serviços terceiros (PayPal, GooglePay, GoogleMaps, GetNet, ClearSale, FirebaseAuth, etc), implementação do protocolo OAuth2 para comunicação com as aplicações-cliente Web e Pontos de Venda internos dos estádios. 
-                Além disso, também fui responsável por boa parte do desenvolvimento front-end do módulo de administração, que conta com relatórios, dashboards, configurações de eventos, ingressos, etc. 
-                Também fui o principal responsável pela administração do servidor de homologação utilizado.
+                Ticketing system responsible for selling events at Arena das Dunas (Natal/RN), Arena Fonte Nova (Salvador/BA) and Arena Portoalegrense (Porto Alegre/RS) stadiums, in addition to other independent C2C event producers. The system has around 400 thousand users, adding up to the general audience of the 3 stadiums, but a typical soccer match sells around 50 thousand tickets.
+                In this project, I was mainly responsible for all of the architecture and back-end development of of the system, including as database modeling, REST API development, integrations with third-party services (PayPal, GooglePay, GoogleMaps, GetNet, ClearSale, Firebase, and others), authentication (and authorization).
+                I was also responsible for most of the front-end development of the management module, which has reports, dashboards, event and  tickets settings as well as for managing the staging infrastructure (AWS) used.
             `,
                 
             "deployUrl": "https://web.lessclick.com.br",

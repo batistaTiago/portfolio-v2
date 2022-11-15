@@ -1,6 +1,6 @@
 <section>
     <div class="hideable-content-toggler">
-        <label for="expand-icon">Projetos de Empresas</label>
+        <label for="expand-icon">{{ companyProjectsHeading }}</label>
         <button id="expand-icon" class="{{ showMenu ? 'toggled' : '' }}" (click)="toggleMenu()">
     <div class="vertical"></div>
     <div class="horizontal"></div>
@@ -12,7 +12,7 @@
                 <h2>
                     <a href="{{ project.deployUrl }}" target="_blank" title="{{ project.titulo }}">{{ project.titulo }}</a>
                 </h2>
-                <p [innerHTML]="project.description"></p>
+                <p *ngFor="let paragraph of project.paragraphs">{{ paragraph }}</p>
             </li>
         </ul>
     </div>
