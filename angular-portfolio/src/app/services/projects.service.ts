@@ -137,7 +137,7 @@ export class ProjectService {
             ],
             
             "description": `
-                Ticketing system responsible for selling events at Arena das Dunas (Natal/RN), Arena Fonte Nova (Salvador/BA) and Arena Portoalegrense (Porto Alegre/RS) stadiums, in addition to other independent C2C event producers. The system has around 400 thousand users, adding up to the general audience of the 3 stadiums, but a typical soccer match sells around 50 thousand tickets.
+                The main responsibilities of this role was to build a ticketing marketplace system for 3 soccer stadiums, in addition to other independent C2C event producers. The system has around 400 thousand users, adding up the general audience of the 3 stadiums, but a typical soccer match sells around 30 to 50 thousand tickets.
                 In this project, I was mainly responsible for all of the architecture and back-end development of of the system, including as database modeling, REST API development, integrations with third-party services (PayPal, GooglePay, GoogleMaps, GetNet, ClearSale, Firebase, and others), authentication (and authorization).
                 I was also responsible for most of the front-end development of the management module, which has reports, dashboards, event and  tickets settings as well as for managing the staging infrastructure (AWS) used.
             `,
